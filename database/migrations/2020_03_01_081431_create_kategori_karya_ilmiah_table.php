@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGuestTable extends Migration
+class CreateKategoriKaryaIlmiahTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,9 @@ class CreateGuestTable extends Migration
     public function up()
     {
         Schema::defaultStringLength(191);
-        Schema::create('guest', function (Blueprint $table) {
-            $table->bigIncrements('id_guest');
-            $table->string('nama');
-            $table->string('alamat');
+        Schema::create('kategori_karya_ilmiah', function (Blueprint $table) {
+            $table->bigIncrements('Id_kategori_karya_ilmiah');
+            $table->string('Jenis');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateGuestTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guest');
+        Schema::dropIfExists('kategori_karya_ilmiah');
     }
 }

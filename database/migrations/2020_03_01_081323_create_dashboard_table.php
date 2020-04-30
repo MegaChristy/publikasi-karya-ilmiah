@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReviewKaryaIlmiahTable extends Migration
+class CreateDashboardTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,9 @@ class CreateReviewKaryaIlmiahTable extends Migration
     public function up()
     {
         Schema::defaultStringLength(191);
-        Schema::create('review_karya_ilmiah', function (Blueprint $table) {
-            $table->bigIncrements('id_riview');
-            $table->string('isi');
-            $table->string('tanggal');
+        Schema::create('dashboard', function (Blueprint $table) {
+            $table->bigIncrements('Id_dashboard');
+            $table->string('Jenis_aktivitas');
         });
     }
 
@@ -28,6 +27,6 @@ class CreateReviewKaryaIlmiahTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('review_karya_ilmiah');
+        Schema::dropIfExists('dashboard');
     }
 }

@@ -15,12 +15,11 @@ class CreateAdminTable extends Migration
     {
         Schema::defaultStringLength(191);
         Schema::create('admin', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nama');
-            $table->string('username');
-            $table->string('password');
-            $table->string('alamat');
-            $table->string('email');
+            $table->bigIncrements('Id_admin');
+            $table->string('Nama_admin');
+            $table->string('Tanggal_publish');
+            $table->string('Email');
+            $table->string('No_telp');
           
             $table->timestamps();
 

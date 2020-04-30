@@ -15,9 +15,11 @@ class CreateNotifikasiTable extends Migration
     {
         Schema::defaultStringLength(191);
         Schema::create('notifikasi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->date('tanggal');
-            $table->string('keterangan');
+            $table->bigIncrements('Id_notifikasi');
+            $table->string('Alamat_tujuan');
+            $table->date('Tanggal_pengiriman');
+            $table->string('Alamat_pengiriman');
+            $table->time('Waktu_pengiriman');
         });
     }
 
