@@ -13,15 +13,12 @@ class CreateKaryaIlmiahTable extends Migration
      */
     public function up()
     {
-        Schema::defaultStringLength(191);
         Schema::create('karya_ilmiah', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('jenis');
-            $table->string('tanggal');
-            $table->string('penulis');
-            $table->string('isi');
-            $table->string('tahun_ajaran');
-            $table->timestamps();
+            $table->string('penulis', 20);
+            $table->date('tanggal_publikasi');
+            $table->string('judul', 30);
+            $table->year('tahun_ajaran');
         });
     }
 

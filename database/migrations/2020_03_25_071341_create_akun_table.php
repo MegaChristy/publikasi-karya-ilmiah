@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAsistenDosenTable extends Migration
+class CreateAkunTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateAsistenDosenTable extends Migration
      */
     public function up()
     {
-        Schema::defaultStringLength(191);
-        Schema::create('asisten_dosen', function (Blueprint $table) {
-            $table->bigIncrements('id_asisten');
-            $table->string('nama');
-            $table->string('jurusan');
-            $table->string('alamat');
+        Schema::create('akun', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('username', 20);
+            $table->string('password', 20);
         });
     }
 
@@ -29,6 +27,6 @@ class CreateAsistenDosenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('asisten_dosen');
+        Schema::dropIfExists('akun');
     }
 }

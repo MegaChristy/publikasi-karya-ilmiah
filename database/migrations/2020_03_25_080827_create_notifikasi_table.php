@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdminTable extends Migration
+class CreateNotifikasiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateAdminTable extends Migration
      */
     public function up()
     {
-        Schema::defaultStringLength(191);
-        Schema::create('admin', function (Blueprint $table) {
+        Schema::create('notifikasi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
-            $table->string('username');
-            $table->string('password');
-            $table->string('alamat');
-            $table->string('email');
-            $table->timestamps();
+            $table->string('alamat_tujuan', 50);
+            $table->date('tanggal_pengiriman');
+            $table->string('alamat_pengiriman');
         });
     }
 
@@ -32,6 +28,6 @@ class CreateAdminTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admin');
+        Schema::dropIfExists('notifikasi');
     }
 }

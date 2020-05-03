@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotifikasiTable extends Migration
+class CreateDataCivitasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateNotifikasiTable extends Migration
      */
     public function up()
     {
-        Schema::defaultStringLength(191);
-        Schema::create('notifikasi', function (Blueprint $table) {
+        Schema::create('data_civitas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('tanggal');
-            $table->string('keterangan');
+            $table->integer('jumlah_civitas');
         });
     }
 
@@ -28,6 +26,6 @@ class CreateNotifikasiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notifikasi');
+        Schema::dropIfExists('data_civitas');
     }
 }
