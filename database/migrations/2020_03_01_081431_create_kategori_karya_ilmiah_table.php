@@ -13,9 +13,10 @@ class CreateKategoriKaryaIlmiahTable extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('kategori_karya_ilmiah', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('jenis', 20);
+            $table->bigIncrements('Id_kategori_karya_ilmiah');
+            $table->string('Jenis');
         });
     }
 

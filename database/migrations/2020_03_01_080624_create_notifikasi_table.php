@@ -13,11 +13,13 @@ class CreateNotifikasiTable extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('notifikasi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('alamat_tujuan', 50);
-            $table->date('tanggal_pengiriman');
-            $table->string('alamat_pengiriman');
+            $table->bigIncrements('Id_notifikasi');
+            $table->string('Alamat_tujuan');
+            $table->date('Tanggal_pengiriman');
+            $table->string('Alamat_pengiriman');
+            $table->time('Waktu_pengiriman');
         });
     }
 

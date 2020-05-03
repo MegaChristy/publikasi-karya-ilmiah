@@ -13,12 +13,14 @@ class CreateCivitasTable extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('civitas', function (Blueprint $table) {
-            $table->bigIncrements('id_civitas');
-            $table->string('alamat', 50);
-            $table->string('status', 15);
-            $table->boolean('jenis_kelamin');
-            $table->string('email', 30);
+            $table->bigIncrements('Id_civitas');
+            $table->string('Nama_civitas');
+            $table->string('Prodi');
+            $table->string('Status');
+            $table->date('Tanggal_upload');
+            $table->string('Email');
         });
     }
 

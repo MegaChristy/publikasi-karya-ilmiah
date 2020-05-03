@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserTable extends Migration
+class CreateDashboardTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::defaultStringLength(191);
+        Schema::create('dashboard', function (Blueprint $table) {
+            $table->bigIncrements('Id_dashboard');
+            $table->string('Jenis_aktivitas');
         });
     }
 
@@ -25,6 +27,6 @@ class CreateUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user');
+        Schema::dropIfExists('dashboard');
     }
 }

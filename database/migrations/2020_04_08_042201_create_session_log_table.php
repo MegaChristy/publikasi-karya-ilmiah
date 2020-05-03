@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDataCivitasTable extends Migration
+class CreateSessionLogTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateDataCivitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_civitas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('jumlah_civitas');
+        Schema::create('session_log', function (Blueprint $table) {
+            $table->bigIncrements('Id_session');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +26,6 @@ class CreateDataCivitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_civitas');
+        Schema::dropIfExists('session_log');
     }
 }

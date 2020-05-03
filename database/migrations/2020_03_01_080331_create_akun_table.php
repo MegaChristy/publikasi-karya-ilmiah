@@ -13,10 +13,11 @@ class CreateAkunTable extends Migration
      */
     public function up()
     {
+        Schema::defaultStringLength(191);
         Schema::create('akun', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('username', 20);
-            $table->string('password', 20);
+            $table->bigIncrements('Id_akun');
+            $table->string('Username');
+            $table->string('Password');
         });
     }
 
