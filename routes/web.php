@@ -11,6 +11,8 @@
 |
 */
 
+//route halaman utama
+
 Route::get('/', function () {
     return view('index');
 });
