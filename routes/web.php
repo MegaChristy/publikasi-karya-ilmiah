@@ -11,10 +11,13 @@
 |
 */
 
-//route halaman utama
-
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/coba' , 'KaryaIlmiahController@show');
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/' , 'KaryaIlmiahController@show');
+
