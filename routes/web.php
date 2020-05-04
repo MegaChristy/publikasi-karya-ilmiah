@@ -17,4 +17,14 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/coba' , 'KaryaIlmiahController@show');
+Route::get('/login', 'LoginController@login');
+
+Route::get('/karyailmiah' , 'KaryaIlmiahController@show');
+Route::get('/admin' , 'AdminController@show');
+Route::get('/akun' , 'AkunController@show');
+Route::get('/civitas' , 'CivitasController@show');
+Route::get('/dashboard' , 'DashboardController@show');
+Route::get('/kategorikaryailmiah' , 'KategoriKaryaIlmiahController@show');
+Route::get('/notifikasi' , 'NotifikasiController@show');
+Route::get('/sessionlog' , 'SessionLogController@show');
+Route::get('/visitor' , 'VisitorController@show');
