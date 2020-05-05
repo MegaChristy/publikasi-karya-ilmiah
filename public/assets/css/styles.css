@@ -148,7 +148,8 @@
 }
 .logo a {
     display: inline-block;
-    max-width: 120px;
+    max-width: 1000px;
+    max-height: 100px;
 }
 
 .metismenu >li >a {
