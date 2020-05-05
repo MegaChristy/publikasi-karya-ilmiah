@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/login', 'LoginController@login');
 
 Route::get('/' , 'KaryaIlmiahController@show');
 Route::get('/tentang', 'TentangController@index');
