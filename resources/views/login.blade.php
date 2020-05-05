@@ -15,9 +15,9 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" action ="homecivitas">
       <img width="72" height="72" class="mb-4" alt="" src="assets/images/icon/logo.png">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <h1 class="h3 mb-3 font-weight-normal">Login</h1>
       <label class="sr-only" for="inputUsername">Username</label>
       <input class="form-control" id="inputUsername" autofocus="" required="" type="username" placeholder="Username">
       <label class="sr-only" for="inputPassword">Password</label>

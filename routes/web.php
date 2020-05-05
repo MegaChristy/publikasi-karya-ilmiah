@@ -18,11 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/login', 'LoginController@login');
+Route::get('/homecivitas', 'HomeController@home');
 
 Route::get('/karyailmiah' , 'KaryaIlmiahController@show');
 Route::get('/admin' , 'AdminController@show');
 Route::get('/akun' , 'AkunController@show');
-Route::get('/civitas' , 'CivitasController@show');
+Route::get('/civitaseditprofile' , 'CivitasController@civitas');
 Route::get('/dashboard' , 'DashboardController@show');
 Route::get('/kategorikaryailmiah' , 'KategoriKaryaIlmiahController@show');
 Route::get('/notifikasi' , 'NotifikasiController@show');
