@@ -20,4 +20,4 @@ Route::get('/login', function () {
 });
 
 Route::get('/' , 'KaryaIlmiahController@show');
-
+Route::get('/tentang', 'TentangController@index');
