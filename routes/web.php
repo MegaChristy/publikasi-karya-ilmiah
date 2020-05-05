@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/login', 'LoginController@login');
+Route::get('/homecivitas', 'HomeController@home');
+Route::get('/civitaseditprofile', 'CivitasController@civitas');
 
 Route::get('/' , 'KaryaIlmiahController@show');
 Route::get('/tentang', 'TentangController@index');
