@@ -59,9 +59,6 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
-                            </li>
-                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
@@ -154,7 +151,7 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitaseditprofile">Profile</a>
                                 <a class="dropdown-item" href="#">Kirim Karya Ilmiah</a>
-                                <a class="dropdown-item" href="/">Keluar</a>
+                                <a class="dropdown-item" href="login">Keluar</a>
                             </div>
                         </div>
                     </div>
