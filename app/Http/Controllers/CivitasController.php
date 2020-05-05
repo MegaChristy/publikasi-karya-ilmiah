@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class CivitasController extends Controller
 {
-    public function civitas(){
+    public function civitaseditprofile(){
         return view('civitaseditprofile');
+    }
+
+    public function civitasprofile(){
+        return view('civitasprofile');
     }
 }
