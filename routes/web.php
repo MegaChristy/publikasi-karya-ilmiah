@@ -11,12 +11,11 @@
 |
 */
 
-//route halaman utama
-
 Route::get('/', function () {
     return view('index');
 });
 
+<<<<<<< HEAD
 Route::get('/login', 'LoginController@login');
 Route::get('/homecivitas', 'HomeController@home');
 
@@ -29,3 +28,8 @@ Route::get('/kategorikaryailmiah' , 'KategoriKaryaIlmiahController@show');
 Route::get('/notifikasi' , 'NotifikasiController@show');
 Route::get('/sessionlog' , 'SessionLogController@show');
 Route::get('/visitor' , 'VisitorController@show');
+=======
+
+Route::get('/' , 'KaryaIlmiahController@show');
+Route::get('/tentang', 'TentangController@index');
+>>>>>>> a0f87ce26dbe8050da0664d92e4323b127ed4a86
