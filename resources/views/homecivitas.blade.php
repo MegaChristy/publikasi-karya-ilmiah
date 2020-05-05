@@ -151,7 +151,7 @@
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitaseditprofile">Profile</a>
                                 <a class="dropdown-item" href="#">Kirim Karya Ilmiah</a>
-                                <a class="dropdown-item" href="login">Keluar</a>
+                                <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
                     </div>
