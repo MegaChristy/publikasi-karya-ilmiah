@@ -7,21 +7,21 @@
     <title>SIKI-Institut Teknologi Del</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/metisMenu.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/slicknav.min.css')}}">
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <link rel="stylesheet" href="assets/css/default-css.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{asset('assets/css/typography.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/default-css.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
     <!-- modernizr css -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/collection" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
@@ -129,26 +129,49 @@
 
                 <!-- overview area start -->
                 <div class="row">
-                    <div class="col-xl-9 col-lg-8">
+                <div class="col-xl-6">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Jumlah Pengunjung Website</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                        <option selected>1 month</option>
-                                        <option value="0">2 month</option>
-                                        <option value="0">3 month</option>
-                                        <option value="0">1 year</option>
-                                    </select>
+                                <h4 class="header-title">Karya Ilmiah Populer</h4>
+                                <div class="letest-news mt-5">
+                                    <div class="single-post mb-xs-40 mb-sm-40">
+                                        <div class="lts-thumb">
+                                            <img src="assets/images/blog/post-thumb1.jpg" alt="post thumb">
+                                        </div>
+                                        <div class="lts-content">
+                                            <span>Yolanda Melani</span>
+                                            <h2><a href="blog.html">Sistem Informasi Perpustakaan</a></h2>
+                                            <p>Sistem Informasi Perpustakaan Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-post">
+                                        <div class="lts-thumb">
+                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
+                                        </div>
+                                        <div class="lts-content">
+                                            <span>Angelia Meilysa</span>
+                                            <h2><a href="blog.html">Sistem Informasi Kampus (CIS)</a></h2>
+                                            <p>Sistem Informasi Kampus (CIS) Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-post">
+                                        <div class="lts-thumb">
+                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
+                                        </div>
+                                        <div class="lts-content">
+                                            <span>Mega Yohana</span>
+                                            <h2><a href="blog.html">Penerapan Algoritma YOLO dalam Penyiraman Tanaman</a></h2>
+                                            <p>Algoritma YOLO merupakan salah satu algoritma Real Object Detection yang sering digunakan dalam mengembangkan ...</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div id="verview-shart"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 coin-distribution">
+                    <div class="col-xl-5 col-lg-6 coin-distribution">
                         <div class="card h-full">
                             <div class="card-body">
-                                <h4 class="header-title mb-0">Karya Ilmiah Populer</h4>
+                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
                                 <div id="coin_distribution"></div>
                             </div>
                         </div>
