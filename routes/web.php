@@ -15,11 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-
 Route::get('/homecivitas', 'HomeController@home');
 Route::get('/civitaseditprofile', 'CivitasController@civitaseditprofile');
 Route::get('/civitasprofile', 'CivitasController@civitasprofile');
 
 Route::get('/homeadmin', 'HomeControllerA@home');
-Route::get('/collection' , 'CollectionController@index');
+
+Route::get('/karyailmiah' , 'KaryailmiahController@index');
