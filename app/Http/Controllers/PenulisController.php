@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class CollectionController extends Controller
+
+class PenulisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,9 @@ class CollectionController extends Controller
      */
     public function index()
     {
-        $collection = DB::table('collections')->get();
-        return view('collection.index', ['collections' => $collection]);
+        //$karyailmiah = DB::table('karyailmiah')->get();
+        $penulis = \App\penulis::all();
+        return view('penulis.index',['penulis' => $penulis]);
     }
 
     /**

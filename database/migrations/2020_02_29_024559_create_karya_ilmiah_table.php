@@ -20,7 +20,6 @@ class CreateKaryaIlmiahTable extends Migration
             $table->string('Penulis');
             $table->date('Tanggal_publikasi');
             $table->string('Judul');
-            $table->timestamps();
         });
     }
 

@@ -20,8 +20,6 @@ class CreateAdminTable extends Migration
             $table->string('Tanggal_publish');
             $table->string('Email');
             $table->string('No_telp');
-          
-            $table->timestamps();
 
         });
     }

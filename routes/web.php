@@ -22,3 +22,4 @@ Route::get('/civitasprofile', 'CivitasController@civitasprofile');
 Route::get('/homeadmin', 'HomeControllerA@home');
 Route::get('/Tentang','TentangController@About');
 Route::get('/karyailmiah' , 'KaryailmiahController@index');
+Route::get('/penulis' , 'PenulisController@index');

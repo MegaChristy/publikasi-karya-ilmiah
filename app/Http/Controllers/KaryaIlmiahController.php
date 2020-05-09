@@ -15,7 +15,8 @@ class KaryailmiahController extends Controller
      */
     public function index()
     {
-        $karyailmiah = DB::table('karyailmiah')->get();
+        //$karyailmiah = DB::table('karyailmiah')->get();
+        $karyailmiah = \App\karyailmiah::all();
         return view('karyailmiah.index',['karyailmiah' => $karyailmiah]);
     }
 
