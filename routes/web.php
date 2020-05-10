@@ -20,5 +20,5 @@ Route::get('/civitaseditprofile', 'CivitasController@civitaseditprofile');
 Route::get('/civitasprofile', 'CivitasController@civitasprofile');
 
 Route::get('/homeadmin', 'HomeControllerA@home');
-
+Route::get('/Tentang','TentangController@About');
 Route::get('/karyailmiah' , 'KaryailmiahController@index');
