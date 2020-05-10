@@ -93,28 +93,26 @@
 <div class="container">        
 <div class="row">
 <div class="col-10">
-<h1 class="mt-5"> Daftar Karya Ilmiah</h1>
+<h1 class="mt-5"> Daftar Penulis</h1>
 
 <table class = "table">
 <thead class="thead-dark">
 <tr>
 <th scope="col"> No</th>
-<th scope="col"> Publisher</th>
-<th scope="col"> Penulis</th>
-<th scope="col"> Tanggal Publikasi</th>
+<th scope="col"> Nama Penulis</th>
+<th scope="col"> Prodi</th>
 <th scope="col"> Judul</th>
 <th scope="col"> Aksi</th>
 </tr>
 </thead>
 <tbody> 
 
-@foreach($karyailmiah as $ki)
+@foreach($penulis as $pls)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
-<td>{{$ki -> Publisher}}</td>
-<td>{{$ki -> Penulis}}</td>
-<td>{{$ki -> Tanggal_publikasi}}</td>
-<td>{{$ki -> Judul}}</td>
+<td>{{$pls -> Nama_penulis}}</td>
+<td>{{$pls -> Prodi}}</td>
+<td>{{$pls -> Judul}}</td>
 <td>
 <a href="" class="badge badge-primary">Lihat</a> 
 </td>
@@ -125,7 +123,6 @@
 </div>
 </div>
 </div>
-
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
     <script src="assets/js/popper.min.js"></script>

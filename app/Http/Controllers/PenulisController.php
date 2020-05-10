@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class KaryailmiahController extends Controller
+class PenulisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class KaryailmiahController extends Controller
     public function index()
     {
         //$karyailmiah = DB::table('karyailmiah')->get();
-        $karyailmiah = \App\karyailmiah::all();
-        return view('karyailmiah.index',['karyailmiah' => $karyailmiah]);
+        $penulis = \App\penulis::all();
+        return view('penulis.index',['penulis' => $penulis]);
     }
 
     /**
