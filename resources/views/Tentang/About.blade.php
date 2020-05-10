@@ -99,13 +99,7 @@
           <h3>Sistem Informasi Karya Ilmiah Institut Teknologi Del</h3>
           <p>
           Sistem Informasi Karya Ilmiah Institut Teknologi Del (SIKI IT Del) merupakan salah satu sistem informasi kampus yang memiliki tujuan untuk melestarikan aset intelektual yang dihasilkan oleh civitas institut serta memastikan aset tersebut dapat diakses dengan mudah. Keberadaan SIKI IT Del ini diharapkan dapat memberi kontribusi yang signifikan terhadap perkembangan ilmu pengetahuan terutama bidang pendidikan.
-Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi:<br>
-1) Tugas akhir<br>
-2) Makalah<br>
-3) Paper<br>
-4) Skripsi<br>
-5) Artikel<br>
-6) Program Kreativitas Mahasiswa<br>
+Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, Makalah, Paper, Skripsi, Artikel, dan Program Kreativitas Mahasiswa<br>
           </p>
           <div class="row">
             <div class="col-lg-6">
@@ -118,12 +112,12 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi:<br>
           Telp : +62632331234 <br> 
           Fax  :  +62632331116
           </p></li>
-                <li><i class="icofont-rounded-right"></i> <strong>Learn more about Institut Teknologi Del:</strong><p><a class="btn btn-primary btn-lg" href="https://www.del.ac.id/?lang=en" role="button">Detail</a></p> </li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Email Us:</strong> <br> http://www.del.ac.id </li>
+                <li><i class="icofont-rounded-right"></i> <strong>Email Us:</strong> <br> http://www.del.ac.id </li> <br> <br>
+                <li><i class="icofont-rounded-right"></i> <strong>Learn more about Institut Teknologi Del:</strong><p><a class="btn btn-primary btn-lg" href="https://www.del.ac.id/?lang=en" role="button">Detail</a></p> </li>
               </ul>
             </div>
           </div>
@@ -133,9 +127,12 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi:<br>
     </div><!-- End About Me -->
     </div>
       </div>
-    <footer class="container">
-      <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
-    </footer>
+
+    <footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
