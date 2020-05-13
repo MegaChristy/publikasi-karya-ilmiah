@@ -23,3 +23,7 @@ Route::get('/homeadmin', 'HomeControllerA@home');
 Route::get('/Tentang','TentangController@About');
 Route::get('/karyailmiah' , 'KaryailmiahController@index');
 Route::get('/penulis' , 'PenulisController@index');
+Route::post('/proses_login', 'AutentikasiController@login');
+Route::get('/login', function () {
+    return view('login');
+});
