@@ -47,7 +47,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
@@ -137,10 +137,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
+                            <h4 class="page-title pull-left">Profile</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>Dashboard</span></li>
+                                <li><a href="homecivitas">Home</a></li>
+                                <li><span>Profile</span></li>
                             </ul>
                         </div>
                     </div>
@@ -185,10 +185,11 @@
                                             <td>ada</td>
                                         </tr>
                                         <tr>
-                                        <td>No. Telp : </td>
+                                            <td>No. Telp : </td>
                                             <td>asas</td>
-                                        </tr>
+                                        </tr>    
                                     </table>
+                                    <a class="btn btn-primary btn-lg" href="civitaseditprofile" role="button">Edit Profile</a>
                                 </div>
                             </div>
                         </div>

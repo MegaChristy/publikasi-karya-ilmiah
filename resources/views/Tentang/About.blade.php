@@ -55,8 +55,8 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            <li >
+                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
@@ -67,8 +67,8 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
-                            <li>
-                                <a href="http://127.0.0.1:8000/Tentang?#" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                            <li class="active">
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -78,7 +78,7 @@
 
         <!-- sidebar menu area end -->
         <!-- main content area start -->
-        <div class="main-content">
+    <div class="main-content">
             <!-- header area start -->
             <div class="header-area">
                 <div class="row align-items-center">
@@ -89,10 +89,58 @@
                             <span></span>
                             <span></span>
                         </div>
+                        <div class="search-box pull-left">
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
+                                <i class="ti-search"></i>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- profile info & task notification -->
+                    <div class="col-md-6 col-sm-4 clearfix">
+                        <ul class="notification-area pull-right">
+                            <li id="full-view"><i class="ti-fullscreen"></i></li>
+                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            <li class="settings-btn">
+                                <i class="ti-settings"></i>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+
+            <!-- header area end -->
+            <!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Tentang</h4>
+                            <ul class="breadcrumbs pull-left">
+                                <li><a href="/">Home</a></li>
+                                <li><span>Tentang</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix">
+                        <div class="user-profile pull-right">
+                            <div class="text-right">
+                                <a href="login" style="color:white">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+            <br>
+
+            <div class="main-content-inner">
+
+                <!-- overview area start -->
+                <div class="container">        
       <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
+        <div class="col--4" data-aos="fade-right">
           <img src="assets/images/icon/logo.png" alt="" width="400" height="400">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
@@ -128,12 +176,12 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, M
     </div>
       </div>
 
-    <footer>
+        <footer>
             <div class="footer-area">
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
-
+      </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
