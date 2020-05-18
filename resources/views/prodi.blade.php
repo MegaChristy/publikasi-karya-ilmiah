@@ -127,7 +127,7 @@
     <body>
         <div class="head">
 			<header>
-				<h1>Prgram Studi</h1>
+				<h1>Program Studi</h1>
                 <br>
                 <br>
                 </header>
@@ -166,7 +166,7 @@
                 <article>
                     <div class="row">
                     <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/images/icon/tk.png" alt="" width="250" height="200">
+                    <img src="assets/images/icon/informatika.png" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
                         <span> S1 Informatika</span>
@@ -182,7 +182,7 @@
                 <article>
                     <div class="row">
                     <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/images/icon/tk.png" alt="" width="250" height="200">
+                    <img src="assets/images/icon/trpl.jpeg" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
                         <span> D4 Teknologi Rekayasa Perangkat Lunak </span>
@@ -196,7 +196,7 @@
                 <article>
                     <div class="row">
                     <div class="col-lg-4" data-aos="fade-right">
-                    <img src="assets/images/icon/tk.png" alt="" width="250" height="200">
+                    <img src="assets/images/icon/himatif.jpeg" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
                         <span> D3 Teknologi Informasi</span>
