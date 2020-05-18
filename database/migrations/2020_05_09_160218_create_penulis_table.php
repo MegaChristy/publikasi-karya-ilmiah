@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDashboardTable extends Migration
+class CreatePenulisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateDashboardTable extends Migration
      */
     public function up()
     {
-        Schema::defaultStringLength(191);
-        Schema::create('dashboard', function (Blueprint $table) {
-            $table->bigIncrements('Id_dashboard');
-            $table->string('Jenis_aktivitas');
+        Schema::create('penulis', function (Blueprint $table) {
+            $table->bigIncrements('Id_penulis');
+            $table->string('Nama_penulis');
+            $table->string('Prodi');
+            $table->date('Judul');
         });
     }
 
@@ -27,6 +28,6 @@ class CreateDashboardTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dashboard');
+        Schema::dropIfExists('penulis');
     }
 }

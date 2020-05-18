@@ -15,12 +15,17 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-
 Route::get('/homecivitas', 'HomeController@home');
 Route::get('/civitaseditprofile', 'CivitasController@civitaseditprofile');
 Route::get('/civitasprofile', 'CivitasController@civitasprofile');
 
 Route::get('/homeadmin', 'HomeControllerA@home');
-
-Route::get('/' , 'KaryaIlmiahController@show');
+Route::get('/Tentang','TentangController@About');
+Route::get('/karyailmiah' , 'KaryailmiahController@index');
+Route::get('/penulis' , 'PenulisController@index');
+Route::post('/proses_login', 'AutentikasiController@login');
+Route::get('/prodi' , 'ProdiController@prodi');
+Route::get('/viewprodi' , 'ViewProdiController@viewprodi');
+Route::get('/login', function () {
+    return view('login');
+});
