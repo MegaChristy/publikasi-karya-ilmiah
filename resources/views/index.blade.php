@@ -47,7 +47,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
@@ -109,7 +109,7 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><span>Dashboard</span></li>
                             </ul>
                         </div>
@@ -124,6 +124,7 @@
                 </div>
             </div>
             <!-- page title area end -->
+            <br>
 
             <div class="main-content-inner">
 
@@ -168,7 +169,11 @@
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="col-xl-5 col-lg-6 coin-distribution">
+=======
+                    <div class="col-xl-6 col-lg-6 coin-distribution">
+>>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
                         <div class="card h-full">
                             <div class="card-body">
                                 <h4 class="header-title mb-0">Kata Kunci Populer</h4>
@@ -179,6 +184,7 @@
                 </div>
                 <!-- overview area end -->
         <!-- footer area start-->
+        </br>
         <footer>
             <div class="footer-area">
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
