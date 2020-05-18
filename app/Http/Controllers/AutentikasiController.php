@@ -10,7 +10,7 @@ use App\Admin;
 class AutentikasiController extends Controller
 {
     public function login(Request $request){
-        
+        $admin = Admin::where('username', $request->username)->where('password', $request->password)->get();
         $client = new Client(); //GuzzleHttp\Client
 
 
@@ -30,6 +30,10 @@ class AutentikasiController extends Controller
         //var_dump($json['result']);
         if($json['result'] == 1){
             return view('homecivitas');
+        }if(count($admin)){
+            return view('homeadmin');
+        }if(count($admin) == 0 && $json['result'] == 0){
+            return view('');
         }
 
         die();
