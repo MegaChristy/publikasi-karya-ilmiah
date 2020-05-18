@@ -50,10 +50,10 @@
                                 <a href="homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
@@ -62,7 +62,7 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -161,59 +161,7 @@
             </div>
             <!-- page title area end -->
             <div class="main-content-inner">
-                <!-- sales report area start -->
-                <div class="sales-report-area mt-5 mb-5">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-btc"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Bitcoin</h4>
-                                        <p>24 H</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales1" height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-report mb-xs-30">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-btc"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Bitcoin Dash</h4>
-                                        <p>24 H</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales2" height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-report">
-                                <div class="s-report-inner pr--20 pt--30 mb-3">
-                                    <div class="icon"><i class="fa fa-eur"></i></div>
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Euthorium</h4>
-                                        <p>24 H</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between pb-2">
-                                        <h2>$ 4567809,987</h2>
-                                        <span>- 45.87</span>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales3" height="100"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- sales report area end -->
                 <!-- overview area start -->
                 <div class="row">
@@ -221,7 +169,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Overview</h4>
+                                    <h4 class="header-title mb-0">Jumlah Pengunjung</h4>
                                     <select class="custome-select border-0 pr-3">
                                     <option selected>1 month</option>
                                         <option value="0">2 month</option>
@@ -242,55 +190,22 @@
                         </div>
                     </div>
                 </div>
-                <!-- overview area end -->
-
-                <!-- row area start -->
-                <div class="row">
-                    <!-- Live Crypto Price area start -->
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Kata Kunci Populer</h4>
-                                <div class="cripto-live mt-5">
-                                    <ul>
-                                        <li>
-                                            <div class="icon b">b</div> Bitcoin<span><i class="fa fa-long-arrow-up"></i>$876909.00</span></li>
-                                        <li>
-                                            <div class="icon l">l</div> Litecoin<span><i class="fa fa-long-arrow-up"></i>$29780.00</span></li>
-                                        <li>
-                                            <div class="icon d">d</div> Dashcoin<span><i class="fa fa-long-arrow-up"></i>$13276.00</span></li>
-                                        <li>
-                                            <div class="icon b">b</div> Bitcoindash<span><i class="fa fa-long-arrow-down"></i>$5684.890</span></li>
-                                        <li>
-                                            <div class="icon e">e</div> Euthorium<span><i class="fa fa-long-arrow-down"></i>$3890.98</span></li>
-                                        <li>
-                                            <div class="icon t">b</div> Tcoin<span><i class="fa fa-long-arrow-up"></i>$750.789</span></li>
-                                        <li>
-                                            <div class="icon b">b</div> Bitcoin<span><i class="fa fa-long-arrow-up"></i>$325.037</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Live Crypto Price area end -->
-                  
-                </div>
-                <!-- row area end -->
                 <div class="row mt-5">
                     <!-- latest news area start -->
-                    <div class="col-xl-6">
+                    <div class="row">
+                <div class="col-xl-6">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Latest News</h4>
+                                <h4 class="header-title">Karya Ilmiah Populer</h4>
                                 <div class="letest-news mt-5">
                                     <div class="single-post mb-xs-40 mb-sm-40">
                                         <div class="lts-thumb">
                                             <img src="assets/images/blog/post-thumb1.jpg" alt="post thumb">
                                         </div>
                                         <div class="lts-content">
-                                            <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
+                                            <span>Yolanda Melani</span>
+                                            <h2><a href="blog.html">Sistem Informasi Perpustakaan</a></h2>
+                                            <p>Sistem Informasi Perpustakaan Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
                                         </div>
                                     </div>
                                     <div class="single-post">
@@ -298,9 +213,19 @@
                                             <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
                                         </div>
                                         <div class="lts-content">
-                                            <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
+                                            <span>Angelia Meilysa</span>
+                                            <h2><a href="blog.html">Sistem Informasi Kampus (CIS)</a></h2>
+                                            <p>Sistem Informasi Kampus (CIS) Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
+                                        </div>
+                                    </div>
+                                    <div class="single-post">
+                                        <div class="lts-thumb">
+                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
+                                        </div>
+                                        <div class="lts-content">
+                                            <span>Mega Yohana</span>
+                                            <h2><a href="blog.html">Penerapan Algoritma YOLO dalam Penyiraman Tanaman</a></h2>
+                                            <p>Algoritma YOLO merupakan salah satu algoritma Real Object Detection yang sering digunakan dalam mengembangkan ...</p>
                                         </div>
                                     </div>
                                 </div>
