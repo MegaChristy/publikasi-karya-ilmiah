@@ -24,6 +24,8 @@ Route::get('/Tentang','TentangController@About');
 Route::get('/karyailmiah' , 'KaryailmiahController@index');
 Route::get('/penulis' , 'PenulisController@index');
 Route::post('/proses_login', 'AutentikasiController@login');
+Route::get('/prodi' , 'ProdiController@prodi');
+Route::get('/viewprodi' , 'ViewProdiController@viewprodi');
 Route::get('/login', function () {
     return view('login');
 });

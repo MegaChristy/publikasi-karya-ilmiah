@@ -47,13 +47,13 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li class="active">
-                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
                                 <a href="http://127.0.0.1:8000/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
@@ -109,7 +109,7 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="/">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><span>Dashboard</span></li>
                             </ul>
                         </div>
@@ -124,67 +124,34 @@
                 </div>
             </div>
             <!-- page title area end -->
-            <br>
 
-            <div class="main-content-inner">
+            <body>
 
-                <!-- overview area start -->
-                <div class="row">
-                <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Karya Ilmiah Populer</h4>
-                                <div class="letest-news mt-5">
-                                    <div class="single-post mb-xs-40 mb-sm-40">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb1.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Yolanda Melani</span>
-                                            <h2><a href="blog.html">Sistem Informasi Perpustakaan</a></h2>
-                                            <p>Sistem Informasi Perpustakaan Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Angelia Meilysa</span>
-                                            <h2><a href="blog.html">Sistem Informasi Kampus (CIS)</a></h2>
-                                            <p>Sistem Informasi Kampus (CIS) Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Mega Yohana</span>
-                                            <h2><a href="blog.html">Penerapan Algoritma YOLO dalam Penyiraman Tanaman</a></h2>
-                                            <p>Algoritma YOLO merupakan salah satu algoritma Real Object Detection yang sering digunakan dalam mengembangkan ...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-<<<<<<< HEAD
-                    <div class="col-xl-5 col-lg-6 coin-distribution">
-=======
-                    <div class="col-xl-6 col-lg-6 coin-distribution">
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
-                        <div class="card h-full">
-                            <div class="card-body">
-                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
-                                <div id="coin_distribution"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- overview area end -->
+<div class="container">
+<div class="row">
+<div class="col-10">
+<h1 class="mt-5"> Daftar Karya Ilmiah</h1>
+
+<table class = "table">
+<thead class="thead-dark">
+<tr>
+<th scope="col"> No</th>
+<th scope="col"> Publisher</th>
+<th scope="col"> Penulis</th>
+<th scope="col"> Tanggal Publikasi</th>
+<th scope="col"> Aksi</th>
+</tr>
+</thead>
+<tbody> 
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+            <!-- overview area end -->
         <!-- footer area start-->
-        </br>
         <footer>
             <div class="footer-area">
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
@@ -319,3 +286,6 @@
 </body>
 
 </html>
+
+   
+

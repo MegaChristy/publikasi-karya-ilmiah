@@ -56,10 +56,14 @@
                                 <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="http://127.0.0.1:8000/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
+<<<<<<< HEAD
                                 <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+=======
+                                <a href="http://127.0.0.1:8000/Tentang?#" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+>>>>>>> 45d4fb5428b2c777f0fb162789f7e7b3927cc700
                             </li>
                         </ul>
                     </nav>
