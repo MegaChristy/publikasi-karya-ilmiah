@@ -48,33 +48,20 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-<<<<<<< HEAD
-                            <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
-=======
                             <li >
                                 <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
                             </li>
                             <li>
                                 <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
-<<<<<<< HEAD
-                            <li>
-=======
                             <li class="active">
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
                                 <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-<<<<<<< HEAD
-                                <a href="http://127.0.0.1:8000/Tentang?#" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
-=======
                                 <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
                             </li>
                         </ul>
                     </nav>
@@ -102,9 +89,6 @@
                             </form>
                         </div>
                     </div>
-<<<<<<< HEAD
-                </div>
-=======
 
                     <!-- profile info & task notification -->
                     <div class="col-md-6 col-sm-4 clearfix">
@@ -142,7 +126,6 @@
                 </div>
             </div>
             <!-- page title area end -->
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
 <div class="container">        
 <div class="row">
 <div class="col-10">
@@ -176,8 +159,12 @@
 </div>
 </div>
 </div>
-<<<<<<< HEAD
-=======
+      
+      <footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
       </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -186,7 +173,6 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
     <script src="assets/js/popper.min.js"></script>
