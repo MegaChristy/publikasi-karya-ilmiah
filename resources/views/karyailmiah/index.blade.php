@@ -83,8 +83,13 @@
                             <span></span>
                         </div>
                         <div class="search-box pull-left">
+<<<<<<< HEAD
                             <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
                                 <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
+=======
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
+>>>>>>> eb1a0fba3ba441fedcd72b7efa2fadb4032723c7
                                 <i class="ti-search"></i>
                             </form>
                         </div>
