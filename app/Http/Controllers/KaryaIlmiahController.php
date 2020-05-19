@@ -13,10 +13,14 @@ class KaryailmiahController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //$karyailmiah = DB::table('karyailmiah')->get();
-        $karyailmiah = \App\karyailmiah::all();
+        if($request->has('cari')){
+            $karyailmiah = \App\karyailmiah::where('judul','LIKE','%' . $request->cari . '%')->get();
+        } else{
+            $karyailmiah = \App\karyailmiah::all();
+        }
         return view('karyailmiah.index',['karyailmiah' => $karyailmiah]);
     }
 

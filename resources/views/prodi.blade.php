@@ -46,20 +46,20 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            <li>
+                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                            </li>
+                            <li class="active">
+                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="http://127.0.0.1:8000/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
-                            </li>
-                            <li>
-                                <a href="http://127.0.0.1:8000/Tentang?#" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -107,10 +107,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
+                            <h4 class="page-title pull-left">Program Studi</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>Dashboard</span></li>
+                                <li><a href="/">Home</a></li>
+                                <li><span>Program Studi</span></li>
                             </ul>
                         </div>
                     </div>

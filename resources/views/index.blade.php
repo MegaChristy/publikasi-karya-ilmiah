@@ -56,10 +56,10 @@
                                 <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="http://127.0.0.1:8000/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="http://127.0.0.1:8000/Tentang?#" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -81,8 +81,8 @@
                             <span></span>
                         </div>
                         <div class="search-box pull-left">
-                            <form action="#">
-                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
+                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
@@ -169,11 +169,7 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <div class="col-xl-5 col-lg-6 coin-distribution">
-=======
                     <div class="col-xl-6 col-lg-6 coin-distribution">
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
                         <div class="card h-full">
                             <div class="card-body">
                                 <h4 class="header-title mb-0">Kata Kunci Populer</h4>

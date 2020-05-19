@@ -48,31 +48,20 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-<<<<<<< HEAD
-                            <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
-                            </li>
-                            <li>
-=======
                             <li >
                                 <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li class="active">
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
                                 <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
                                 <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-<<<<<<< HEAD
-                                <a href="http://127.0.0.1:8000/Tentang?#" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
-=======
                                 <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
                             </li>
                         </ul>
                     </nav>
@@ -94,20 +83,12 @@
                             <span></span>
                         </div>
                         <div class="search-box pull-left">
-                            <form action="#">
-<<<<<<< HEAD
-                                <input type="text" name="search" placeholder="Cari Penulis" required>
-=======
-                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
+                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
                     </div>
-<<<<<<< HEAD
-                </div>
-<div class="container">        
-=======
 
                     <!-- profile info & task notification -->
                     <div class="col-md-6 col-sm-4 clearfix">
@@ -146,7 +127,6 @@
             </div>
             <!-- page title area end -->
 <div class="container">
->>>>>>> 4dfe5fbddd7191494ad204eb461cb7beb0acf6bd
 <div class="row">
 <div class="col-10">
 <h1 class="mt-5"> Daftar Karya Ilmiah</h1>
@@ -181,6 +161,13 @@
 </div>
 </div>
 </div>
+
+<footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+      </div>
 
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

@@ -47,7 +47,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li class="active">
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
@@ -84,9 +84,9 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="search-box pull-left">
-                            <form action="#">
-                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
+                       <div class="search-box pull-left">
+                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
@@ -142,7 +142,7 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="homeadmin">Home</a></li>
                                 <li><span>Dashboard</span></li>
                             </ul>
                         </div>
