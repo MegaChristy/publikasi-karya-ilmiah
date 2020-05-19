@@ -90,10 +90,7 @@
                             <span></span>
                         </div>
                         <div class="search-box pull-left">
-                            <form action="#">
-                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
-                                <i class="ti-search"></i>
-                            </form>
+                            
                         </div>
                     </div>
 
