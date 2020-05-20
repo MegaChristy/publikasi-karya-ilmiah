@@ -18,6 +18,10 @@ Route::get('/', function () {
 Route::get('/homecivitas', 'HomeController@home');
 Route::get('/civitaseditprofile', 'CivitasController@civitaseditprofile');
 Route::get('/civitasprofile', 'CivitasController@civitasprofile');
+Route::get('/civitaskaryailmiah', 'CivitasController@civitaskaryailmiah');
+Route::get('/civitaspenulis', 'CivitasController@civitaspenulis');
+Route::get('/civitastentang', 'CivitasController@civitastentang');
+Route::get('/civitasprodi', 'CivitasController@civitasprodi');
 
 Route::get('/homeadmin', 'HomeControllerA@home');
 Route::get('/Tentang','TentangController@About');

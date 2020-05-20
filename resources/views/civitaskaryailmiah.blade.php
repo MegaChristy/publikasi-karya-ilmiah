@@ -49,19 +49,19 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li >
-                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li class="active">
-                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -83,7 +83,7 @@
                             <span></span>
                         </div>
                         <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                            <form class="form-inline my-2 my-lg-0" method="GET">
                                 <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
                         </div>
                     </div>
@@ -116,8 +116,12 @@
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
-                            <div class="text-right">
-                                <a href="login" style="color:white">Login</a>
+                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="civitasprofile">Profile</a>
+                                <a class="dropdown-item" href="#">Kirim Karya Ilmiah</a>
+                                <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
                     </div>
@@ -141,7 +145,7 @@
 </thead>
 <tbody> 
 
-@foreach($karyailmiah as $ki)
+@foreach($karyailmiah ?? '' as $ki)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>
