@@ -40,4 +40,7 @@ class CivitasController extends Controller
     public function civitasprodi(){
         return view('civitasprodi');
     }
+    public function civitasrequest(){
+        return view('civitasrequest');
+    }
 }

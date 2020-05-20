@@ -30,6 +30,7 @@ Route::get('/penulis' , 'PenulisController@index');
 Route::post('/proses_login', 'AutentikasiController@login');
 Route::get('/prodi' , 'ProdiController@prodi');
 Route::get('/viewprodi' , 'ViewProdiController@viewprodi');
+Route::get('/civitasrequest' , 'CivitasController@civitasrequest');
 Route::get('/login', function () {
     return view('login');
 });

@@ -47,19 +47,19 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li class="active">
-                                <a href="/homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -82,8 +82,8 @@
                             <span></span>
                         </div>
                         <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
-                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
+                            <form action="#">
+                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
@@ -137,10 +137,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
+                            <h4 class="page-title pull-left">Kirim Karya Ilmiah</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="homecivitas">Home</a></li>
-                                <li><span>Dashboard</span></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><span>Kirim Karya Ilmiah</span></li>
                             </ul>
                         </div>
                     </div>
@@ -158,60 +158,76 @@
                 </div>
             </div>
             <!-- page title area end -->
-            <div class="main-content-inner">
-                <!-- overview area start -->
-                <div class="row">
-                <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Karya Ilmiah Populer</h4>
-                                <div class="letest-news mt-5">
-                                    <div class="single-post mb-xs-40 mb-sm-40">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb1.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Yolanda Melani</span>
-                                            <h2><a href="blog.html">Sistem Informasi Perpustakaan</a></h2>
-                                            <p>Sistem Informasi Perpustakaan Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Angelia Meilysa</span>
-                                            <h2><a href="blog.html">Sistem Informasi Kampus (CIS)</a></h2>
-                                            <p>Sistem Informasi Kampus (CIS) Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Mega Yohana</span>
-                                            <h2><a href="blog.html">Penerapan Algoritma YOLO dalam Penyiraman Tanaman</a></h2>
-                                            <p>Algoritma YOLO merupakan salah satu algoritma Real Object Detection yang sering digunakan dalam mengembangkan ...</p>
-                                        </div>
-                                    </div>
+
+            <div class="container" style="margin-top:20px">
+    <h1 class="text-center">Unggah Karya Ilmiah</h1>
+    <div class="col-md-10 offset-md-5">
+    </div>
+    <form>
+           <div class="row mt-9">
+                    <div class="col-md-11">
+                        <div class="form-group">
+                        <th>
+                            <label for="judul"><b>Judul</b></label>
+                            <input type="text" id="judul" name="judul" class="form-control" value="">
+                        </th>
+                        </div>
+                 
+                        <div class="form-group">
+                        <th>
+                            <label for="deskripsi"><b>Deskripsi</b></label>
+                            <textarea rows="2" id="deskripsi" name="deskripsi" class="form-control"></textarea>
+                        </th>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            <label for="penulis"><b>Penulis</b></label>
+                            <input type="text" id="penulis" name="penulis" class="form-control" value="">
+                        </div>
+                    </th>
+                        <div class="form-group">
+                            <label for="pembimbing"><b>Pembimbing</b></label>
+                            <input type="text" id="pembimbing" name="pembingbing" class="form-control" value="">
+                        </div>
+                    </div>
+                    <th>
+                        <div class="col-md-11">
+                            <label for="prodi"><b>Prodi</b></label>
+                            <select name="" class="form-control" id="prodi">
+                                <option value=""></option>
+                                <option value="">D3 Teknologi Informasi</option>
+                                <option value="">D3 Teknologi Komputer</option>
+                                <option value="">D4 Teknologi Rekaya Perangkat Lunak</option>
+                                <option value="">S1 Sistem Informasi</option>
+                                <option value="">S1 Informatika</option>
+                                <option value="">S1 Teknik Elektro</option>
+                                <option value="">S1 Manajemen Rekayasa</option>
+                                <option value="">S1 Teknik Bioproses</option>
+                               
+                    </th>
+                    <div class="col-md-11">
+                            <textarea rows="3" id="" name="" class="form-control"></textarea>
+                            <form action="" method="post" enctype="multipart/form-data">
+                            <p><input type='file'/></p>
+                        </div>
+                            <div class="">
+                                <div class="col">
+                                <ul class="right">
+                                    <button><input class="btn btn-primary right-block" type="button" value="Lakukan Permintaan" id="lakukan permintaan"></button>
+                                    <button><input class="btn btn-primary right-block" type="button" value="Batalkan" id="batalkan" style="background-color:red"></button>
+                                </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 coin-distribution">
-                        <div class="card h-full">
-                            <div class="card-body">
-                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
-                                <div id="coin_distribution"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <input type="hidden" name="action" value="place-order">
                 </div>
-                <!-- overview area end -->
-        <!-- footer area start-->
-        </br>
+        </div>
+    </div>
+</div>
+</form>
+           
         <footer>
             <div class="footer-area">
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
@@ -346,3 +362,4 @@
 </body>
 
 </html>
+
