@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\karyailmiah;
 
 class CivitasController extends Controller
 {
@@ -41,6 +41,8 @@ class CivitasController extends Controller
         return view('civitasprodi');
     }
     public function civitasrequest(){
-        return view('civitasrequest');
+        
+        $karyailmiah = karyailmiah::all();
+        return view('civitaskaryailmiah');
     }
 }
