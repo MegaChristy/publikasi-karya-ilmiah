@@ -33,6 +33,7 @@ Route::get('/viewprodi' , 'ViewProdiController@viewprodi');
 Route::get('/login', function () {
     return view('login');
 });
+<<<<<<< HEAD
 
 Route::get('/Publikasi' , 'PublikasiController@index')->name('Publikasi.index');
 Route::get('/tambah' , 'PublikasiController@create')->name('Publikasi.create');
@@ -42,3 +43,8 @@ Route::get('/civitasrequest' , 'CivitasController1@index')->name('KirimKI.index'
 Route::get('/kirimkaryailmiah' , 'CivitasController1@create')->name('KirimKI.create');
 Route::PUT('/store' , 'CivitasController1@store')->name('KirimKI.store');
 Route::get('/files/{id}','CivitasController1@showDetailFile');
+=======
+Route::get('/Publikasi' , 'PublikasiController@index')->name('Publikasi.index');
+Route::get('/tambah' , 'PublikasiController@create')->name('Publikasi.create');
+Route::PUT('/store' , 'PublikasiController@store')->name('Publikasi.store');
+>>>>>>> c884b187d7bfd9cf0467dade968ecb428216347d

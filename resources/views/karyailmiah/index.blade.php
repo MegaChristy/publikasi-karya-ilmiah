@@ -148,7 +148,10 @@
 <td>{{$ki -> Judul}}</td>
 <td>{{$ki -> Penulis}}</td>
 <td>{{$ki -> created_at}}</td>
+<<<<<<< HEAD
 <td>{{$ki -> File}}</td>
+=======
+>>>>>>> c884b187d7bfd9cf0467dade968ecb428216347d
 <td>
 <a href="/files" class="badge badge-primary">Lihat</a> 
 </td>
