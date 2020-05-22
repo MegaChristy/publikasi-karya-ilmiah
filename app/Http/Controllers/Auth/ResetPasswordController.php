@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use App\Http\Requests\ErrorFormRequest;
 
 class ResetPasswordController extends Controller
 {
@@ -18,7 +19,10 @@ class ResetPasswordController extends Controller
     | explore this trait and override any methods you wish to tweak.
     |
     */
-
+    public function __store(ErrorFormRequest $request)
+    {
+    //script code
+    }
     use ResetsPasswords;
 
     /**

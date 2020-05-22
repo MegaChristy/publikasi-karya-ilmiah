@@ -22,15 +22,15 @@
       
       <label class="sr-only" for="inputUsername">Username</label>
       <input class="form-control" id="inputUsername" autofocus="" required="" type="username" placeholder="Username" name="username"> 
-      <!-- @error('username')
-      <p style="color:red">{{$message??'Username yang anda masukkan salah'}}</p></div>
-      @enderror-->
+    
      <p> <label class="sr-only" for="inputPassword">Password</label></p>
       <input class="form-control" id="inputPassword" required="" type="password" placeholder="Password" name="password">
        <!--@error('password')
       <p style="color:red">{{$message}}</p>
       @enderror-->
-
+      <div class="alert alert-danger">
+      <p style="color:red">{{$message??'Incorrect username or password'}}</p></div>
+      </div>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
-
+use App\Http\Requests\ErrorFormRequest;
 class ForgotPasswordController extends Controller
 {
     /*
@@ -17,6 +17,9 @@ class ForgotPasswordController extends Controller
     | your application to your users. Feel free to explore this trait.
     |
     */
-
+    public function __store(ErrorFormRequest $request)
+    {
+    //script code
+    }
     use SendsPasswordResetEmails;
 }
