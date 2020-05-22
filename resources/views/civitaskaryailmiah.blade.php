@@ -109,7 +109,7 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Karya Ilmiah</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="/">Home</a></li>
+                                <li><a href="homecivitas">Home</a></li>
                                 <li><span>Karya Ilmiah</span></li>
                             </ul>
                         </div>
@@ -150,7 +150,7 @@
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>
 <td>{{$ki -> Penulis}}</td>
-<td>{{$ki -> Tanggal_publikasi}}</td>
+<td>{{$ki -> created_at}}</td>
 <td>
 <a href="" class="badge badge-primary">Lihat</a> 
 </td>

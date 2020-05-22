@@ -46,7 +46,7 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li class="active">
+                            <li>
                                 <a href="homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
@@ -56,9 +56,9 @@
                                 <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
@@ -140,10 +140,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
+                            <h4 class="page-title pull-left">Tambah Publikasi</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="homeadmin">Home</a></li>
-                                <li><span>Dashboard</span></li>
+                                <li><span>Tambah Publikasi</span></li>
                             </ul>
                         </div>
                     </div>
@@ -160,82 +160,80 @@
                 </div>
             </div>
             <!-- page title area end -->
+            <br>
             <div class="main-content-inner">
                 
                 <!-- sales report area end -->
                 <!-- overview area start -->
                 <div class="row">
-                    <div class="col-xl-9 col-lg-8">
+                    <div class="col-xl-12 col-lg-8">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Jumlah Pengunjung</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                    <option selected>1 month</option>
-                                        <option value="0">2 month</option>
-                                        <option value="0">3 month</option>
-                                        <option value="0">1 year</option>
-                                    </select>
+                                    <div class="col-md-12">
+                                        <h4 class="header-title mb-0">Publikasi Karya Ilmiah</h4>
+                                        <br>
+                                        <form method="post" action="{{route('Publikasi.store')}}" enctype=”multipart/form-data” >
+                                            @csrf
+                                            @method('PUT')
+                                            <div class="form-group">
+                                                <h8>Judul
+                                                <input type="text" name="judul" class="form-control" placeholder="Judul"/>
+                                                </h8>
+                                            </div>
+                                            <div class="form-group">
+                                                <h8>Deskripsi
+                                                <textarea name="deskripsi" class="form-control" placeholder="Deskripsi"></textarea>
+                                                </h8>
+                                            </div>
+                                            <div class="form-group">
+                                                <h8>Penulis
+                                                <input type="textarea" name="penulis" class="form-control" placeholder="Nama Penulis"/>
+                                                </h8>
+                                            </div>
+                                            <div class="form-group">
+                                                <h8>Pembimbing
+                                                <input type="textarea" name="pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
+                                                </h8>
+                                            </div>
+                                            <div class="form-group">
+                                                <h8>Program Studi</h8>
+                                                <select name="ProgramStudi" class="form-control">
+                                                    <option value="S1 Informatika">S1 Informatika</option>
+                                                    <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
+                                                    <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
+                                                    <option value="S1 Manajemen Rekayasa">S1 Manajemen Rekayasa</option>
+                                                    <option value="S1 Teknik Bioproses">S1 Teknik Bioproses</option>
+                                                    <option value="D4 Teknologi Rekayasa Perangkat Lunak">D4 Teknologi Rekayasa Perangkat Lunak</option>
+                                                    <option value="D3 Teknologi Informasi">D3 Teknologi Informasi</option>
+                                                    <option value="D3 Teknologi Komputer">D3 Teknologi Komputer</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <h8>Jenis Karya Ilmiah</h8>
+                                                <select name="JenisKaryaIlmiah" class="form-control">
+                                                    <option value="Tugas Akhir">Tugas Akhir</option>
+                                                    <option value="Makalah">Makalah</option>
+                                                    <option value="Paper">Paper</option>
+                                                    <option value="Skripsi">Skripsi</option>
+                                                    <option value="Artikel">Artikel</option>
+                                                    <option value="Program Kreativitas Mahasiswa">Program Kreativitas Mahasiswa</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <h8>File</h8>
+                                                <input type='file' name='file' accept='file/*' class='form-control' />
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit">Tambah</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div id="verview-shart"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 coin-distribution">
-                        <div class="card h-full">
-                            <div class="card-body">
-                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
-                                <div id="coin_distribution"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-5">
-                    <!-- latest news area start -->
-                    <div class="row">
-                <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Karya Ilmiah Populer</h4>
-                                <div class="letest-news mt-5">
-                                    <div class="single-post mb-xs-40 mb-sm-40">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb1.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Yolanda Melani</span>
-                                            <h2><a href="blog.html">Sistem Informasi Perpustakaan</a></h2>
-                                            <p>Sistem Informasi Perpustakaan Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Angelia Meilysa</span>
-                                            <h2><a href="blog.html">Sistem Informasi Kampus (CIS)</a></h2>
-                                            <p>Sistem Informasi Kampus (CIS) Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Mega Yohana</span>
-                                            <h2><a href="blog.html">Penerapan Algoritma YOLO dalam Penyiraman Tanaman</a></h2>
-                                            <p>Algoritma YOLO merupakan salah satu algoritma Real Object Detection yang sering digunakan dalam mengembangkan ...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- latest news area end -->
-
-                </div>
-                <!-- row area start-->
             </div>
         </div>
         <!-- main content area end -->

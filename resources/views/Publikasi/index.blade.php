@@ -46,7 +46,7 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li class="active">
+                            <li>
                                 <a href="homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
@@ -58,7 +58,7 @@
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
@@ -140,10 +140,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
+                            <h4 class="page-title pull-left">Publikasi</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="homeadmin">Home</a></li>
-                                <li><span>Dashboard</span></li>
+                                <li><span>Publikasi</span></li>
                             </ul>
                         </div>
                     </div>
@@ -160,82 +160,54 @@
                 </div>
             </div>
             <!-- page title area end -->
+            <br>
             <div class="main-content-inner">
                 
                 <!-- sales report area end -->
                 <!-- overview area start -->
                 <div class="row">
-                    <div class="col-xl-9 col-lg-8">
+                    <div class="col-xl-12 col-lg-8">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Jumlah Pengunjung</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                    <option selected>1 month</option>
-                                        <option value="0">2 month</option>
-                                        <option value="0">3 month</option>
-                                        <option value="0">1 year</option>
-                                    </select>
-                                </div>
-                                <div id="verview-shart"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 coin-distribution">
-                        <div class="card h-full">
-                            <div class="card-body">
-                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
-                                <div id="coin_distribution"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <!-- latest news area start -->
-                    <div class="row">
-                <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Karya Ilmiah Populer</h4>
-                                <div class="letest-news mt-5">
-                                    <div class="single-post mb-xs-40 mb-sm-40">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb1.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Yolanda Melani</span>
-                                            <h2><a href="blog.html">Sistem Informasi Perpustakaan</a></h2>
-                                            <p>Sistem Informasi Perpustakaan Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Angelia Meilysa</span>
-                                            <h2><a href="blog.html">Sistem Informasi Kampus (CIS)</a></h2>
-                                            <p>Sistem Informasi Kampus (CIS) Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Mega Yohana</span>
-                                            <h2><a href="blog.html">Penerapan Algoritma YOLO dalam Penyiraman Tanaman</a></h2>
-                                            <p>Algoritma YOLO merupakan salah satu algoritma Real Object Detection yang sering digunakan dalam mengembangkan ...</p>
-                                        </div>
+                                    <div class="col-md-12">
+                                        <h4 class="header-title mb-0">Publikasi Karya Ilmiah</h4>
+                                        <br>
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <th scope="col">No</th>
+                                                <th scope="col">Judul</th>
+                                                <th scope="col">Deskripsi</th>
+                                                <th scope="col">Penulis</th>
+                                                <th scope="col">Pembimbing</th>
+                                                <th scope="col">Program Studi</th>
+                                                <th scope="col">Jenis Karya Ilmiah</th>
+                                                <th scope="col">File</th>
+                                                <th scope="col">Tanggal Publikasi</th>
+                                                <th scope="col">Aksi</th>
+                                            </tr>
+                                                @foreach($Publikasi as $item)
+                                                    <tr>
+                                                        <th scope="row">{{$loop->iteration}}</th>
+                                                        <td>{{$item['Judul']}}</td>
+                                                        <td>{{$item['Deskripsi']}}</td>
+                                                        <td>{{$item['Penulis']}}</td>
+                                                        <td>{{$item['Pembimbing']}}</td>
+                                                        <td>{{$item['ProgramStudi']}}</td>
+                                                        <td>{{$item['JenisKaryaIlmiah']}}</td>
+                                                        <td>{{$item['File']}}</td>
+                                                        <td>{{$item['created_at']}}</td>
+                                                        <td><a href="">Lihat</a></td>
+                                                    </tr>
+                                                @endforeach
+                                        </table>
+                                        <a href="{{route('Publikasi.create')}}" class="btn btn-primary">Tambah</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- latest news area end -->
-
                 </div>
-                <!-- row area start-->
             </div>
         </div>
         <!-- main content area end -->

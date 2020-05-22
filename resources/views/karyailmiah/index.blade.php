@@ -146,7 +146,7 @@
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>
 <td>{{$ki -> Penulis}}</td>
-<td>{{$ki -> Tanggal_publikasi}}</td>
+<td>{{$ki -> created_at}}</td>
 <td>
 <a href="" class="badge badge-primary">Lihat</a> 
 </td>

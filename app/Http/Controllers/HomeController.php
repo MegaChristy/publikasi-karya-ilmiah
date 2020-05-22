@@ -10,4 +10,9 @@ class HomeController extends Controller
     {
         return view('homecivitas');
     }
+
+    public function homeadmin()
+    {
+        return view('homeadmin');
+    }
 }

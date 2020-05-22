@@ -23,7 +23,7 @@ Route::get('/civitaspenulis', 'CivitasController@civitaspenulis');
 Route::get('/civitastentang', 'CivitasController@civitastentang');
 Route::get('/civitasprodi', 'CivitasController@civitasprodi');
 
-Route::get('/homeadmin', 'HomeControllerA@home');
+Route::get('/homeadmin', 'HomeController@homeadmin');
 Route::get('/Tentang','TentangController@About');
 Route::get('/karyailmiah' , 'KaryailmiahController@index');
 Route::get('/penulis' , 'PenulisController@index');
@@ -34,3 +34,6 @@ Route::get('/civitasrequest' , 'CivitasController@civitasrequest');
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/Publikasi' , 'PublikasiController@index')->name('Publikasi.index');
+Route::get('/tambah' , 'PublikasiController@create')->name('Publikasi.create');
+Route::PUT('/store' , 'PublikasiController@store')->name('Publikasi.store');
