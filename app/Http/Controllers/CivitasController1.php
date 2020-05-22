@@ -3,25 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\KirimKI;
+use App\karyailmiah;
 
 
-class PenulisController extends Controller
+class CivitasController1 extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-{
-        //$karyailmiah = DB::table('karyailmiah')->get();
-        if($request->has('cari')){
-            $penulis = \App\penulis::where('nama_penulis','LIKE','%' . $request->cari . '%')->get();
-        } else{
-            $penulis = \App\penulis::all();
-        }
-        return view('penulis.index',['penulis' => $penulis]);
+    public function index()
+    {
+        $KirimKI = karyailmiah::all();
+        return view('KirimKI.index', compact('KirimKI'));
     }
 
     /**
@@ -31,7 +27,7 @@ class PenulisController extends Controller
      */
     public function create()
     {
-        //
+        return view('KirimKI/tambah');
     }
 
     /**
@@ -42,9 +38,21 @@ class PenulisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        karyailmiah::create($request->all());
+        $file = new karyailmiah; 
+        if($request->file('File')){
+            $file = $request->file('File');
+            $filename = $request->judul.'.'.$file->getClientOriginalExtension();
+            $request->File->move('storage/',$filename);
+            $data->File = $filename;
+        } 
+        return redirect()->route('KirimKI.index');
     }
 
+        public function showDetailFile($id){
+        $file = karyailmiah::find($id);
+        return view('karyailmiah.detailsFile',compact('file'));
+    }
     /**
      * Display the specified resource.
      *

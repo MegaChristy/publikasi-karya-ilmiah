@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> 
     <title>SIKI-Institut Teknologi Del</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
@@ -47,7 +47,7 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li class="active">
-                                <a href="homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="/homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
@@ -56,7 +56,7 @@
                                 <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
                                 <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
@@ -82,8 +82,8 @@
                             <span></span>
                         </div>
                         <div class="search-box pull-left">
-                            <form action="#">
-                                <input type="text" name="search" placeholder="Cari Karya Ilmiah" required>
+                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
                                 <i class="ti-search"></i>
                             </form>
                         </div>
@@ -126,7 +126,7 @@
                             <li class="settings-btn">
                                 <i class="ti-settings"></i>
                             </li>
-                        </ul>
+                        </ul> 
                     </div>
                 </div>
             </div>
@@ -137,11 +137,10 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Edit Profile</h4>
+                            <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="homecivitas">Home</a></li>
-                                <li><a href="civitasprofile">Profile</a><li>
-                                <li><span>Edit Profile</span></li>
+                                <li><span>Dashboard</span></li>
                             </ul>
                         </div>
                     </div>
@@ -151,74 +150,148 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="#">Kirim Karya Ilmiah</a>
+                                <a class="dropdown-item" href="civitasrequest">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- overview area end -->
-            <!-- market value area start -->
-            <div class="row mt-5 mb-5">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="market-status-table mt-4">
-                            <div class="table-responsive">
-                              <form class="form-horizontal" action ="#" enctype="multipart/form-data">
-                                    <table class="table">
-                                        <tr>
-                                            <td>Nama Depan : </td>
-                                            <td>
-                                                <label class="sr-only" for="inputNamaDepan">Nama Depan</label>
-                                                <input class="form-control" id="inputNamaDepan" autofocus="" required="" type="namadepan" placeholder="Nama Depan">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nama Belakang : </td>
-                                            <td>
-                                                <label class="sr-only" for="inputNamaBelakang">Nama Belakang</label>
-                                                <input class="form-control" id="inputNamaBelakang" autofocus="" required="" type="namabelakang" placeholder="Nama Belakang">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alamat : </td>
-                                            <td>
-                                                <label class="sr-only" for="inputAlamat">Alamat</label>
-                                                <input class="form-control" id="inputAlamat" autofocus="" required="" type="alamat" placeholder="Alamat">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Email : </td>
-                                            <td>
-                                                <label class="sr-only" for="inputEmail">Email</label>
-                                                <input class="form-control" id="inputEmail" autofocus="" required="" type="email" placeholder="Email">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>No. Telp : </td>
-                                            <td>
-                                                <label class="sr-only" for="inputNoTelp">No. Telp</label>
-                                                <input class="form-control" id="inputNoTelp" required="" type="notelp" placeholder="Notelp">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Unggah Foto : </td>
-                                            <td>
-                                                <label class="sr-only" for="inputfoto">Pilih Foto</label>
-                                                <input class="form-control" id="inputfoto" required="" type="file" accept='image/*' placeholder="Foto">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <a class="btn btn-primary btn-lg" href="civitasprofile" role="button">Simpan</a>
-                                  </form>
+
+<div class="main-content-inner">
+                <!-- sales report area start -->
+                <div class="sales-report-area mt-5 mb-5">
+                    <div class="row">
+                    @foreach($file  as $key=>$data)
+                        <div class="col-md-4">
+                            <div class="single-report mb-xs-30">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
+                                    <div class="s-report-title d-flex justify-content-between">
+                                        <h4 class="header-title mb-0"><a href="/files/{{$data->id}}">{{$data->judul}}</a></h4>
+                                        @if($data->status == 'Requested')
+                                        <p>{{$data->status}}</p>
+                                        @elseif($data->status == 'Published')
+                                        <p>Publish</p>
+                                        @endif
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <b>{{$data->publisher}}</b>
+                                        <span>Penulis : <br>{{$data->penulis}}</span>
+                                    </div>
+                                </div>
+                                <!-- <canvas id="coin_sales1" height="100"></canvas> -->
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+                </div>
+</div>
+
+
+</br>
+        <footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+    </div>
+    <!-- page container area end -->
+    <!-- offset area start -->
+    <div class="offset-area">
+        <div class="offset-close"><i class="ti-close"></i></div>
+        <ul class="nav offset-menu-tab">
+            <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-toggle="tab" href="#settings">Settings</a></li>
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="fa fa-bomb"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Member waiting for you Attention</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg2">
+                            <i class="fa fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                    <div class="timeline-task">
+                        <div class="icon bg3">
+                            <i class="ti-signal"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>Rashed sent you an email</h4>
+                            <span class="time"><i class="ti-time"></i>09:35</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="settings" class="tab-pane fade">
+                <div class="offset-settings">
+                    <h4>General Settings</h4>
+                    <div class="settings-list">
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch1" />
+                                    <label for="switch1">Toggle</label>
                                 </div>
                             </div>
+                            <p>Keep it 'On' When you want to get all the notification.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show Task statistics</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch4" />
+                                    <label for="switch4">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch5" />
+                                    <label for="switch5">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Use checkboxes when looking for yes or no answers.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
     <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>

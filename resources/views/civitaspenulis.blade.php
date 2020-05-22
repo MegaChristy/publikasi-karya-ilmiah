@@ -113,7 +113,7 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Penulis</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="/">Home</a></li>
+                                <li><a href="homecivitas">Home</a></li>
                                 <li><span>Penulis</span></li>
                             </ul>
                         </div>

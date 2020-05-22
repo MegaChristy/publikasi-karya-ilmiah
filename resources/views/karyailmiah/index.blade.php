@@ -136,6 +136,7 @@
 <th scope="col"> Judul</th>
 <th scope="col"> Penulis</th>
 <th scope="col"> Tanggal Publikasi</th>
+<th scope="col"> File</th>
 <th scope="col"> Aksi</th>
 </tr>
 </thead>
@@ -146,9 +147,10 @@
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>
 <td>{{$ki -> Penulis}}</td>
-<td>{{$ki -> Tanggal_publikasi}}</td>
+<td>{{$ki -> created_at}}</td>
+<td>{{$ki -> File}}</td>
 <td>
-<a href="" class="badge badge-primary">Lihat</a> 
+<a href="/files" class="badge badge-primary">Lihat</a> 
 </td>
 </tr>
 @endforeach
@@ -163,7 +165,7 @@
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
-      </div>
+    </div>
 
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

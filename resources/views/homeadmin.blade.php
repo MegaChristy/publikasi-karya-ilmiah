@@ -59,7 +59,7 @@
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
+                                <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
                                 <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>

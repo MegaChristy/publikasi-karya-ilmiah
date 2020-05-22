@@ -3,25 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\KaryaIlmiah;
 
-
-class PenulisController extends Controller
+class PublikasiController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-{
-        //$karyailmiah = DB::table('karyailmiah')->get();
-        if($request->has('cari')){
-            $penulis = \App\penulis::where('nama_penulis','LIKE','%' . $request->cari . '%')->get();
-        } else{
-            $penulis = \App\penulis::all();
-        }
-        return view('penulis.index',['penulis' => $penulis]);
+    public function index()
+    {
+        $Publikasi = karyailmiah::all();
+        return view('Publikasi.index', compact('Publikasi'));
     }
 
     /**
@@ -31,7 +25,7 @@ class PenulisController extends Controller
      */
     public function create()
     {
-        //
+        return view('Publikasi/tambah');
     }
 
     /**
@@ -42,7 +36,8 @@ class PenulisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        karyailmiah::create($request->all());
+        return redirect()->route('Publikasi.index');
     }
 
     /**
