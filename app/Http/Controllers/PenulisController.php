@@ -14,7 +14,7 @@ class PenulisController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
- {
+{
         //$karyailmiah = DB::table('karyailmiah')->get();
         if($request->has('cari')){
             $penulis = \App\penulis::where('nama_penulis','LIKE','%' . $request->cari . '%')->get();
