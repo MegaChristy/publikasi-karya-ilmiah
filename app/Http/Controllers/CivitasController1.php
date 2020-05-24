@@ -41,24 +41,27 @@ public function store(Request $request)
         karyailmiah::create($request->all());
         $file = new karyailmiah; 
         
-        $data->judul = $request->judul;
-        $data->deskripsi = $request->deskripsi;
-        $data->penulis = $request->penulis;
-        $data->pembimbing = $request->penulis;
-        $data->ProgramStudi = $request->penulis;
-        $data->JenisKaryaIlmiah = $request->penulis;
-        $data->status = "Requested";
+      $data->judul = $request->judul;
+      $data->deskripsi = $request->deskripsi;
+      $data->penulis = $request->penulis;
+      $data->pembimbing = $request->penulis;
+      $data->ProgramStudi = $request->penulis;
+      $data->JenisKaryaIlmiah = $request->penulis;
+      $data->status = "Requested";
         if($request->file('File')){
             $file = $request->file('File');
             $filename = $request->judul.'.'.$file->getClientOriginalExtension();
             $request->File->move('storage/',$filename);
             $data->File = $filename;
         } 
-        $data->save();
+        //$data->save();
 
         return redirect()->route('KirimKI.index');
     }
-
+    public function showDetailFile($id){
+        $file = karyailmiah::find($id);
+        return view('karyailmiah.detailsFile',compact('file'));
+    }
     public function getAllReject(){
         $file = DB::table('karyailmiah')->where('status','Rejected')->get();
         return view('Home.homeAdminreject',compact('file'));

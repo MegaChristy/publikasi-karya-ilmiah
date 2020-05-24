@@ -26,10 +26,14 @@ Route::get('/civitasprodi', 'CivitasController@civitasprodi');
 Route::get('/homeadmin', 'HomeController@homeadmin');
 Route::get('/Tentang','TentangController@About');
 Route::get('/karyailmiah' , 'KaryailmiahController@index');
+Route::get('/admin/koleksi' , 'AdminController@adminkoleksi');
+Route::get('/admin/tentang' , 'AdminController@admintentang');
+Route::get('/admin/prodi' , 'AdminController@adminprodi');
 Route::get('/penulis' , 'PenulisController@index');
 Route::post('/proses_login', 'AutentikasiController@login');
 Route::get('/prodi' , 'ProdiController@prodi');
 Route::get('/viewprodi' , 'ViewProdiController@viewprodi');
+Route::get('/civitasrequest' , 'CivitasController@civitasrequest');
 Route::get('/login', function () {
     return view('login');
 });
@@ -40,5 +44,5 @@ Route::PUT('/store' , 'PublikasiController@store')->name('Publikasi.store');
 
 Route::get('/civitasrequest' , 'CivitasController1@index');
 Route::get('/kirimkaryailmiah' , 'CivitasController1@create')->name('KirimKI.create');
-Route::PUT('/stores' , 'CivitasController1@store')->name('KirimKI.store');
-Route::get('/reject','CivitasControlle1r@getAllReject');
+Route::PUT('/store' , 'CivitasController1@store')->name('KirimKI.store');
+Route::get('/reject','CivitasController1@getAllReject');

@@ -13,6 +13,6 @@ class HomeController extends Controller
 
     public function homeadmin()
     {
-        return view('homeadmin');
+        return view('/homeadmin');
     }
 }
