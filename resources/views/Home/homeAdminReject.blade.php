@@ -74,192 +74,41 @@
         </div>
 
 
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
-            <div class="header-area">
-                <div class="row align-items-center">
-                    <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                       <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
-                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
-                                <i class="ti-search"></i>
-                            </form>
-                        </div>
-                    </div>
+@section('content')
 
-                    <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
-                            <li id="full-view"><i class="ti-fullscreen"></i></li>
-                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            <li class="dropdown">
-                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
-                                    <span>2</span>
-                                </i>
-                                <div class="dropdown-menu bell-notify-box notify-box">
-                                    <span class="notify-title">You have new notifications <a href="#">view all</a></span>
-                                    <div class="nofity-list">
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
-                                            <div class="notify-text">
-                                                <p>New Commetns On Post</p>
-                                                <span>30 Seconds ago</span>
-                                            </div>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
-                                            <div class="notify-text">
-                                                <p>New Commetns On Post</p>
-                                                <span>30 Seconds ago</span>
-                                            </div>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
-                                            <div class="notify-text">
-                                                <p>You have Changed Your Password</p>
-                                                <span>Just Now</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="settings-btn">
-                                <i class="ti-settings"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- header area end -->
-            <!-- page title area start -->
-            <div class="page-title-area">
-                <div class="row align-items-center">
-                    <div class="col-sm-6">
-                        <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
-                            <ul class="breadcrumbs pull-left">
-                                <li><a href="homeadmin">Home</a></li>
-                                <li><span>Dashboard</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 clearfix">
-                        <div class="user-profile pull-right">
-                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="/">Keluar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- page title area end -->
-            <div class="main-content-inner">
-                
-                <!-- sales report area end -->
-                <!-- overview area start -->
-                <div class="row">
-                    <div class="col-xl-9 col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Jumlah Pengunjung</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                    <option selected>Month</option>
-                                        <option value="0">January</option>
-                                        <option value="0">February</option>
-                                        <option value="0">March</option>
-                                        <option value="0">April</option>
-                                        <option value="0">May</option>
-                                        <option value="0">June</option>
-                                        <option value="0">July</option>
-                                        <option value="0">August</option>
-                                        <option value="0">September</option>
-                                        <option value="0">October</option>
-                                        <option value="0">November</option>
-                                        <option value="0">December</option>
-                                    </select>
-                                     <select class="custome-select border-0 pr-3">
-                                    <option selected>Year</option>
-                                        <option value="0">2017</option>
-                                        <option value="0">2018</option>
-                                        <option value="0">2019</option>
-                                        <option value="0">2020</option>
-                                    </select>
-                                </div>
-                                <div id="verview-shart"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 coin-distribution">
-                        <div class="card h-full">
-                            <div class="card-body">
-                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
-                                <div id="coin_distribution"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <!-- latest news area start -->
+<div class="main-content-inner">
+                <!-- sales report area start -->
+                <div class="sales-report-area mt-5 mb-5">
                     <div class="row">
-                <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Karya Ilmiah Populer</h4>
-                                <div class="letest-news mt-5">
-                                    <div class="single-post mb-xs-40 mb-sm-40">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb1.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Yolanda Melani</span>
-                                            <h2><a href="blog.html">Sistem Informasi Perpustakaan</a></h2>
-                                            <p>Sistem Informasi Perpustakaan Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
+                    @foreach($file  as $key=>$data)
+                        <div class="col-md-4">
+                            <div class="single-report mb-xs-30">
+                                <div class="s-report-inner pr--20 pt--30 mb-3">
+                                    <div class="s-report-title d-flex justify-content-between">
+                                        <h4 class="header-title mb-0"><a href="/files/{{$data->id}}">{{$data->judul}}</a></h4>
+                                        @if($data->status == 'Request')
+                                        <p>{{$data->status}}</p>
+                                        @elseif($data->status == 'Publish')
+                                        <p>Publish</p>
+                                        @endif
                                     </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Angelia Meilysa</span>
-                                            <h2><a href="blog.html">Sistem Informasi Kampus (CIS)</a></h2>
-                                            <p>Sistem Informasi Kampus (CIS) Institut Teknologi Del merupakan salah satu sistem informasi yang dapat digunakan...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Mega Yohana</span>
-                                            <h2><a href="blog.html">Penerapan Algoritma YOLO dalam Penyiraman Tanaman</a></h2>
-                                            <p>Algoritma YOLO merupakan salah satu algoritma Real Object Detection yang sering digunakan dalam mengembangkan ...</p>
-                                        </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <b>{{$data->publisher}}</b>
+                                        <span>Penulis : <br>{{$data->penulis}}</span>
                                     </div>
                                 </div>
+                                <!-- <canvas id="coin_sales1" height="100"></canvas> -->
                             </div>
                         </div>
+                    @endforeach
                     </div>
-                    <!-- latest news area end -->
-
                 </div>
-                <!-- row area start-->
-            </div>
-        </div>
-        <!-- main content area end -->
-        <!-- footer area start-->
-        <footer>
+</div>
+
+
+@endsection
+
+  <footer>
             <div class="footer-area">
                 <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>

@@ -41,3 +41,4 @@ Route::PUT('/store' , 'PublikasiController@store')->name('Publikasi.store');
 Route::get('/civitasrequest' , 'CivitasController1@index');
 Route::get('/kirimkaryailmiah' , 'CivitasController1@create')->name('KirimKI.create');
 Route::PUT('/stores' , 'CivitasController1@store')->name('KirimKI.store');
+Route::get('/reject','CivitasControlle1r@getAllReject');

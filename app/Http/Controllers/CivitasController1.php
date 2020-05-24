@@ -59,10 +59,12 @@ public function store(Request $request)
         return redirect()->route('KirimKI.index');
     }
 
-        public function showDetailFile($id){
-        $file = karyailmiah::find($id);
-        return view('karyailmiah.detailsFile',compact('file'));
+    public function getAllReject(){
+        $file = DB::table('karyailmiah')->where('status','Rejected')->get();
+        return view('Home.homeAdminreject',compact('file'));
     }
+
+
     /**
      * Display the specified resource.
      *

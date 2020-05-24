@@ -185,6 +185,7 @@
                                                 <th scope="col">File</th>
                                                 <th scope="col">Tanggal Publikasi</th>
                                                 <th scope="col">Aksi</th>
+                                                <th scope="col">Status</th>
                                             </tr>
                                                 @foreach($Publikasi as $item)
                                                     <tr>
@@ -198,6 +199,9 @@
                                                         <td>{{$item['File']}}</td>
                                                         <td>{{$item['created_at']}}</td>
                                                         <td><a href="">Lihat</a></td>
+                                                        <td><a href="/publikasi">Accept</a>
+                                                        <a href="/reject">Reject</a>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                         </table>
