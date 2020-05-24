@@ -223,12 +223,18 @@
 						<input type="file" name="File">
 					</div>
 
+                    <th>
+                        <div class="form-group">
+                            <label for="status"><b>Status</b></label>
+                            <input type="text" id="status" name="status" class="form-control" value="Requested" disabled>
+                        </div>
+                </th>
                             <div class="">
                             <th>
                                 <div class="col">
                                 <ul class="right">
-                                <input type="submit" value="Kirim Karya Ilmiah" class="btn btn-primary">
-                                <input type="submit" value="Batal" class="btn btn-danger">
+                                <a href=civitaskaryailmiah input type="submit" value="Kirim Karya Ilmiah" class="btn btn-primary"></a>
+                                <a href=civitaskaryailmiah input type="submit" value="Batal" class="btn btn-danger"></a>
                                 
                                 </ul>
                             </div>

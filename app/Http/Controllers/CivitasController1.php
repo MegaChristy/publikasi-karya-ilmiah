@@ -36,16 +36,26 @@ class CivitasController1 extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+public function store(Request $request)
     {
         karyailmiah::create($request->all());
         $file = new karyailmiah; 
+        
+        $data->judul = $request->judul;
+        $data->deskripsi = $request->deskripsi;
+        $data->penulis = $request->penulis;
+        $data->pembimbing = $request->penulis;
+        $data->ProgramStudi = $request->penulis;
+        $data->JenisKaryaIlmiah = $request->penulis;
+        $data->status = "Requested";
         if($request->file('File')){
             $file = $request->file('File');
             $filename = $request->judul.'.'.$file->getClientOriginalExtension();
             $request->File->move('storage/',$filename);
             $data->File = $filename;
         } 
+        $data->save();
+
         return redirect()->route('KirimKI.index');
     }
 

@@ -223,6 +223,11 @@
                                                 <input type='file' name='file' accept='file/*' class='form-control' />
                                             </div>
                                             <div class="form-group">
+                                                <h8>Status
+                                                <input type="textarea" name="status" class="form-control" placeholder="Requested" disabled>
+                                                </h8>
+                                            </div>
+                                            <div class="form-group">
                                                 <button class="btn btn-primary" type="submit">Kirim Karya Ilmiah</button>
                                                 <button class="btn btn-danger" type="submit">Batalkan</button>
                                             </div>

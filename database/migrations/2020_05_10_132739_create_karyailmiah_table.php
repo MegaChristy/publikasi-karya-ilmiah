@@ -23,6 +23,7 @@ class CreateKaryailmiahTable extends Migration
             $table->string('ProgramStudi');
             $table->string('JenisKaryaIlmiah');
             $table->string('File');
+            $table->string('Status');
             $table->timestamps();
         });
     }

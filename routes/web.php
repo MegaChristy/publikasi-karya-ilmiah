@@ -38,6 +38,6 @@ Route::get('/Publikasi' , 'PublikasiController@index')->name('Publikasi.index');
 Route::get('/tambah' , 'PublikasiController@create')->name('Publikasi.create');
 Route::PUT('/store' , 'PublikasiController@store')->name('Publikasi.store');
 
-Route::get('/civitasrequest' , 'CivitasController1@index')->name('KirimKI.index');
+Route::get('/civitasrequest' , 'CivitasController1@index');
 Route::get('/kirimkaryailmiah' , 'CivitasController1@create')->name('KirimKI.create');
-Route::PUT('/store' , 'CivitasController1@store')->name('KirimKI.store');
+Route::PUT('/stores' , 'CivitasController1@store')->name('KirimKI.store');
