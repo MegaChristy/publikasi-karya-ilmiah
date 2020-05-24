@@ -62,6 +62,9 @@
                                 <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
+                                <a href="" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
+                            </li>
+                            <li>
                                 <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
@@ -171,10 +174,26 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h4 class="header-title mb-0">Jumlah Pengunjung</h4>
                                     <select class="custome-select border-0 pr-3">
-                                    <option selected>1 month</option>
-                                        <option value="0">2 month</option>
-                                        <option value="0">3 month</option>
-                                        <option value="0">1 year</option>
+                                    <option selected>Month</option>
+                                        <option value="0">January</option>
+                                        <option value="0">February</option>
+                                        <option value="0">March</option>
+                                        <option value="0">April</option>
+                                        <option value="0">May</option>
+                                        <option value="0">June</option>
+                                        <option value="0">July</option>
+                                        <option value="0">August</option>
+                                        <option value="0">September</option>
+                                        <option value="0">October</option>
+                                        <option value="0">November</option>
+                                        <option value="0">December</option>
+                                    </select>
+                                     <select class="custome-select border-0 pr-3">
+                                    <option selected>Year</option>
+                                        <option value="0">2017</option>
+                                        <option value="0">2018</option>
+                                        <option value="0">2019</option>
+                                        <option value="0">2020</option>
                                     </select>
                                 </div>
                                 <div id="verview-shart"></div>
