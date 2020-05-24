@@ -22,7 +22,7 @@ class CreateAdminTable extends Migration
             $table->string('No_telp');
             $table->string('username');
             $table->string('password');
-
+            $table->timestamps();
         });
     }
 

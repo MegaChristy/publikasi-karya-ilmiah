@@ -26,11 +26,11 @@ class CivitasController extends Controller
 
     public function civitaspenulis(Request $request){
         if($request->has('cari')){
-            $civitaspenulis = \App\civitaspenulis::where('nama_penulis','LIKE','%' . $request->cari . '%')->get();
+            $penulis = karyailmiah::where('Penulis','LIKE','%' . $request->cari . '%')->get();
         } else{
-            $civitaspenulis = \App\civitaspenulis::all();
+            $penulis = karyailmiah::all();
         }
-        return view('civitaspenulis',['penulis' => $civitaspenulis]);
+        return view('civitaspenulis', compact('penulis'));
     }
 
     public function civitastentang(){

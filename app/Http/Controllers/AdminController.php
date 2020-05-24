@@ -23,4 +23,13 @@ class AdminController extends Controller
         return view('/admin/tentang');
     
     }
+
+    public function adminpenulis(Request $request){
+        if($request->has('cari')){
+            $penulis = karyailmiah::where('Penulis','LIKE','%' . $request->cari . '%')->get();
+        } else{
+            $penulis = karyailmiah::all();
+        }
+        return view('/admin/penulis', compact('penulis'));
+    }
 }

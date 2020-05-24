@@ -23,12 +23,8 @@ Route::get('/civitaspenulis', 'CivitasController@civitaspenulis');
 Route::get('/civitastentang', 'CivitasController@civitastentang');
 Route::get('/civitasprodi', 'CivitasController@civitasprodi');
 
-Route::get('/homeadmin', 'HomeController@homeadmin');
 Route::get('/Tentang','TentangController@About');
 Route::get('/karyailmiah' , 'KaryailmiahController@index');
-Route::get('/admin/koleksi' , 'AdminController@adminkoleksi');
-Route::get('/admin/tentang' , 'AdminController@admintentang');
-Route::get('/admin/prodi' , 'AdminController@adminprodi');
 Route::get('/penulis' , 'PenulisController@index');
 Route::post('/proses_login', 'AutentikasiController@login');
 Route::get('/prodi' , 'ProdiController@prodi');
@@ -46,3 +42,9 @@ Route::get('/civitasrequest' , 'CivitasController1@index');
 Route::get('/kirimkaryailmiah' , 'CivitasController1@create')->name('KirimKI.create');
 Route::PUT('/store' , 'CivitasController1@store')->name('KirimKI.store');
 Route::get('/reject','CivitasController1@getAllReject');
+
+Route::get('/homeadmin/{username}', 'HomeController@homeadmin');
+Route::get('/admin/koleksi' , 'AdminController@adminkoleksi');
+Route::get('/admin/tentang' , 'AdminController@admintentang');
+Route::get('/admin/prodi' , 'AdminController@adminprodi');
+Route::get('/admin/penulis', 'AdminController@adminpenulis');

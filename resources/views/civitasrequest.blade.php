@@ -226,7 +226,7 @@
                     <th>
                         <div class="form-group">
                             <label for="status"><b>Status</b></label>
-                            <input type="text" id="status" name="status" class="form-control" value="Requested" disabled>
+                            <input class="form-control" readonly="readonly" name="status" type="text" value="Requested">
                         </div>
                 </th>
                             <div class="">

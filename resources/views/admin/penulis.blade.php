@@ -14,22 +14,22 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>SIKI-Institut Teknologi Del</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/metisMenu.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/slicknav.min.css')}}">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/metisMenu.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/slicknav.min.css')}}">
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
-    <link rel="stylesheet" href="{{asset('assets/css/typography.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/default-css.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/typography.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/default-css.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('/assets/css/responsive.css')}}">
     <!-- modernizr css -->
-    <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{asset('/assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
     </head>
     
     <body>
@@ -41,7 +41,7 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="/assets/images/icon/logo.png" alt="logo"></a>
                 </div>
             </div>
             <div class="main-menu">
@@ -49,19 +49,25 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li >
-                                <a href="/homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="/homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/admin/koleksi" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li class="active">
-                                <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/admin/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/admin/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
+                            </li>
+                            <li>
+                                <a href="" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
+                            </li>
+                            <li>
+                                <a href="/admin/tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -113,18 +119,17 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Penulis</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="homecivitas">Home</a></li>
+                                <li><a href="/homeadmin">Home</a></li>
                                 <li><span>Penulis</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
-                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                            <img class="avatar user-thumb" src="/assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="#">Kirim Karya Ilmiah</a>
+                                <a class="dropdown-item" href="#">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -176,17 +181,17 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/metisMenu.min.js"></script>
+    <script src="/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="/assets/js/jquery.slicknav.min.js"></script>
 
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
@@ -199,12 +204,12 @@
     ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
     </script>
     <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
+    <script src="/assets/js/line-chart.js"></script>
     <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
+    <script src="/assets/js/pie-chart.js"></script>
     <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/scripts.js"></script>
 
     </body>
 </html>

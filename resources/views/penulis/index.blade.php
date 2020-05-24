@@ -148,8 +148,8 @@
 @foreach($penulis as $pls)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
-<td>{{$pls -> Nama_penulis}}</td>
-<td>{{$pls -> Prodi}}</td>
+<td>{{$pls -> Penulis}}</td>
+<td>{{$pls -> ProgramStudi}}</td>
 <td>{{$pls -> Judul}}</td>
 <td>
 <a href="" class="badge badge-primary">Lihat</a> 

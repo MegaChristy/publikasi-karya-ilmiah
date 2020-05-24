@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use App\karyailmiah;
 
 class PenulisController extends Controller
 {
@@ -17,11 +17,11 @@ class PenulisController extends Controller
 {
         //$karyailmiah = DB::table('karyailmiah')->get();
         if($request->has('cari')){
-            $penulis = \App\penulis::where('nama_penulis','LIKE','%' . $request->cari . '%')->get();
+            $penulis = karyailmiah::where('Penulis','LIKE','%' . $request->cari . '%')->get();
         } else{
-            $penulis = \App\penulis::all();
+            $penulis = karyailmiah::all();
         }
-        return view('penulis.index',['penulis' => $penulis]);
+        return view('penulis/index', compact('penulis'));
     }
 
     /**
