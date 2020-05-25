@@ -43,8 +43,17 @@ Route::get('/kirimkaryailmiah' , 'CivitasController1@create')->name('KirimKI.cre
 Route::PUT('/store' , 'CivitasController1@store')->name('KirimKI.store');
 Route::get('/reject','CivitasController1@getAllReject');
 
-Route::get('/homeadmin/{username}', 'HomeController@homeadmin');
+Route::get('/homeadmin', 'HomeController@homeadmin');
 Route::get('/admin/koleksi' , 'AdminController@adminkoleksi');
 Route::get('/admin/tentang' , 'AdminController@admintentang');
 Route::get('/admin/prodi' , 'AdminController@adminprodi');
 Route::get('/admin/penulis', 'AdminController@adminpenulis');
+
+Route::get('/sisteminformasi', 'AdminController@sisteminformasi')->name('adminprodi.sisteminformasi');
+Route::get('/informatika', 'AdminController@informatika')->name('adminprodi.informatika');
+Route::get('/teknologikomputer', 'AdminController@teknologikomputer')->name('adminprodi.teknologikomputer');
+Route::get('/teknikelektro', 'AdminController@teknikelektro')->name('adminprodi.teknikelektro');
+Route::get('/trpl', 'AdminController@trpl')->name('adminprodi.trpl');
+Route::get('/teknologiinformasi', 'AdminController@teknologiinformasi')->name('adminprodi.teknologiinformasi');
+Route::get('/manajemenrekayasa', 'AdminController@manajemenrekayasa')->name('adminprodi.manajemenrekayasa');
+Route::get('/teknikbioproses', 'AdminController@teknikbioproses')->name('adminprodi.teknikbioproses');

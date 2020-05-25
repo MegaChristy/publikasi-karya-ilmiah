@@ -88,7 +88,7 @@
                             <span></span>
                         </div>
                        <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                            <form class="form-inline my-2 my-lg-0" method="GET" action="/admin/koleksi">
                                 <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
                                 <i class="ti-search"></i>
                             </form>
@@ -155,7 +155,7 @@
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="civitasprofile">Profile</a>
+                                <a class="dropdown-item" href="#">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
