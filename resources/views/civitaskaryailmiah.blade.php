@@ -120,7 +120,7 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="#">Kirim Karya Ilmiah</a>
+                                <a class="dropdown-item" href="KirimKI/index">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -145,12 +145,13 @@
 </thead>
 <tbody> 
 
-@foreach($karyailmiah as $ki)
+@foreach($karyailmiahs ?? '' as $item)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
-<td>{{$ki -> Judul}}</td>
-<td>{{$ki -> Penulis}}</td>
-<td>{{$ki -> created_at}}</td>
+<td>{{$item['Judul']}}</td>
+<td>{{$item['Penulis']}}</td>
+<td>{{$item['Tanggal Publikasi']}}</td>
+</tr>
 <td>
 <a href="" class="badge badge-primary">Lihat</a> 
 </td>

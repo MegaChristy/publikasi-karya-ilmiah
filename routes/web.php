@@ -38,10 +38,8 @@ Route::get('/Publikasi' , 'PublikasiController@index')->name('Publikasi.index');
 Route::get('/tambah' , 'PublikasiController@create')->name('Publikasi.create');
 Route::PUT('/store' , 'PublikasiController@store')->name('Publikasi.store');
 
-Route::get('/civitasrequest' , 'CivitasController1@index');
-Route::get('/kirimkaryailmiah' , 'CivitasController1@create')->name('KirimKI.create');
-Route::PUT('/store' , 'CivitasController1@store')->name('KirimKI.store');
-Route::get('/reject','CivitasController1@getAllReject');
+Route::get('/FormAddKaryaAdmin', 'CivitasController1@index');
+Route::post('/upload/proses','CivitasController1@UploadFiles');
 
 Route::get('/homeadmin', 'HomeController@homeadmin');
 Route::get('/admin/koleksi' , 'AdminController@adminkoleksi');

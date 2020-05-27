@@ -150,7 +150,7 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="civitasrequest">Kirim Karya Ilmiah</a>
+                                <a class="dropdown-item" href="KirimKI/index">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -171,27 +171,26 @@
                                     <div class="col-md-12">
                                         <h4 class="header-title mb-0">Kirim Karya Ilmiah</h4>
                                         <br>
-                                        <form method="post" action="{{route('KirimKI.store')}}" enctype=”multipart/form-data” >
-                                            @csrf
-                                            @method('PUT')
+                                            <form action="/upload/proses" method="POST" enctype="multipart/form-data">
+					                        {{ csrf_field() }} 
                                             <div class="form-group">
                                                 <h8>Judul
-                                                <input type="text" name="judul" class="form-control" placeholder="Judul"/>
+                                                <input type="text" name="Judul" class="form-control" placeholder="Judul"/>
                                                 </h8>
                                             </div>
                                             <div class="form-group">
                                                 <h8>Deskripsi
-                                                <textarea name="deskripsi" class="form-control" placeholder="Deskripsi"></textarea>
+                                                <textarea name="Deskripsi" class="form-control" placeholder="Deskripsi"></textarea>
                                                 </h8>
                                             </div>
                                             <div class="form-group">
                                                 <h8>Penulis
-                                                <input type="textarea" name="penulis" class="form-control" placeholder="Nama Penulis"/>
+                                                <input type="textarea" name="Penulis" class="form-control" placeholder="Nama Penulis"/>
                                                 </h8>
                                             </div>
                                             <div class="form-group">
                                                 <h8>Pembimbing
-                                                <input type="textarea" name="pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
+                                                <input type="textarea" name="Pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
                                                 </h8>
                                             </div>
                                             <div class="form-group">
@@ -219,8 +218,8 @@
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <h8>File</h8>
-                                                <input type='file' name='file' accept='file/*' class='form-control' />
+                                            <b>File</b><br/>
+                                            <input type="file" name="File">
                                             </div>
                                             <div class="form-group">
                                                 <h8>Status
@@ -228,8 +227,8 @@
                                                 </h8>
                                             </div>
                                             <div class="form-group">
-                                                <button class="btn btn-primary" type="submit">Kirim Karya Ilmiah</button>
-                                                <button class="btn btn-danger" type="submit">Batalkan</button>
+                                            <a href="/" class="btn btn-primary">Kirim Karya ilmiah</a>
+                                            <a href="/KirimKI/index" class="btn btn-danger">Batalkan</a>
                                             </div>
                                         </form>
                                     </div>

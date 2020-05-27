@@ -9,15 +9,29 @@ use App\karyailmiah;
 
 class CivitasController1 extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $KirimKI = karyailmiah::all();
-        return view('KirimKI.index', compact('KirimKI'));
+    
+    public function index(){ 
+        $file =karyailmiah::all();
+        return view('KirimKI.index',compact('file'));
+    }
+
+        public function UploadFiles(Request $request){
+        $data = new karyailmiah; 
+        $data->Judul = $request->Judul;
+        $data->Deskripsi = $request->Deskripsi;
+        $data->Penulis = $request->Penulis;
+        $data->Pembimbing = $request->Pembimbing;
+        $data->ProgramStudi = $request->ProgramStudi;
+        $data->JenisKaryaIlmiah = $request->JenisKaryaIlmiah;
+        $data->Status = "Requested"; 
+        if($request->file('File')){
+            $file = $request->file('File');
+            $filename = $request->judul.'.'.$file->getClientOriginalExtension();
+            $request->File->move('storage/',$filename);
+            $data->File = $filename;
+        }
+        $data->save();
+        return redirect('/KirimKI/index');
     }
 
     /**
@@ -36,28 +50,28 @@ class CivitasController1 extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-public function store(Request $request)
-    {
-        karyailmiah::create($request->all());
-        $file = new karyailmiah; 
+// public function store(Request $request)
+//     {
+//         karyailmiah::create($request->all());
+//         $file = new karyailmiah; 
         
-      $data->judul = $request->judul;
-      $data->deskripsi = $request->deskripsi;
-      $data->penulis = $request->penulis;
-      $data->pembimbing = $request->penulis;
-      $data->ProgramStudi = $request->penulis;
-      $data->JenisKaryaIlmiah = $request->penulis;
-      $data->status = "Requested";
-        if($request->file('File')){
-            $file = $request->file('File');
-            $filename = $request->judul.'.'.$file->getClientOriginalExtension();
-            $request->File->move('storage/',$filename);
-            $data->File = $filename;
-        } 
-        //$data->save();
+//       $data->judul = $request->judul;
+//       $data->deskripsi = $request->deskripsi;
+//       $data->penulis = $request->penulis;
+//       $data->pembimbing = $request->penulis;
+//       $data->ProgramStudi = $request->penulis;
+//       $data->JenisKaryaIlmiah = $request->penulis;
+//       $data->status = "Requested";
+//         if($request->file('File')){
+//             $file = $request->file('File');
+//             $filename = $request->judul.'.'.$file->getClientOriginalExtension();
+//             $request->File->move('storage/',$filename);
+//             $data->File = $filename;
+//         } 
+//         //$data->save();
 
-        return redirect()->route('KirimKI.index');
-    }
+//         return redirect()->route('KirimKI.index');
+//     }
     public function showDetailFile($id){
         $file = karyailmiah::find($id);
         return view('karyailmiah.detailsFile',compact('file'));
