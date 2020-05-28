@@ -46,6 +46,9 @@ Route::get('/admin/koleksi' , 'AdminController@adminkoleksi');
 Route::get('/admin/tentang' , 'AdminController@admintentang');
 Route::get('/admin/prodi' , 'AdminController@adminprodi');
 Route::get('/admin/penulis', 'AdminController@adminpenulis');
+Route::get('/rejected','AdminController@getAllReject');
+Route::get('/files/reject','AdminController@reject');
+Route::get('/files/publish','AdminController@publish');
 
 Route::get('/sisteminformasi', 'AdminController@sisteminformasi')->name('adminprodi.sisteminformasi');
 Route::get('/informatika', 'AdminController@informatika')->name('adminprodi.informatika');

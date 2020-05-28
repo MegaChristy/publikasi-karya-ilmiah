@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\karyailmiah;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -84,5 +85,24 @@ class AdminController extends Controller
         $karyailmiah = karyailmiah::all();
         $ki = $karyailmiah->where('ProgramStudi', 'S1 Teknik Bioproses');
         return view('/adminprodi/teknikbioproses',['karyailmiah' => $ki]);
+    }
+
+    public function getAllReject(){
+        $file = DB::table('karyailmiah')->where('status','Rejected')->get();
+        return view('admin.rejectedkaryailmiah',compact('file'));
+    }
+
+    public function publish(Request $request, $id){
+        $data = karyailmiah::find($id);
+        $data->status = "Published";
+        $data->save();
+        return redirect('/admin/koleksi');
+    }
+
+    public function reject(Request $request, $id){ 
+        $data = karyailmiah::find($id);
+        $data->status = "Rejected";
+        $data->save();
+        return redirect('/admin/rejectedkaryailmiah');
     }
 }

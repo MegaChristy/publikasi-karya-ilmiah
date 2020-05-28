@@ -138,7 +138,7 @@
 <h1 class="mt-5"> Daftar Penulis</h1>
 
 <table class = "table">
-<thead class="thead-dark">
+<thead class="thead-dark"> 
 <tr>
 <th scope="col"> No</th>
 <th scope="col"> Nama Penulis</th>

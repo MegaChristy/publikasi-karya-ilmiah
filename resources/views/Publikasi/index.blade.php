@@ -62,7 +62,7 @@
                                 <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
-                                <a href="" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
+                                <a href="/rejected" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
                             </li>
                             <li>
                                 <a href="/admin/tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
@@ -176,7 +176,8 @@
                                     <div class="col-md-12">
                                         <h4 class="header-title mb-0">Publikasi Karya Ilmiah</h4>
                                         <br>
-                                        <table class="table table-striped">
+                                        <table class = "table">
+                                        <thead class="thead-dark">
                                             <tr>
                                                 <th scope="col">No</th>
                                                 <th scope="col">Judul</th>
@@ -189,7 +190,8 @@
                                                 <th scope="col">Tanggal Publikasi</th>
                                                 <th scope="col">Aksi</th>
                                                 <th scope="col">Status</th>
-                                            </tr>
+                                            </tr>    
+                                        </thead>
                                                 @foreach($Publikasi as $item)
                                                     <tr>
                                                         <th scope="row">{{$loop->iteration}}</th>
@@ -201,14 +203,12 @@
                                                         <td>{{$item['JenisKaryaIlmiah']}}</td>
                                                         <td>{{$item['File']}}</td>
                                                         <td>{{$item['created_at']}}</td>
-                                                        <td><a href="">Lihat</a></td>
-                                                        <td><a href="/publikasi">Accept</a>
-                                                        <a href="/reject">Reject</a>
-                                                        </td>
+                                                        <td><a href="/karyailmiah/detailsFile" class="badge badge-primary">Lihat</a></td> 
+                                                        <td><a href="/files/publish" class="badge badge-success">Accept</a>
+                                                        <a href="/files/reject" class="badge badge-danger">Reject</a></td> 
                                                     </tr>
                                                 @endforeach
                                         </table>
-                                        <a href="{{route('Publikasi.create')}}" class="btn btn-primary">Tambah</a>
                                     </div>
                                 </div>
                             </div>

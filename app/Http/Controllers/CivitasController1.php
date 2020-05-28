@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\KirimKI;
+//use App\KirimKI;
 use App\karyailmiah;
 
 
