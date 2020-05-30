@@ -171,66 +171,66 @@
                                     <div class="col-md-12">
                                         <h4 class="header-title mb-0">Kirim Karya Ilmiah</h4>
                                         <br>
-                                            <form action="/upload/proses" method="POST" enctype="multipart/form-data">
-					                        {{ csrf_field() }} 
-                                            <div class="form-group">
-                                                <h8>Judul
-                                                <input type="text" name="Judul" class="form-control" placeholder="Judul"/>
-                                                </h8>
-                                            </div>
-                                            <div class="form-group">
-                                                <h8>Deskripsi
-                                                <textarea name="Deskripsi" class="form-control" placeholder="Deskripsi"></textarea>
-                                                </h8>
-                                            </div>
-                                            <div class="form-group">
-                                                <h8>Penulis
-                                                <input type="textarea" name="Penulis" class="form-control" placeholder="Nama Penulis"/>
-                                                </h8>
-                                            </div>
-                                            <div class="form-group">
-                                                <h8>Pembimbing
-                                                <input type="textarea" name="Pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
-                                                </h8>
-                                            </div>
-                                            <div class="form-group">
-                                                <h8>Program Studi</h8>
-                                                <select name="ProgramStudi" class="form-control">
-                                                    <option value="S1 Informatika">S1 Informatika</option>
-                                                    <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
-                                                    <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
-                                                    <option value="S1 Manajemen Rekayasa">S1 Manajemen Rekayasa</option>
-                                                    <option value="S1 Teknik Bioproses">S1 Teknik Bioproses</option>
-                                                    <option value="D4 Teknologi Rekayasa Perangkat Lunak">D4 Teknologi Rekayasa Perangkat Lunak</option>
-                                                    <option value="D3 Teknologi Informasi">D3 Teknologi Informasi</option>
-                                                    <option value="D3 Teknologi Komputer">D3 Teknologi Komputer</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <h8>Jenis Karya Ilmiah</h8>
-                                                <select name="JenisKaryaIlmiah" class="form-control">
-                                                    <option value="Tugas Akhir">Tugas Akhir</option>
-                                                    <option value="Makalah">Makalah</option>
-                                                    <option value="Paper">Paper</option>
-                                                    <option value="Skripsi">Skripsi</option>
-                                                    <option value="Artikel">Artikel</option>
-                                                    <option value="Program Kreativitas Mahasiswa">Program Kreativitas Mahasiswa</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                            <b>File</b><br/>
-                                            <input type="file" name="File">
-                                            </div>
-                                            <div class="form-group">
-                                                <h8>Status
-                                                <input type="textarea" name="status" class="form-control" placeholder="Requested" disabled>
-                                                </h8>
-                                            </div>
-                                            <div class="form-group">
-                                            <a href="/" class="btn btn-primary">Kirim Karya ilmiah</a>
-                                            <a href="/KirimKI/index" class="btn btn-danger">Batalkan</a>
-                                            </div>
-                                        </form>
+                                        <form enctype="multipart/form-data" action="{{ route('upload') }}" method="post">
+                                            {{ csrf_field() }} 
+                                                <div class="form-group">
+                                                    <h8>Judul
+                                                    <input type="text" name="Judul" class="form-control" placeholder="Judul"/>
+                                                    </h8>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h8>Deskripsi
+                                                    <textarea name="Deskripsi" class="form-control" placeholder="Deskripsi"></textarea>
+                                                    </h8>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h8>Penulis
+                                                    <input type="textarea" name="Penulis" class="form-control" placeholder="Nama Penulis"/>
+                                                    </h8>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h8>Pembimbing
+                                                    <input type="textarea" name="Pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
+                                                    </h8>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h8>Program Studi</h8>
+                                                    <select name="ProgramStudi" class="form-control">
+                                                        <option value="S1 Informatika">S1 Informatika</option>
+                                                        <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
+                                                        <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
+                                                        <option value="S1 Manajemen Rekayasa">S1 Manajemen Rekayasa</option>
+                                                        <option value="S1 Teknik Bioproses">S1 Teknik Bioproses</option>
+                                                        <option value="D4 Teknologi Rekayasa Perangkat Lunak">D4 Teknologi Rekayasa Perangkat Lunak</option>
+                                                        <option value="D3 Teknologi Informasi">D3 Teknologi Informasi</option>
+                                                        <option value="D3 Teknologi Komputer">D3 Teknologi Komputer</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h8>Jenis Karya Ilmiah</h8>
+                                                    <select name="JenisKaryaIlmiah" class="form-control">
+                                                        <option value="Tugas Akhir">Tugas Akhir</option>
+                                                        <option value="Makalah">Makalah</option>
+                                                        <option value="Paper">Paper</option>
+                                                        <option value="Skripsi">Skripsi</option>
+                                                        <option value="Artikel">Artikel</option>
+                                                        <option value="Program Kreativitas Mahasiswa">Program Kreativitas Mahasiswa</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                <b>File</b><br/>
+                                                <input type="file" name="File">
+                                                </div>
+                                                <div class="form-group">
+                                                    <h8>Status
+                                                    <input type="textarea" name="status" class="form-control" placeholder="Requested" disabled>
+                                                    </h8>
+                                                </div>
+                                                <div class="form-group">
+                                                <button type="submit" class="btn btn-primary">Kirim Karya ilmiah</button>
+                                                <a href="/KirimKI/index" class="btn btn-danger">Batalkan</a>
+                                                </div>
+                                             </form>
                                     </div>
                                 </div>
                             </div>

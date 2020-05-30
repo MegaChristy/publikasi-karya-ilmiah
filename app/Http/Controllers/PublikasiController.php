@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\KaryaIlmiah;
+use Illuminate\Support\Facades\DB;
 
 class PublikasiController extends Controller
 {
@@ -14,7 +15,7 @@ class PublikasiController extends Controller
      */
     public function index()
     {
-        $Publikasi = karyailmiah::all();
+        $Publikasi = KaryaIlmiah::where("Status","=","Requested")->get();
         return view('Publikasi.index', compact('Publikasi'));
     }
 

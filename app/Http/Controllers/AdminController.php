@@ -9,9 +9,9 @@ class AdminController extends Controller
 {
     public function adminkoleksi(Request $request){
         if ($request->has('cari')){
-            $karyailmiah = karyailmiah::where('Judul','LIKE','%' . $request->cari . '%')->get();    
+            $karyailmiah = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
         }else{
-            $karyailmiah = karyailmiah::all();
+            $karyailmiah = karyailmiah::where("Status","=","Published")->get();
         }
         return view('/admin/koleksi', compact('karyailmiah'));
     
@@ -92,17 +92,17 @@ class AdminController extends Controller
         return view('admin.rejectedkaryailmiah',compact('file'));
     }
 
-    public function publish(Request $request, $id){
+    public function publish($id){
         $data = karyailmiah::find($id);
         $data->status = "Published";
         $data->save();
         return redirect('/admin/koleksi');
     }
 
-    public function reject(Request $request, $id){ 
+    public function reject($id){ 
         $data = karyailmiah::find($id);
         $data->status = "Rejected";
         $data->save();
-        return redirect('/admin/rejectedkaryailmiah');
+        return redirect('/rejected');
     }
 }

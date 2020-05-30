@@ -203,9 +203,9 @@
                                                         <td>{{$item['JenisKaryaIlmiah']}}</td>
                                                         <td>{{$item['File']}}</td>
                                                         <td>{{$item['created_at']}}</td>
-                                                        <td><a href="/karyailmiah/detailsFile" class="badge badge-primary">Lihat</a></td> 
-                                                        <td><a href="/files/publish" class="badge badge-success">Accept</a>
-                                                        <a href="/files/reject" class="badge badge-danger">Reject</a></td> 
+                                                        <td><a href="{{ asset('/storage/'.$item->File)}}" class="badge badge-primary">Lihat</a></td> 
+                                                        <td><a href="{{ '/files/publish/'.$item['Id_karya_ilmiah'] }}" class="badge badge-success">Accept</a>
+                                                        <a href="{{ '/files/reject/'.$item['Id_karya_ilmiah'] }}" class="badge badge-danger">Reject</a></td> 
                                                     </tr>
                                                 @endforeach
                                         </table>

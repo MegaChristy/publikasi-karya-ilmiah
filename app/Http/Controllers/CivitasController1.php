@@ -26,7 +26,8 @@ class CivitasController1 extends Controller
         $data->Status = "Requested"; 
         if($request->file('File')){
             $file = $request->file('File');
-            $filename = $request->judul.'.'.$file->getClientOriginalExtension();
+            $time_now = date("Ymdhis");
+            $filename = $time_now.'.'.$file->getClientOriginalExtension();
             $request->File->move('storage/',$filename);
             $data->File = $filename;
         }

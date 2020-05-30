@@ -145,15 +145,14 @@
 </thead>
 <tbody> 
 
-@foreach($karyailmiahs ?? '' as $item)
+@foreach($karyailmiah as $ki)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
-<td>{{$item['Judul']}}</td>
-<td>{{$item['Penulis']}}</td>
-<td>{{$item['Tanggal Publikasi']}}</td>
-</tr>
+<td>{{$ki -> Judul}}</td>
+<td>{{$ki -> Penulis}}</td>
+<td>{{$ki -> created_at}}</td>
 <td>
-<a href="" class="badge badge-primary">Lihat</a> 
+<a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Lihat</a> 
 </td>
 </tr>
 @endforeach

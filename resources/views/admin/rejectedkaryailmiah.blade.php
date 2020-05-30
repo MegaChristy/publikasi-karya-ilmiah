@@ -152,7 +152,7 @@
 </thead>
 <tbody> 
 
-@foreach($karyailmiah ?? '' as $ki)
+@foreach($file as $ki)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>
@@ -161,7 +161,7 @@
 <td>{{$ki -> Status}}</td>
 <td>{{$ki -> created_at}}</td>
 <td>
-<a href="" class="badge badge-primary">Lihat</a> 
+<a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Lihat</a> 
 </td>
 </tr>
 @endforeach

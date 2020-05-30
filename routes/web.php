@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('index');
@@ -39,7 +40,7 @@ Route::get('/tambah' , 'PublikasiController@create')->name('Publikasi.create');
 Route::PUT('/store' , 'PublikasiController@store')->name('Publikasi.store');
 
 Route::get('/FormAddKaryaAdmin', 'CivitasController1@index');
-Route::post('/upload/proses','CivitasController1@UploadFiles');
+Route::post('/upload/proses','CivitasController1@UploadFiles')->name('upload');
 
 Route::get('/homeadmin', 'HomeController@homeadmin');
 Route::get('/admin/koleksi' , 'AdminController@adminkoleksi');
@@ -47,8 +48,8 @@ Route::get('/admin/tentang' , 'AdminController@admintentang');
 Route::get('/admin/prodi' , 'AdminController@adminprodi');
 Route::get('/admin/penulis', 'AdminController@adminpenulis');
 Route::get('/rejected','AdminController@getAllReject');
-Route::get('/files/reject','AdminController@reject');
-Route::get('/files/publish','AdminController@publish');
+Route::get('/files/reject/{id}','AdminController@reject');
+Route::get('/files/publish/{id}','AdminController@publish');
 
 Route::get('/sisteminformasi', 'AdminController@sisteminformasi')->name('adminprodi.sisteminformasi');
 Route::get('/informatika', 'AdminController@informatika')->name('adminprodi.informatika');

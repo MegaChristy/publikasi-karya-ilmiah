@@ -215,8 +215,7 @@
                             <input type="text" id="jeniskaryailmiah" name="jeniskaryailmiah" class="form-control" value="">
                         </div>
                 </th>
-                
-                <form action="/upload/proses" method="POST" enctype="multipart/form-data">
+                <form action="{{ href('/upload/proses') }}" method="POST" enctype="multipart/form-data">
 					{{ csrf_field() }}
 					<div class="form-group">
 						<b>File</b><br/>
@@ -228,7 +227,7 @@
                             <label for="status"><b>Status</b></label>
                             <input class="form-control" readonly="readonly" name="status" type="text" value="Requested">
                         </div>
-                </th>
+                    </th>
                             <div class="">
                             <th>
                                 <div class="col">
