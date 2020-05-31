@@ -32,7 +32,7 @@ class CivitasController1 extends Controller
             $data->File = $filename;
         }
         $data->save();
-        return redirect('/KirimKI/index');
+        return redirect('/FormAddKaryaAdmin');
     }
 
     /**

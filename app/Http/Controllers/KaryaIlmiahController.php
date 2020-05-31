@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\karyailmiah;
 
 
 class KaryailmiahController extends Controller
@@ -15,13 +16,12 @@ class KaryailmiahController extends Controller
      */
     public function index(Request $request)
     {
-        //$karyailmiah = DB::table('karyailmiah')->get();
-        if($request->has('cari')){
-            $karyailmiah = \App\karyailmiah::where('judul','LIKE','%' . $request->cari . '%')->get();
-        } else{
-            $karyailmiah = \App\karyailmiah::all();
+        if ($request->has('cari')){
+            $karyailmiah = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+        }else{
+            $karyailmiah = karyailmiah::where("Status","=","Published")->get();
         }
-        return view('karyailmiah.index',['karyailmiah' => $karyailmiah]);
+        return view('/karyailmiah.index', compact('karyailmiah'));
     }
 
     /**

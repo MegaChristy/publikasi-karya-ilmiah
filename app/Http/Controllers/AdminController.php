@@ -32,64 +32,60 @@ class AdminController extends Controller
 
     public function adminpenulis(Request $request){
         if($request->has('cari')){
-            $penulis = karyailmiah::where('Penulis','LIKE','%' . $request->cari . '%')->get();
+            $penulis = karyailmiah::where("Status","=","Published")->where('Penulis','LIKE','%' . $request->cari . '%')->get();
         } else{
-            $penulis = karyailmiah::all();
+            $penulis = karyailmiah::where("Status","=","Published")->get();
         }
         return view('/admin/penulis', compact('penulis'));
     }
 
     public function sisteminformasi(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'S1 Sistem Informasi');
-        return view('/adminprodi/sisteminformasi',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Sistem Informasi")->where("Status","=","Published")->get();
+        return view('/adminprodi/sisteminformasi', compact('karyailmiah'));
     }
 
     public function informatika(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'S1 Informatika');
-        return view('/adminprodi/informatika',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Informatika")->where("Status","=","Published")->get();
+        return view('/adminprodi/informatika', compact('karyailmiah'));
     }
-
+    
     public function teknologikomputer(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'D3 Teknologi Komputer');
-        return view('/adminprodi/teknologikomputer',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","D3 Teknologi Komputer")->where("Status","=","Published")->get();
+        return view('/adminprodi/teknologikomputer', compact('karyailmiah'));
     }
-
+    
     public function teknikelektro(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'S1 Teknik Elektro');
-        return view('/adminprodi/teknikelektro',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Teknik Elektro")->where("Status","=","Published")->get();
+        return view('/adminprodi/teknikelektro', compact('karyailmiah'));
     }
-
+    
     public function trpl(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'D4 Teknologi Rekayasa Perangkat Lunak');
-        return view('/adminprodi/trpl',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","D4 Teknologi Rekayasa Perangkat Lunak")->where("Status","=","Published")->get();
+        return view('/adminprodi/trpl', compact('karyailmiah'));
     }
-
+    
     public function teknologiinformasi(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'D3 Teknologi Informasi');
-        return view('/adminprodi/teknologiinformasi',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","D3 Teknologi Informasi")->where("Status","=","Published")->get();
+        return view('/adminprodi/teknologiinformasi', compact('karyailmiah'));
     }
-
+    
     public function manajemenrekayasa(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'S1 Manajemen Rekayasa');
-        return view('/adminprodi/manajemenrekayasa',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Manajemen Rekayasa")->where("Status","=","Published")->get();
+        return view('/adminprodi/manajemenrekayasa', compact('karyailmiah'));
     }
-
+    
     public function teknikbioproses(){
-        $karyailmiah = karyailmiah::all();
-        $ki = $karyailmiah->where('ProgramStudi', 'S1 Teknik Bioproses');
-        return view('/adminprodi/teknikbioproses',['karyailmiah' => $ki]);
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Teknik Bioproses")->where("Status","=","Published")->get();
+        return view('/adminprodi/teknikbioproses', compact('karyailmiah'));
     }
 
-    public function getAllReject(){
-        $file = DB::table('karyailmiah')->where('status','Rejected')->get();
-        return view('admin.rejectedkaryailmiah',compact('file'));
+    public function getAllReject(Request $request){
+        if ($request->has('cari')){
+            $file = karyailmiah::where("Status","=","Rejected")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+        }else{
+            $file = karyailmiah::where("Status","=","Rejected")->get();
+        }
+        return view('admin.rejectedkaryailmiah', compact('file'));
     }
 
     public function publish($id){

@@ -13,9 +13,13 @@ class PublikasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $Publikasi = KaryaIlmiah::where("Status","=","Requested")->get();
+        if ($request->has('cari')){
+            $Publikasi = karyailmiah::where("Status","=","Requested")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+        }else{
+            $Publikasi = karyailmiah::where("Status","=","Requested")->get();
+        }
         return view('Publikasi.index', compact('Publikasi'));
     }
 

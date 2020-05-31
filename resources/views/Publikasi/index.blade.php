@@ -88,7 +88,7 @@
                             <span></span>
                         </div>
                        <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                            <form class="form-inline my-2 my-lg-0" method="GET">
                                 <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
                                 <i class="ti-search"></i>
                             </form>

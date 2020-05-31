@@ -64,7 +64,7 @@
                                 <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
-                                <a href="" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
+                                <a href="/rejected" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
                             </li>
                             <li>
                                 <a href="/admin/tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
@@ -161,7 +161,7 @@
 <td>{{$pls -> ProgramStudi}}</td>
 <td>{{$pls -> Judul}}</td>
 <td>
-<a href="" class="badge badge-primary">Lihat</a> 
+<a href="{{ asset('/storage/'.$pls->File)}}" class="badge badge-primary">Lihat</a> 
 </td>
 </tr>
 @endforeach

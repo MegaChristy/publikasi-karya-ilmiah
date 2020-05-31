@@ -14,12 +14,11 @@ class PenulisController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-{
-        //$karyailmiah = DB::table('karyailmiah')->get();
+    {
         if($request->has('cari')){
-            $penulis = karyailmiah::where('Penulis','LIKE','%' . $request->cari . '%')->get();
-        } else{
-            $penulis = karyailmiah::all();
+            $penulis = karyailmiah::where("Status","=","Published")->where('Penulis','LIKE','%' . $request->cari . '%')->get();    
+        }else{
+            $penulis = karyailmiah::where("Status","=","Published")->get();
         }
         return view('penulis/index', compact('penulis'));
     }
