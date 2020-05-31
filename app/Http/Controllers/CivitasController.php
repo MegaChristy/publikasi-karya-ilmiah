@@ -16,19 +16,19 @@ class CivitasController extends Controller
     }
     
     public function civitaskaryailmiah(Request $request){
-        if($request->has('cari')){
-            $civitaskaryailmiah = \App\civitaskaryailmiah::where('Judul','LIKE','%' . $request->cari . '%')->get();
-        } else{
-            $civitaskaryailmiah = \App\civitaskaryailmiah::all();
+        if ($request->has('cari')){
+            $karyailmiah = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+        }else{
+            $karyailmiah = karyailmiah::where("Status","=","Published")->get();
         }
-        return view('civitaskaryailmiah',['karyailmiah' => $civitaskaryailmiah]);
+        return view('civitaskaryailmiah', compact('karyailmiah'));
     }
 
     public function civitaspenulis(Request $request){
-        if($request->has('cari')){
-            $penulis = karyailmiah::where('Penulis','LIKE','%' . $request->cari . '%')->get();
-        } else{
-            $penulis = karyailmiah::all();
+        if ($request->has('cari')){
+            $penulis = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+        }else{
+            $penulis = karyailmiah::where("Status","=","Published")->get();
         }
         return view('civitaspenulis', compact('penulis'));
     }
@@ -44,5 +44,37 @@ class CivitasController extends Controller
         
         $karyailmiah = karyailmiah::all();
         return view('civitaskaryailmiah');
+    }
+    public function informasi(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Sistem Informasi")->where("Status","=","Published")->get();
+        return view('/civitasprodi/informasi', compact('karyailmiah'));
+    }
+    public function elektro(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Teknik Elektro")->where("Status","=","Published")->get();
+        return view('/civitasprodi/elektro', compact('karyailmiah'));
+    }
+    public function ti(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Informatika")->where("Status","=","Published")->get();
+        return view('/civitasprodi/ti', compact('karyailmiah'));
+    }
+    public function teknologirekayasa(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","D4 Teknologi Rekayasa Perangkat Lunak")->where("Status","=","Published")->get();
+        return view('/civitasprodi/teknologirekayasa', compact('karyailmiah'));
+    }
+    public function d3ti(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","D3 Teknologi Informasi")->where("Status","=","Published")->get();
+        return view('/civitasprodi/d3ti', compact('karyailmiah'));
+    }
+    public function komputer(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","D3 Teknologi Komputer")->where("Status","=","Published")->get();
+        return view('/civitasprodi/komputer', compact('karyailmiah'));
+    }
+    public function bioproses(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Teknik Bioproses")->where("Status","=","Published")->get();
+        return view('/civitasprodi/bioproses', compact('karyailmiah'));
+    }
+    public function mr(){
+        $karyailmiah = karyailmiah::where("ProgramStudi","=","S1 Manajemen Rekayasa")->where("Status","=","Published")->get();
+        return view('/civitasprodi/mr', compact('karyailmiah'));
     }
 }

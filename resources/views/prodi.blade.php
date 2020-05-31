@@ -142,7 +142,7 @@
                         <p>muda yang terampil dan profesional, terutama terkait dengan pengembangan, pemanfaatan, dan pengelolaan 
                         <p>Sistem Informasi/Teknologi Informasi dalam suatu organisasi.Kurikulum Program Studi Sistem Informasi 
                         <P>IT Del mengacu kepada beberapa kurikulum Sarjana Sistem Informasi di Indonesia maupun Internasional.</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.informasi')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     
                     </div>
@@ -158,7 +158,7 @@
                         <p>mampu menjawab keperluan industri melalui lulusan tenaga terdidik dan juga terampil di bidangnya. 
                         <P>Visi Program Studi Teknik Elektro adalah Mewujudkan program pendidikan Teknik Elektro yang unggul 
                         <P>dan penyelenggaraan penelitian bidang Teknik Elektro yang bertaraf nasional pada tahun 2024</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.elektro')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article><br>  
@@ -174,7 +174,7 @@
                         <p>siber (Cybersecurity), dan ilmu data (Data Science).Lulusan dari PSIF dipersiapkan untuk dapat memiliki 
                         <p>kemampuan analisis persoalan yang terkait bidang computer science dan pengembangan perangkat lunak mulai 
                         <p>dari yang sederhana yang sampai yang kompleks ataupun berskala besar.</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.ti')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article><br><br>
@@ -188,7 +188,7 @@
                         <p>Visi Program Studi Teknologi Rekayasa Perangkat Lunak Program Sarjana Terapan sebagai batu loncatan 
                         <p>menuju masa depan Teknologi Informasi yang mengintegrasikan dunia pendidikan dengan kebutuhan usaha 
                         <p>akan tenaga profesional informatika yang mampu bersaing secara global.</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.teknologirekayasa')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article><br><br> 
@@ -202,7 +202,7 @@
                         <p>Program Studi Teknologi Informasi Diploma Tiga  mempunyai sasaran untuk menyelenggarakan proses 
                         <p>pembelajaran yang dapat menumbuhkan-kembangkan daya nalar, daya cipta, daya kreasi dan keterampilan 
                         <p>yang tinggi, yang dapat dikomunikasikan dan diaplikasikan pada bidang kehidupan.</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.d3ti')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article><br><br>  
@@ -217,7 +217,7 @@
                         <p>Del yang terletak di daerah pedesaan Tobasa, yang membuka peluang bagi siswa berprestasi untuk 
                         <p>mengenyam pendidikan dengan mutu yang tidak kalah dengan pendidikan bermutu bagus yang 
                         <p>diselenggarakan di kota besar.</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.komputer')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article><br><br>
@@ -233,7 +233,7 @@
                         <p>Aspek keilmuan teknik (engineering) dari Manajemen Rekayasa terlihat melalui  penerapan matematika dan ilmu 
                         <p>pengetahuan alam yang diperoleh melalui pembelajaran, pengalaman, dan praktek empiris untuk menemukan 
                         <p>cara-cara yang optimal dalam memanfaatkan material dan sumber daya lain dalam mengembangkan teknologi.</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.mr')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article><br><br>
@@ -247,7 +247,7 @@
                         <p>Program studi Sarjana Teknik Bioproses memiliki visi yaitu menjadi program studi yang unggul secara nasional 
                         <p>dan internasional dalam bidang pendidikan, penelitian, pengembangan dan penerapan ilmu dan teknologi, serta 
                         <p>pengabdian kepada masyarakat.</p>
-                        <a href="http://127.0.0.1:8000/viewprodi"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
+                        <a href="{{route('civitasprodi.bioproses')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article>                                                  

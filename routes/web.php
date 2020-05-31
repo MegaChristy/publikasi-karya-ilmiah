@@ -59,3 +59,12 @@ Route::get('/trpl', 'AdminController@trpl')->name('adminprodi.trpl');
 Route::get('/teknologiinformasi', 'AdminController@teknologiinformasi')->name('adminprodi.teknologiinformasi');
 Route::get('/manajemenrekayasa', 'AdminController@manajemenrekayasa')->name('adminprodi.manajemenrekayasa');
 Route::get('/teknikbioproses', 'AdminController@teknikbioproses')->name('adminprodi.teknikbioproses');
+
+Route::get('/informasi' , 'CivitasController@informasi')->name('civitasprodi.informasi');
+Route::get('/elektro' , 'CivitasController@elektro')->name('civitasprodi.elektro');
+Route::get('/ti' , 'CivitasController@ti')->name('civitasprodi.ti');
+Route::get('/teknologirekayasa' , 'CivitasController@teknologirekayasa')->name('civitasprodi.teknologirekayasa');
+Route::get('/d3ti' , 'CivitasController@d3ti')->name('civitasprodi.d3ti');
+Route::get('/komputer' , 'CivitasController@komputer')->name('civitasprodi.komputer');
+Route::get('/bioproses' , 'CivitasController@bioproses')->name('civitasprodi.bioproses');
+Route::get('/mr' , 'CivitasController@mr')->name('civitasprodi.mr');

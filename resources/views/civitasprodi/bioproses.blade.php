@@ -48,20 +48,20 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li >
+                            <li>
                                 <a href="/homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
                                 <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -82,13 +82,8 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="search-box pull-left">
-                             <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET">
-                                <input type="text" name="cari" placeholder="Cari Penulis" required>
-                                <i class="ti-search"></i>
-                            </form>
-                        </div>
+                        <div class="row">
+                        <h3 class="col-12">S1 Teknik Bioproses</h3>
                         </div>
                     </div>
 
@@ -111,10 +106,9 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Penulis</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="homecivitas">Home</a></li>
-                                <li><span>Penulis</span></li>
+                                <li><a href="/">Home</a></li>
+                                <li><span>S1 Teknik Bioproses</span></li>
                             </ul>
                         </div>
                     </div>
@@ -124,7 +118,7 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="FromAddKaryaAdmin">Kirim Karya Ilmiah</a>
+                                <a class="dropdown-item" href="FormAddKaryaAdmin">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -132,31 +126,35 @@
                 </div>
             </div>
             <!-- page title area end -->
-<div class="container">        
+<div class="container">
 <div class="row">
 <div class="col-10">
-<h1 class="mt-5"> Daftar Penulis</h1>
+<h1 class="mt-5"> Daftar Karya Ilmiah</h1>
 
 <table class = "table">
-<thead class="thead-dark"> 
+<thead class="thead-dark">
 <tr>
 <th scope="col"> No</th>
-<th scope="col"> Nama Penulis</th>
-<th scope="col"> Prodi</th>
 <th scope="col"> Judul</th>
+<th scope="col"> Penulis</th>
+<th scope="col"> Pembimbing</th>
+<th scope="col"> Jenis</th>
+<th scope="col"> Tanggal Publikasi</th>
 <th scope="col"> Aksi</th>
 </tr>
 </thead>
 <tbody> 
 
-@foreach($penulis ?? '' as $pls)
+@foreach($karyailmiah as $ki)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
-<td>{{$pls -> Penulis}}</td>
-<td>{{$pls -> ProgramStudi}}</td>
-<td>{{$pls -> Judul}}</td>
+<td>{{$ki -> Judul}}</td>
+<td>{{$ki -> Penulis}}</td>
+<td>{{$ki -> Pembimbing}}</td>
+<td>{{$ki -> JenisKaryaIlmiah}}</td>
+<td>{{$ki -> created_at}}</td>
 <td>
-<a href="{{ asset('/storage/'.$pls->File)}}" class="badge badge-primary">Lihat</a> 
+<a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Lihat</a> 
 </td>
 </tr>
 @endforeach
@@ -165,20 +163,14 @@
 </div>
 </div>
 </div>
-      
-      <footer>
+
+<footer>
             <div class="footer-area">
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
       </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
     <script src="assets/js/popper.min.js"></script>
