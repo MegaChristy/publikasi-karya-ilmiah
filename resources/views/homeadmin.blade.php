@@ -169,35 +169,10 @@
                 <!-- overview area start -->
                 <div class="row">
                     <div class="col-xl-9 col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <h4 class="header-title mb-0">Jumlah Pengunjung</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                    <option selected>Month</option>
-                                        <option value="0">January</option>
-                                        <option value="0">February</option>
-                                        <option value="0">March</option>
-                                        <option value="0">April</option>
-                                        <option value="0">May</option>
-                                        <option value="0">June</option>
-                                        <option value="0">July</option>
-                                        <option value="0">August</option>
-                                        <option value="0">September</option>
-                                        <option value="0">October</option>
-                                        <option value="0">November</option>
-                                        <option value="0">December</option>
-                                    </select>
-                                     <select class="custome-select border-0 pr-3">
-                                    <option selected>Year</option>
-                                        <option value="0">2017</option>
-                                        <option value="0">2018</option>
-                                        <option value="0">2019</option>
-                                        <option value="0">2020</option>
-                                    </select>
-                                </div>
-                                <div id="verview-shart"></div>
-                            </div>
+                         <div class="card">
+                            <div class="card">
+                           <div id="GrafikChart"></div>
+                        </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 coin-distribution">
@@ -472,6 +447,80 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script> 
+
+    Highcharts.chart('GrafikChart', {
+
+    title: {
+        text: 'Jumlah Pengunjung Website Sistem Informasi Karya Ilmiah Institut Teknologi Del'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Jumlah Pengunjung'
+        }
+    },
+
+    xAxis: {
+        accessibility: {
+            rangeDescription: 'Range: 2017 - 2020'
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2017
+        }
+    },
+
+    series: [{
+        name: 'Tugas Akhir',
+        data: [43934, 52503, 57177, 69658, 97031]
+    }, {
+        name: 'Makalah',
+        data: [24916, 24064, 29742, 29851, 32490]
+    }, {
+        name: 'Paper',
+        data: [11744, 17722, 16005, 19771, 20185]
+    }, {
+        name: 'Skripsi',
+        data: [null, null, 7988, 12169, 15112]
+    }, {
+        name: 'Artikel',
+        data: [12908, 5948, 8105, 11248, 8989]
+    }, {
+        name: 'Program Kreativitas Mahasiswa',
+        data: [43934, 52503, 57177, 69658, 97031]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+
+    </script>
 </body>
 
 </html>
