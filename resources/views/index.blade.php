@@ -313,77 +313,7 @@
     <script src="assets/js/scripts.js"></script>
      <script src="https://code.highcharts.com/highcharts.js"></script>
     <script> 
-
-    Highcharts.chart('GrafikChart', {
-
-    title: {
-        text: 'Jumlah Pengunjung Website Sistem Informasi Karya Ilmiah Institut Teknologi Del'
-    },
-
-    yAxis: {
-        title: {
-            text: 'Jumlah Pengunjung'
-        }
-    },
-
-    xAxis: {
-        accessibility: {
-            rangeDescription: 'Range: 2017 - 2020'
-        }
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            },
-            pointStart: 2017
-        }
-    },
-
-    series: [{
-        name: 'Tugas Akhir',
-        data: [43934, 52503, 57177, 69658, 97031]
-    }, {
-        name: 'Makalah',
-        data: [24916, 24064, 29742, 29851, 32490]
-    }, {
-        name: 'Paper',
-        data: [11744, 17722, 16005, 19771, 20185]
-    }, {
-        name: 'Skripsi',
-        data: [null, null, 7988, 12169, 15112]
-    }, {
-        name: 'Artikel',
-        data: [12908, 5948, 8105, 11248, 8989]
-    }, {
-        name: 'Program Kreativitas Mahasiswa',
-        data: [43934, 52503, 57177, 69658, 97031]
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
-    }
-
-});
-
+    
 Highcharts.chart('container', {
     chart: {
         plotBackgroundColor: null,
