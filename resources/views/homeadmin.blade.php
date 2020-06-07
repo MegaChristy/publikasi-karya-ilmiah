@@ -175,11 +175,10 @@
                         </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 coin-distribution">
+                    <div class="col-xl-3 col-lg-2 coin-distribution">
                         <div class="card h-full">
                             <div class="card-body">
-                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
-                                <div id="coin_distribution"></div>
+                                <div id="container"></div>
                             </div>
                         </div>
                     </div>
@@ -518,6 +517,55 @@
         }]
     }
 
+});
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Kata Kunci Populer'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Sistem',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Laravel',
+            y: 11.84
+        }, {
+            name: 'Del',
+            y: 4.67
+        }, {
+            name: 'Tugas Akhir',
+            y: 4.18
+        }]
+    }]
 });
 
     </script>
