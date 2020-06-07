@@ -446,7 +446,7 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
-      <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script> 
 
     Highcharts.chart('GrafikChart', {
@@ -550,7 +550,7 @@ Highcharts.chart('container', {
     series: [{
         name: 'Brands',
         colorByPoint: true,
-        data: [{
+        data: [{ 
             name: 'Sistem',
             y: 61.41,
             sliced: true,

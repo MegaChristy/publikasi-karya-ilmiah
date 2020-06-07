@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css"> 
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.min.css">
     <!-- amchart css -->
@@ -200,11 +200,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 coin-distribution">
+                    <div class="col-xl-3 col-lg-2 coin-distribution">
                         <div class="card h-full">
                             <div class="card-body">
-                                <h4 class="header-title mb-0">Kata Kunci Populer</h4>
-                                <div id="coin_distribution"></div>
+                                <div id="container"></div>
                             </div>
                         </div>
                     </div>
@@ -343,6 +342,129 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script> 
+
+    Highcharts.chart('GrafikChart', {
+
+    title: {
+        text: 'Jumlah Pengunjung Website Sistem Informasi Karya Ilmiah Institut Teknologi Del'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Jumlah Pengunjung'
+        }
+    },
+
+    xAxis: {
+        accessibility: {
+            rangeDescription: 'Range: 2017 - 2020'
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2017
+        }
+    },
+
+    series: [{
+        name: 'Tugas Akhir',
+        data: [43934, 52503, 57177, 69658, 97031]
+    }, {
+        name: 'Makalah',
+        data: [24916, 24064, 29742, 29851, 32490]
+    }, {
+        name: 'Paper',
+        data: [11744, 17722, 16005, 19771, 20185]
+    }, {
+        name: 'Skripsi',
+        data: [null, null, 7988, 12169, 15112]
+    }, {
+        name: 'Artikel',
+        data: [12908, 5948, 8105, 11248, 8989]
+    }, {
+        name: 'Program Kreativitas Mahasiswa',
+        data: [43934, 52503, 57177, 69658, 97031]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Kata Kunci Populer'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{ 
+            name: 'Sistem',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Laravel',
+            y: 11.84
+        }, {
+            name: 'Del',
+            y: 4.67
+        }, {
+            name: 'Tugas Akhir',
+            y: 4.18
+        }]
+    }]
+});
+
+    </script>
 </body>
 
 </html>
