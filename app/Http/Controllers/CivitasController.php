@@ -26,7 +26,7 @@ class CivitasController extends Controller
 
     public function civitaspenulis(Request $request){
         if ($request->has('cari')){
-            $penulis = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+            $penulis = karyailmiah::where("Status","=","Published")->where('Penulis','LIKE','%' . $request->cari . '%')->get();    
         }else{
             $penulis = karyailmiah::where("Status","=","Published")->get();
         }

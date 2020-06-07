@@ -187,8 +187,8 @@
                                                 <th scope="col">Program Studi</th>
                                                 <th scope="col">Jenis Karya Ilmiah</th>
                                                 <th scope="col">File</th>
+                                                <th scope="col">Abstract</th>
                                                 <th scope="col">Tanggal Publikasi</th>
-                                                <th scope="col">Aksi</th>
                                                 <th scope="col">Status</th>
                                             </tr>    
                                         </thead>
@@ -201,9 +201,12 @@
                                                         <td>{{$item['Pembimbing']}}</td>
                                                         <td>{{$item['ProgramStudi']}}</td>
                                                         <td>{{$item['JenisKaryaIlmiah']}}</td>
-                                                        <td>{{$item['File']}}</td>
+                                                        <td>
+                                                        <a href="{{ asset('/storage/'.$item->File)}}" class="badge badge-primary">Lihat</a> </td>
+                                                        <td>
+                                                        <a href="{{ asset('/Abstrak/'.$item->Abstract)}}" class="badge badge-primary">Lihat</a> </td>
                                                         <td>{{$item['created_at']}}</td>
-                                                        <td><a href="{{ asset('/storage/'.$item->File)}}" class="badge badge-primary">Lihat</a></td> 
+                                                     
                                                         <td><a href="{{ '/files/publish/'.$item['Id_karya_ilmiah'] }}" class="badge badge-success">Accept</a>
                                                         <a href="{{ '/files/reject/'.$item['Id_karya_ilmiah'] }}" class="badge badge-danger">Reject</a></td> 
                                                     </tr>

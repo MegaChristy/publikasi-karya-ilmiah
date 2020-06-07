@@ -31,6 +31,13 @@ class CivitasController1 extends Controller
             $request->File->move('storage/',$filename);
             $data->File = $filename;
         }
+        if($request->file('Abstract')){
+            $file = $request->file('Abstract');
+            $time_now = date("Ymdhis");
+            $filename = $time_now.'.'.$file->getClientOriginalExtension();
+            $request->Abstract->move('Abstrak/',$filename);
+            $data->Abstract = $filename;
+        }
         $data->save();
         return redirect('/FormAddKaryaAdmin');
     }

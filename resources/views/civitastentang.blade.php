@@ -89,9 +89,9 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="search-box pull-left">
-                            
-                        </div>
+                       <div clas ="row">
+                       <h3 class="col-12">Tentang</h3>
+                       </div>
                     </div>
 
                     <!-- profile info & task notification -->
@@ -113,7 +113,6 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Tentang</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="homecivitas">Home</a></li>
                                 <li><span>Tentang</span></li>
@@ -126,7 +125,7 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="#">Kirim Karya Ilmiah</a>
+                                <a class="dropdown-item" href="/FormAddKaryaAdmin">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>

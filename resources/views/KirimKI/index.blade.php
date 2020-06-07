@@ -50,16 +50,16 @@
                                 <a href="homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -220,6 +220,10 @@
                                                 <div class="form-group">
                                                 <b>File</b><br/>
                                                 <input type="file" name="File">
+                                                </div>
+                                                <div class="form-group">
+                                                <b>Abstract</b><br/>
+                                                <input type="file" name="Abstract">
                                                 </div>
                                                 <div class="form-group">
                                                     <h8>Status

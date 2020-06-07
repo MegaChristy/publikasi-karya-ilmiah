@@ -150,7 +150,7 @@
 <td>{{$ki -> created_at}}</td>
 <td>{{$ki -> File}}</td>
 <td>
-<a href="/files" class="badge badge-primary">Lihat</a> 
+<a href="{{ asset('/Abstrak/'.$ki->Abstract)}}" class="badge badge-primary">Lihat</a>  
 </td>
 </tr>
 @endforeach

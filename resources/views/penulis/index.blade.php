@@ -152,7 +152,7 @@
 <td>{{$pls -> ProgramStudi}}</td>
 <td>{{$pls -> Judul}}</td>
 <td>
-<a href="" class="badge badge-primary">Lihat</a> 
+<a href="{{ asset('/Abstrak/'.$pls->Abstract)}}" class="badge badge-primary">Lihat</a> 
 </td>
 </tr>
 @endforeach
