@@ -47,19 +47,19 @@
                     <nav>
                         <ul class="metismenu" id="menu">
                             <li>
-                                <a href="homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="/homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -242,13 +242,6 @@
                     </div>
                 </div>
         <!-- main content area end -->
-        <!-- footer area start-->
-        <footer>
-            <div class="footer-area">
-                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
-            </div>
-        </footer>
-        <!-- footer area end-->
     </div>
     <!-- page container area end -->
     <!-- offset area start -->
@@ -456,6 +449,13 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <!-- footer area start-->
+    <footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
 </body>
 
 </html>

@@ -163,12 +163,6 @@
 </div>
 </div>
 </div>
-
-<footer>
-            <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
-            </div>
-        </footer>
       </div>
 
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
@@ -197,6 +191,12 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+      </div>
 
     </body>
 </html>

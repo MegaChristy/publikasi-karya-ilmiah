@@ -25,6 +25,7 @@ class CreateKaryailmiahTable extends Migration
             $table->string('File');
             $table->string('Status');
             $table->timestamps();
+            $table->string('Abstract');
         });
     }
 

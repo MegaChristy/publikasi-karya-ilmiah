@@ -178,14 +178,6 @@
                     </div>
                 </div>
                 <!-- overview area end -->
-        <!-- footer area start-->
-        </br>
-        <footer>
-            <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
-            </div>
-        </footer>
-        <!-- footer area end-->
     </div>
     <!-- page container area end -->
     <!-- offset area start -->
@@ -364,6 +356,14 @@ Highcharts.chart('container', {
 });
 
     </script>
+    <!-- footer area start-->
+    </br>
+        <footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
 </body>
 
 </html>
