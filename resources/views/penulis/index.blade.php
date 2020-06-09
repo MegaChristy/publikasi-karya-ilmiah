@@ -137,9 +137,9 @@
 <thead class="thead-dark">
 <tr>
 <th scope="col"> No</th>
+<th scope="col"> Judul</th>
 <th scope="col"> Nama Penulis</th>
 <th scope="col"> Prodi</th>
-<th scope="col"> Judul</th>
 <th scope="col"> Aksi</th>
 </tr>
 </thead>
@@ -148,9 +148,9 @@
 @foreach($penulis as $pls)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
+<td>{{$pls -> Judul}}</td>
 <td>{{$pls -> Penulis}}</td>
 <td>{{$pls -> ProgramStudi}}</td>
-<td>{{$pls -> Judul}}</td>
 <td>
 <a href="{{ asset('/Abstrak/'.$pls->Abstract)}}" class="badge badge-primary">Lihat</a> 
 </td>

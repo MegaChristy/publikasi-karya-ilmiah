@@ -50,6 +50,8 @@ Route::get('/admin/penulis', 'AdminController@adminpenulis');
 Route::get('/rejected','AdminController@getAllReject');
 Route::get('/files/reject/{id}','AdminController@reject');
 Route::get('/files/publish/{id}','AdminController@publish');
+Route::get('/files/download/{file}', 'AdminController@download')->name('downloadfile');
+Route::get('/files/unduh/{file}', 'AdminController@unduh')->name('unduhfile');
 
 Route::get('/sisteminformasi', 'AdminController@sisteminformasi')->name('adminprodi.sisteminformasi');
 Route::get('/informatika', 'AdminController@informatika')->name('adminprodi.informatika');

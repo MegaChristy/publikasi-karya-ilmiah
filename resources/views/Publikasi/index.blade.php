@@ -202,9 +202,13 @@
                                                         <td>{{$item['ProgramStudi']}}</td>
                                                         <td>{{$item['JenisKaryaIlmiah']}}</td>
                                                         <td>
-                                                        <a href="{{ asset('/storage/'.$item->File)}}" class="badge badge-primary">Unduh</a> </td>
+                                                        <a href="{{ asset('/storage/'.$item->File)}}" class="badge badge-primary">Lihat</a>
+                                                        <a href="{{ route('downloadfile', $item->File) }}" class="badge badge-primary">Unduh</a>
+                                                        </td>
                                                         <td>
-                                                        <a href="{{ asset('/Abstrak/'.$item->Abstract)}}" class="badge badge-primary">Unduh</a> </td>
+                                                        <a href="{{ asset('/Abstrak/'.$item->Abstract)}}" class="badge badge-primary">Lihat</a>
+                                                        <a href="{{ route('unduhfile', $item->Abstract) }}" class="badge badge-primary">Unduh</a>
+                                                        </td>
                                                         <td>{{$item['created_at']}}</td>
                                                      
                                                         <td><a href="{{ '/files/publish/'.$item['Id_karya_ilmiah'] }}" class="badge badge-success">Accept</a>

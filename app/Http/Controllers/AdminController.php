@@ -12,6 +12,8 @@ class AdminController extends Controller
             $karyailmiah = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->paginate(10);
         }else{
             $karyailmiah = karyailmiah::where("Status","=","Published")->paginate(10);
+            //$karyailmiah = karyailmiah::find($id);
+           // return karyailmiah::download($karyailmiah->path, $karyailmiah->Judul);
         }
         return view('/admin/koleksi', compact('karyailmiah'));
     
@@ -100,5 +102,15 @@ class AdminController extends Controller
         $data->status = "Rejected";
         $data->save();
         return redirect('/rejected');
+    }
+
+    public function download($file){
+       // $data = karyailmiah::find($id);
+       // return Storage::download($data->path, $data->title);
+       return response()->download('storage/'.$file);
+    }
+
+    public function unduh($file){
+        return response()->download('Abstrak/'.$file);
     }
 }

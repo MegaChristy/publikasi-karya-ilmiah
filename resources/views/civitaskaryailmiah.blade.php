@@ -152,7 +152,8 @@
 <td>{{$ki -> Penulis}}</td>
 <td>{{$ki -> created_at}}</td>
 <td>
-<a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Unduh</a> 
+<a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Lihat</a>
+<a href="{{ route('downloadfile', $ki->File) }}" class="badge badge-primary">Unduh</a>
 </td>
 </tr>
 @endforeach
