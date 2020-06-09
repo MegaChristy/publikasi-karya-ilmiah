@@ -17,9 +17,9 @@ class KaryailmiahController extends Controller
     public function index(Request $request)
     {
         if ($request->has('cari')){
-            $karyailmiah = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+            $karyailmiah = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->paginate(10);
         }else{
-            $karyailmiah = karyailmiah::where("Status","=","Published")->get();
+            $karyailmiah = karyailmiah::where("Status","=","Published")->paginate(10);
         }
         return view('/karyailmiah.index', compact('karyailmiah'));
     }

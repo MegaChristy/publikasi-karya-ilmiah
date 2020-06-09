@@ -68,3 +68,12 @@ Route::get('/d3ti' , 'CivitasController@d3ti')->name('civitasprodi.d3ti');
 Route::get('/komputer' , 'CivitasController@komputer')->name('civitasprodi.komputer');
 Route::get('/bioproses' , 'CivitasController@bioproses')->name('civitasprodi.bioproses');
 Route::get('/mr' , 'CivitasController@mr')->name('civitasprodi.mr');
+
+Route::get('/s1teknikelektro', 'ProdiController@s1te')->name('visitorprodi.s1te');
+Route::get('/s1sisteminformasi', 'ProdiController@s1si')->name('visitorprodi.s1si');
+Route::get('/s1manajemenrekayasa', 'ProdiController@s1mr')->name('visitorprodi.s1mr');
+Route::get('/s1informatika', 'ProdiController@s1info')->name('visitorprodi.s1info');
+Route::get('/s1teknikbioproses', 'ProdiController@s1bp')->name('visitorprodi.s1bp');
+Route::get('/d3teknologiinformasi', 'ProdiController@diplomati')->name('visitorprodi.diplomati');
+Route::get('/d4trpl', 'ProdiController@d4trpl')->name('visitorprodi.d4trpl');
+Route::get('/d3teknologikomputer', 'ProdiController@d3tk')->name('visitorprodi.d3tk');

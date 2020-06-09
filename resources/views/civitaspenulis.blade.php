@@ -134,7 +134,7 @@
             <!-- page title area end -->
 <div class="container">        
 <div class="row">
-<div class="col-10">
+<div class="col-12">
 <h1 class="mt-5"> Daftar Penulis</h1>
 
 <table class = "table">
@@ -156,12 +156,13 @@
 <td>{{$pls -> ProgramStudi}}</td>
 <td>{{$pls -> Judul}}</td>
 <td>
-<a href="{{ asset('/storage/'.$pls->File)}}" class="badge badge-primary">Lihat</a> 
+<a href="{{ asset('/storage/'.$pls->File)}}" class="badge badge-primary">Unduh</a> 
 </td>
 </tr>
 @endforeach
 </tbody>
 </table>
+{{ $penulis->onEachSide(1)->links() }}
 </div>
 </div>
 </div>

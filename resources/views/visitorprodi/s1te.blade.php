@@ -46,26 +46,20 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li >
-                                <a href="/homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            <li>
+                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
-                                <a href="/admin/koleksi" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="/admin/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li class="active">
-                                <a href="/admin/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
-                            </li>
-                            <li>
-                                <a href="/rejected" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
-                            </li>
-                            <li>
-                                <a href="/admin/tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -87,7 +81,7 @@
                             <span></span>
                         </div>
                             <div class="row">
-                                <h3 class="col-12"> D3 Teknologi Komputer</h3>
+                                <h3 class="col-12"> S1 Teknik Elektro</h3>
                             </div>
                         
                     </div>
@@ -114,17 +108,14 @@
 
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="/homeadmin">Home</a></li>
-                                <li><span>D3 Teknologi Komputer</span></li>
+                                <li><span>S1 Teknik Elektro</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
-                            <img class="avatar user-thumb" src="/assets/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="/">Keluar</a>
+                        <div class="text-right">
+                                <a href="login" style="color:white">Login</a>
                             </div>
                         </div>
                     </div>
@@ -161,7 +152,7 @@
 <td>{{$ki -> JenisKaryaIlmiah}}</td>
 <td>{{$ki -> created_at}}</td>
 <td>
-<a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Unduh</a> 
+<a href="{{ asset('/Abstrak/'.$ki->Abstract)}}" class="badge badge-primary">Unduh</a> 
 </td>
 </tr>
 @endforeach
@@ -296,7 +287,7 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
-     <!-- overview area end -->
+    <!-- overview area end -->
         <!-- footer area start-->
         <footer>
             <div class="footer-area">

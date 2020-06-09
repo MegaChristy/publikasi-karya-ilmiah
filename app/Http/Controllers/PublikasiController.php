@@ -16,9 +16,9 @@ class PublikasiController extends Controller
     public function index(Request $request)
     {
         if ($request->has('cari')){
-            $Publikasi = karyailmiah::where("Status","=","Requested")->where('Judul','LIKE','%' . $request->cari . '%')->get();    
+            $Publikasi = karyailmiah::where("Status","=","Requested")->where('Judul','LIKE','%' . $request->cari . '%')->paginate(10);   
         }else{
-            $Publikasi = karyailmiah::where("Status","=","Requested")->get();
+            $Publikasi = karyailmiah::where("Status","=","Requested")->paginate(10);
         }
         return view('Publikasi.index', compact('Publikasi'));
     }

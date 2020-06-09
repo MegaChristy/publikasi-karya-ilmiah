@@ -16,9 +16,9 @@ class PenulisController extends Controller
     public function index(Request $request)
     {
         if($request->has('cari')){
-            $penulis = karyailmiah::where("Status","=","Published")->where('Penulis','LIKE','%' . $request->cari . '%')->get();    
+            $penulis = karyailmiah::where("Status","=","Published")->where('Penulis','LIKE','%' . $request->cari . '%')->paginate(10);
         }else{
-            $penulis = karyailmiah::where("Status","=","Published")->get();
+            $penulis = karyailmiah::where("Status","=","Published")->paginate(10);
         }
         return view('penulis/index', compact('penulis'));
     }

@@ -48,20 +48,20 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li >
-                                <a href="homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            <li>
+                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                            </li>
+                            <li>
+                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li class="active">
-                                <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
-                            </li>
-                            <li>
-                                <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
-                            </li>
-                            <li>
-                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -82,9 +82,8 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET">
-                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
+                        <div class="row">
+                        <h3 class="col-12">S1 Teknik Bioproses</h3>
                         </div>
                     </div>
 
@@ -107,21 +106,16 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Karya Ilmiah</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="homecivitas">Home</a></li>
-                                <li><span>Karya Ilmiah</span></li>
+                                <li><a href="/">Home</a></li>
+                                <li><span>S1 Teknik Bioproses</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
-                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="FormAddKaryaAdmin">Kirim Karya Ilmiah</a>
-                                <a class="dropdown-item" href="/">Keluar</a>
+                        <div class="text-right">
+                                <a href="login" style="color:white">Login</a>
                             </div>
                         </div>
                     </div>
@@ -139,6 +133,8 @@
 <th scope="col"> No</th>
 <th scope="col"> Judul</th>
 <th scope="col"> Penulis</th>
+<th scope="col"> Pembimbing</th>
+<th scope="col"> Jenis</th>
 <th scope="col"> Tanggal Publikasi</th>
 <th scope="col"> Aksi</th>
 </tr>
@@ -150,9 +146,11 @@
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>
 <td>{{$ki -> Penulis}}</td>
+<td>{{$ki -> Pembimbing}}</td>
+<td>{{$ki -> JenisKaryaIlmiah}}</td>
 <td>{{$ki -> created_at}}</td>
 <td>
-<a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Unduh</a> 
+<a href="{{ asset('/Abstrak/'.$ki->Abstract)}}" class="badge badge-primary">Unduh</a> 
 </td>
 </tr>
 @endforeach
@@ -195,6 +193,7 @@
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
             </div>
         </footer>
+
     </body>
 </html>
 

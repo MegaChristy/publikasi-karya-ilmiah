@@ -202,9 +202,9 @@
                                                         <td>{{$item['ProgramStudi']}}</td>
                                                         <td>{{$item['JenisKaryaIlmiah']}}</td>
                                                         <td>
-                                                        <a href="{{ asset('/storage/'.$item->File)}}" class="badge badge-primary">Lihat</a> </td>
+                                                        <a href="{{ asset('/storage/'.$item->File)}}" class="badge badge-primary">Unduh</a> </td>
                                                         <td>
-                                                        <a href="{{ asset('/Abstrak/'.$item->Abstract)}}" class="badge badge-primary">Lihat</a> </td>
+                                                        <a href="{{ asset('/Abstrak/'.$item->Abstract)}}" class="badge badge-primary">Unduh</a> </td>
                                                         <td>{{$item['created_at']}}</td>
                                                      
                                                         <td><a href="{{ '/files/publish/'.$item['Id_karya_ilmiah'] }}" class="badge badge-success">Accept</a>
@@ -212,6 +212,7 @@
                                                     </tr>
                                                 @endforeach
                                         </table>
+                                        {{ $Publikasi->onEachSide(1)->links() }}
                                     </div>
                                 </div>
                             </div>

@@ -158,6 +158,7 @@
 @endforeach
 </tbody>
 </table>
+{{ $penulis->onEachSide(1)->links() }}
 </div>
 </div>
 </div>

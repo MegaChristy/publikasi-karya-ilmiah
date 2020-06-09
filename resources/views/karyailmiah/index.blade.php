@@ -156,6 +156,7 @@
 @endforeach
 </tbody>
 </table>
+{{ $karyailmiah->onEachSide(1)->links() }}
 </div>
 </div>
 </div>
