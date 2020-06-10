@@ -34,7 +34,7 @@
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
-         
+          <a class="btn btn-link" href="password.request">Forgot Your Password?</a>
         </label>
       </div>
       <div class="form-group row mb-0">
@@ -42,14 +42,10 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       
 
- <div>
- </div>
+ 
 
-      <footer>
-            <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI-04</a>.</p>
-            </div>
-        </footer>
+      
+      <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
     </form>
    </body>
 </html>

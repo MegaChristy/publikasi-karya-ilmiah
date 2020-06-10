@@ -150,7 +150,6 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="/FormAddKaryaAdmin">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -186,11 +185,6 @@
                                                 <div class="form-group">
                                                     <h8>Penulis
                                                     <input type="textarea" name="Penulis" class="form-control" placeholder="Nama Penulis"/>
-                                                    </h8>
-                                                </div>
-                                                <div class="form-group">
-                                                    <h8>Pembimbing
-                                                    <input type="textarea" name="Pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
                                                     </h8>
                                                 </div>
                                                 <div class="form-group">
@@ -452,7 +446,7 @@
     <!-- footer area start-->
     <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI-04</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

@@ -183,7 +183,6 @@
                                                 <th scope="col">Judul</th>
                                                 <th scope="col">Deskripsi</th>
                                                 <th scope="col">Penulis</th>
-                                                <th scope="col">Pembimbing</th>
                                                 <th scope="col">Program Studi</th>
                                                 <th scope="col">Jenis Karya Ilmiah</th>
                                                 <th scope="col">File</th>
@@ -198,7 +197,6 @@
                                                         <td>{{$item['Judul']}}</td>
                                                         <td>{{$item['Deskripsi']}}</td>
                                                         <td>{{$item['Penulis']}}</td>
-                                                        <td>{{$item['Pembimbing']}}</td>
                                                         <td>{{$item['ProgramStudi']}}</td>
                                                         <td>{{$item['JenisKaryaIlmiah']}}</td>
                                                         <td>
@@ -435,7 +433,7 @@
     <script src="assets/js/scripts.js"></script>
     <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

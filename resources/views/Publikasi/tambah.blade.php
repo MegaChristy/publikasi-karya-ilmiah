@@ -195,11 +195,6 @@
                                                 </h8>
                                             </div>
                                             <div class="form-group">
-                                                <h8>Pembimbing
-                                                <input type="textarea" name="pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
-                                                </h8>
-                                            </div>
-                                            <div class="form-group">
                                                 <h8>Program Studi</h8>
                                                 <select name="ProgramStudi" class="form-control">
                                                     <option value="S1 Informatika">S1 Informatika</option>
@@ -450,7 +445,7 @@
      <!-- footer area start-->
      <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

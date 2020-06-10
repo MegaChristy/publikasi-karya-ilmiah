@@ -151,7 +151,6 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="FromAddKaryaAdmin">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -249,7 +248,7 @@
     <script src="assets/js/scripts.js"></script>
     <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
 </body>

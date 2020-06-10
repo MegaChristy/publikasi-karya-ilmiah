@@ -150,7 +150,6 @@
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="civitasprofile">Profile</a>
-                                <a class="dropdown-item" href="civitasrequest">Kirim Karya Ilmiah</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -186,11 +185,7 @@
                             <input type="text" id="penulis" name="penulis" class="form-control" value="">
                         </div>
                     </th>
-                        <div class="form-group">
-                            <label for="pembimbing"><b>Pembimbing</b></label>
-                            <input type="text" id="pembimbing" name="pembingbing" class="form-control" value="">
-                        </div>
-                    </div>
+                        
 
                     <th>
                         <div class="col-md-11">

@@ -293,7 +293,7 @@
     <script src="/assets/js/scripts.js"></script>
     <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
       </div>
