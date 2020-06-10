@@ -42,27 +42,30 @@
                     <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
                 </div>
             </div>
-            <div class="main-menu">
+             <div class="main-menu">
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
+                            <li >
+                                <a href="/homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            </li>
                             <li class="active">
-                                <a href="homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                                <a href="/admin/koleksi" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
-                                <a href="/FormAddKaryaAdmin" aria-expanded="true"><i class="ti-pie-chart"></i><span>Kirim Karya Ilmiah</span></a>
+                                <a href="/admin/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
                             </li>
                             <li>
-                                <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
+                                <a href="/admin/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/civitaspenulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
+                                <a href="/Publikasi" aria-expanded="true"><i class="ti-palette"></i><span>Publikasi</span></a>
                             </li>
                             <li>
-                                <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
+                                <a href="/rejected" aria-expanded="true"><i class="ti-palette"></i><span>Rejected Karya Ilmiah</span></a>
                             </li>
                             <li>
-                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/admin/tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -140,10 +143,11 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Profile</h4>
+                            <h4 class="page-title pull-left">Edit Profile</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="homecivitas">Home</a></li>
-                                <li><span>Profile</span></li>
+                                <li><a href="homeadmin">Home</a></li>
+                                <li><a href="adminprofile">Profile</a><li>
+                                <li><span>Edit Profile</span></li>
                             </ul>
                         </div>
                     </div>
@@ -152,7 +156,7 @@
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="civitasprofile">Profile</a>
+                                <a class="dropdown-item" href="adminprofile">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -165,33 +169,36 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="header-title mb-0">Info Pengguna</h4>
                             <div class="market-status-table mt-4">
-                                <div class="table-responsive">
+                            <div class="table-responsive">
+                              <form class="form-horizontal" action ="#" enctype="multipart/form-data">
                                     <table class="table">
                                         <tr>
-                                            <td rowspan="5"><img src="assets/images/icon/market-value/icon1.png"></td>
-                                            <td>Nama Depan : </td>
-                                            <td>30%</td>
+                                            <td>Nama Admin : </td>
+                                            <td>
+                                                <label class="sr-only" for="inputNamaAdmin">Nama Admin</label>
+                                                <input class="form-control" id="inputNamaAdmin" autofocus="" required="" type="namaadmin" placeholder="Nama Admin">
+                                            </td>
                                         </tr>
-                                        <tr>
-                                            <td>Nama Belakang : </td>
-                                            <td>asas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alamat : </td>
-                                            <td>asas</td>
-                                        </tr>
+                                       
                                         <tr>
                                             <td>Email : </td>
-                                            <td>ada</td>
+                                            <td>
+                                                <label class="sr-only" for="inputEmail">Email</label>
+                                                <input class="form-control" id="inputEmail" autofocus="" required="" type="Email" placeholder="Email">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>No. Telp : </td>
-                                            <td>asas</td>
-                                        </tr>    
+                                            <td>
+                                                <label class="sr-only" for="inputNoTelp">No. Telp</label>
+                                                <input class="form-control" id="inputNoTelp" required="" type="notelp" placeholder="Notelp">
+                                            </td>
+                                        </tr>
+                                       
                                     </table>
-                                    <a class="btn btn-primary btn-lg" href="civitaseditprofile" role="button">Edit Profile</a>
+                                    <a class="btn btn-primary btn-lg" href="adminprofile" role="button">Simpan</a>
+                                  </form>
                                 </div>
                             </div>
                         </div>

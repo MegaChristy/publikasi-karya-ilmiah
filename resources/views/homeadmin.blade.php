@@ -155,7 +155,7 @@
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                              <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{ $_SESSION['admin_login'] }}<i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="/adminprofile">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>

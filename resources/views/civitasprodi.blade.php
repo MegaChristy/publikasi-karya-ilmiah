@@ -50,6 +50,9 @@
                                 <a href="/homecivitas" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
                             <li>
+                                <a href="/FormAddKaryaAdmin" aria-expanded="true"><i class="ti-pie-chart"></i><span>Kirim Karya Ilmiah</span></a>
+                            </li>
+                            <li>
                                 <a href="/civitaskaryailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>

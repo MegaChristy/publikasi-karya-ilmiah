@@ -45,7 +45,11 @@
 
 
       
-      <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
+    <footer>
+            <div class="footer-area">
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI-04</a>.</p>
+            </div>
+        </footer>
     </form>
    </body>
 </html>

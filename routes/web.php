@@ -52,6 +52,8 @@ Route::get('/files/reject/{id}','AdminController@reject');
 Route::get('/files/publish/{id}','AdminController@publish');
 Route::get('/files/download/{file}', 'AdminController@download')->name('downloadfile');
 Route::get('/files/unduh/{file}', 'AdminController@unduh')->name('unduhfile');
+Route::get('/admineditprofile', 'AdminController@admineditprofile');
+Route::get('/adminprofile', 'AdminController@adminprofile');
 
 Route::get('/sisteminformasi', 'AdminController@sisteminformasi')->name('adminprodi.sisteminformasi');
 Route::get('/informatika', 'AdminController@informatika')->name('adminprodi.informatika');

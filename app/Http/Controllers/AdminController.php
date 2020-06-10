@@ -7,6 +7,14 @@ use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
+    public function admineditprofile(){
+        return view('/admin/admineditprofile');
+    }
+
+    public function adminprofile(){
+        return view('/admin/adminprofile');
+    }
+
     public function adminkoleksi(Request $request){
         if ($request->has('cari')){
             $karyailmiah = karyailmiah::where("Status","=","Published")->where('Judul','LIKE','%' . $request->cari . '%')->paginate(10);

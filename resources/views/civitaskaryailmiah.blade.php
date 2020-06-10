@@ -144,7 +144,7 @@
 </thead>
 <tbody> 
 
-@foreach($karyailmiah as $ki)
+@foreach($karyailmiah as $ki) 
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>

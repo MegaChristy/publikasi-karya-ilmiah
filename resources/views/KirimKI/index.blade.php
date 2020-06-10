@@ -188,6 +188,11 @@
                                                     </h8>
                                                 </div>
                                                 <div class="form-group">
+                                                    <h8>Pembimbing
+                                                    <input type="textarea" name="Pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
+                                                    </h8>
+                                                </div>
+                                                <div class="form-group">
                                                     <h8>Program Studi</h8>
                                                     <select name="ProgramStudi" class="form-control">
                                                         <option value="S1 Informatika">S1 Informatika</option>
