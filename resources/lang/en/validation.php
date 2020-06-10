@@ -133,6 +133,24 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'Judul' => [
+            'required' => 'Judul Karya Ilmiah tidak boleh kosong',
+        ],
+        'Deskripsi' => [
+            'required' => 'Deskripsi Karya Ilmiah tidak boleh kosong',
+        ],
+        'Penulis' => [
+            'required' => 'Penulis Karya Ilmiah tidak boleh kosong',
+        ],
+        'Pembimbing' => [
+            'nullable',
+        ],
+        'File' => [
+            'required' => 'File tidak boleh kosong',
+        ],
+        'Abstract' => [
+            'required' => 'Abstract tidak boleh kosong',
+        ],
     ],
 
     /*
@@ -147,5 +165,7 @@ return [
     */
 
     'attributes' => [],
+        'nama'=>'Judul'
+
 
 ];

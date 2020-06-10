@@ -175,21 +175,33 @@
                                                 <div class="form-group">
                                                     <h8>Judul
                                                     <input type="text" name="Judul" class="form-control" placeholder="Judul"/>
+                                                    @if($errors->has('Judul'))
+                                                        <div class="text-danger">{{ $errors->first('Judul') }}</div>
+                                                    @endif
                                                     </h8>
                                                 </div>
                                                 <div class="form-group">
                                                     <h8>Deskripsi
                                                     <textarea name="Deskripsi" class="form-control" placeholder="Deskripsi"></textarea>
+                                                    @if($errors->has('Deskripsi'))
+                                                        <div class="text-danger">{{ $errors->first('Deskripsi') }}</div>
+                                                    @endif
                                                     </h8>
                                                 </div>
                                                 <div class="form-group">
                                                     <h8>Penulis
                                                     <input type="textarea" name="Penulis" class="form-control" placeholder="Nama Penulis"/>
+                                                    @if($errors->has('Penulis'))
+                                                        <div class="text-danger">{{ $errors->first('Penulis') }}</div>
+                                                    @endif
                                                     </h8>
                                                 </div>
                                                 <div class="form-group">
                                                     <h8>Pembimbing
                                                     <input type="textarea" name="Pembimbing" class="form-control" placeholder="Nama Pembimbing"/>
+                                                    @if($errors->has('Abstract'))
+                                                        <div class="text-danger">{{ $errors->first('Abstract') }}</div>
+                                                    @endif
                                                     </h8>
                                                 </div>
                                                 <div class="form-group">
@@ -219,10 +231,16 @@
                                                 <div class="form-group">
                                                 <b>File</b><br/>
                                                 <input type="file" name="File">
+                                                @if($errors->has('File'))
+                                                        <div class="text-danger">{{ $errors->first('File') }}</div>
+                                                    @endif
                                                 </div>
                                                 <div class="form-group">
                                                 <b>Abstract</b><br/>
                                                 <input type="file" name="Abstract">
+                                                @if($errors->has('Abstract'))
+                                                        <div class="text-danger">{{ $errors->first('Abstract') }}</div>
+                                                    @endif
                                                 </div>
                                                 <div class="form-group">
                                                     <h8>Status

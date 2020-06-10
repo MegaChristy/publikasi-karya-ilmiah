@@ -19,7 +19,7 @@ class CreateKaryailmiahTable extends Migration
             $table->string('Judul');
             $table->text('Deskripsi');
             $table->string('Penulis');
-            $table->string('Pembimbing');
+            $table->string('Pembimbing')->nullable();
             $table->string('ProgramStudi');
             $table->string('JenisKaryaIlmiah');
             $table->string('File');

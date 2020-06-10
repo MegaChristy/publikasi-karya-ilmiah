@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Http\Requests\UserFormRequest;
 //use App\KirimKI;
 use App\karyailmiah;
 
@@ -10,12 +10,12 @@ use App\karyailmiah;
 class CivitasController1 extends Controller
 {
     
-    public function index(){ 
+    public function index(Request $request){ 
         $file =karyailmiah::all();
         return view('KirimKI.index',compact('file'));
     }
 
-        public function UploadFiles(Request $request){
+        public function UploadFiles(UserFormRequest $request){
         $data = new karyailmiah; 
         $data->Judul = $request->Judul;
         $data->Deskripsi = $request->Deskripsi;
@@ -58,7 +58,10 @@ class CivitasController1 extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-// public function store(Request $request)
+    //public function store(UserFormRequest $request)
+    //{
+
+    //}
 //     {
 //         karyailmiah::create($request->all());
 //         $file = new karyailmiah; 

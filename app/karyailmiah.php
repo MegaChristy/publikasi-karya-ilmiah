@@ -10,7 +10,7 @@ class karyailmiah extends Model
     protected $table = 'karyailmiah';
     protected $primaryKey = 'Id_karya_ilmiah';
     protected $guarded=[];
-    protected $fillable = ['Judul','Deskripsi','Penulis','Pembimbing', 'ProgramStudi','JenisKaryaIlmiah', 'File','Abstract'];
+    protected $fillable = ['Judul','Deskripsi','Penulis', 'ProgramStudi','JenisKaryaIlmiah', 'File','Abstract'];
 }
 
 
