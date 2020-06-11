@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>SIKI-Institut Teknologi Del</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -93,9 +93,7 @@
                         <ul class="notification-area pull-right">
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            <li class="settings-btn">
-                                <i class="ti-settings"></i>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -126,7 +124,7 @@
             <!-- page title area end -->
 <div class="container">
 <div class="row">
-<div class="col-10">
+<div class="col-12">
 <h1 class="mt-5"> Daftar Karya Ilmiah</h1>
 
 <table class = "table">
@@ -147,7 +145,7 @@
 <th scope="row">{{$loop->iteration}}</th>
 <td>{{$ki -> Judul}}</td>
 <td>{{$ki -> Penulis}}</td>
-<td>{{$ki -> created_at}}</td>
+<td>{{$ki -> updated_at}}</td>
 <td>{{$ki -> File}}</td>
 <td>
 <a href="{{ asset('/Abstrak/'.$ki->Abstract)}}" class="badge badge-primary">Lihat</a>  
@@ -285,7 +283,7 @@
     <script src="assets/js/scripts.js"></script>
     <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

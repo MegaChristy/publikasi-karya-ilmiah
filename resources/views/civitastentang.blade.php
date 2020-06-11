@@ -102,6 +102,29 @@
                         <ul class="notification-area pull-right">
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            <li class="dropdown">
+                                <?php
+                                    $karya = \DB::select("SELECT * FROM karyailmiah where NOT Status='Requested'");
+                                ?>
+                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
+                                    <span>{{count($karya)}}</span>
+                                </i>
+                                <div class="dropdown-menu bell-notify-box notify-box">
+                                    <span class="notify-title">You have new notifications <a href="/civitaskaryailmiah">view all</a></span>
+                                    <div class="nofity-list">
+                                    @foreach($karya as $ky)
+                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                            <div class="notify-text">
+                                                <a href="/civitaskaryailmiah">
+                                                <p>{{ $ky->Judul }}</p>
+                                                <span>{{ $ky->Status }}</span>
+                                                <span>{{ $ky->updated_at }}</span>
+                                                </a>
+                                            </div>
+                                    @endforeach
+                                    </div>
+                                </div>
+                            </li>
                             <li class="settings-btn">
                                 <i class="ti-settings"></i>
                             </li>
@@ -127,7 +150,6 @@
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="civitasprofile">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -142,12 +164,12 @@
                 <!-- overview area start -->
                 <div class="container">        
       <div class="row">
-        <div class="col--4" data-aos="fade-right">
+        <div class="col-12">
           <img src="assets/images/icon/logo.png" alt="" width="400" height="400">
         </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Sistem Informasi Karya Ilmiah Institut Teknologi Del</h3>
-          <p>
+        <div class="col-12">
+          <br><h3>Sistem Informasi Karya Ilmiah Institut Teknologi Del</h3>
+          <p style="text-align:justify">
           Sistem Informasi Karya Ilmiah Institut Teknologi Del (SIKI IT Del) merupakan salah satu sistem informasi kampus yang memiliki tujuan untuk melestarikan aset intelektual yang dihasilkan oleh civitas institut serta memastikan aset tersebut dapat diakses dengan mudah. Keberadaan SIKI IT Del ini diharapkan dapat memberi kontribusi yang signifikan terhadap perkembangan ilmu pengetahuan terutama bidang pendidikan.
 Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, Makalah, Paper, Skripsi, Artikel, dan Program Kreativitas Mahasiswa<br>
           </p>
@@ -166,8 +188,8 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, M
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Email Us:</strong> <br> http://www.del.ac.id </li> <br> <br>
-                <li><i class="icofont-rounded-right"></i> <strong>Learn more about Institut Teknologi Del:</strong><p><a class="btn btn-primary btn-lg" href="https://www.del.ac.id/?lang=en" role="button">Detail</a></p> </li>
+                <li><i class="icofont-rounded-right"></i> <strong>Email Us:</strong> <br>info@del.ac.id<br></li> <br> <br>
+                <li><i class="icofont-rounded-right"></i> <strong>Learn more about Institut Teknologi Del:</strong><p><a class="btn btn-primary" href="https://www.del.ac.id/?lang=en" role="button">Detail</a></p> </li>
               </ul>
             </div>
           </div>
@@ -178,6 +200,88 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, M
     </div>
       </div>
       </div>
+      <div class="offset-area">
+        <div class="offset-close"><i class="ti-close"></i></div>
+        <ul class="nav offset-menu-tab">
+            <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-toggle="tab" href="#settings">Settings</a></li>
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                <?php
+                $karyai = \DB::select("SELECT * FROM karyailmiah where Status='Requested'");
+                ?>
+                @foreach($karyai as $k)
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>{{ $k->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $k->created_at }}</span>
+                            <span class="time">{{ $k->Status }}</span>
+                        </div>
+                        <p>{{ $k->Deskripsi }}</p>
+                    </div>
+                @endforeach
+                <?php
+                $karyail = \DB::select("SELECT * FROM karyailmiah where NOT Status='Requested'");
+                ?>
+                @foreach($karyail as $kl)
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>{{ $kl->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $kl->updated_at }}</span>
+                            <span class="time">{{ $kl->Status }}</span>
+                        </div>
+                        <p>{{ $kl->Deskripsi }}</p>
+                    </div>
+                @endforeach
+                </div>
+            </div>
+            <div id="settings" class="tab-pane fade">
+                <div class="offset-settings">
+                    <h4>General Settings</h4>
+                    <div class="settings-list">
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch1" />
+                                    <label for="switch1">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Keep it 'On' When you want to get all the notification.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show Task statistics</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch4" />
+                                    <label for="switch4">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch5" />
+                                    <label for="switch5">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Use checkboxes when looking for yes or no answers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

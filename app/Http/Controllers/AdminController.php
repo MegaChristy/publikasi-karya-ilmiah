@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\karyailmiah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Admin;
 
 class AdminController extends Controller
 {

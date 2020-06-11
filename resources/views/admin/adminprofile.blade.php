@@ -49,7 +49,7 @@
                             <li >
                                 <a href="/homeadmin" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="/admin/koleksi" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
                             </li>
                             <li>
@@ -101,31 +101,24 @@
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                             <li class="dropdown">
+                                <?php
+                                    $karya = \DB::select("SELECT * FROM karyailmiah where Status='Requested'");
+                                ?>
                                 <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
-                                    <span>2</span>
+                                    <span>{{count($karya)}}</span>
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
-                                    <span class="notify-title">You have new notifications <a href="#">view all</a></span>
+                                    <span class="notify-title">You have new notifications <a href="/Publikasi">view all</a></span>
                                     <div class="nofity-list">
-                                        <a href="#" class="notify-item">
+                                    @foreach($karya as $ky)
                                             <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
-                                                <span>30 Seconds ago</span>
+                                                <a href="/Publikasi">
+                                                <p>{{ $ky->Judul }}</p>
+                                                <span>{{ $ky->created_at }}</span>
+                                                </a>
                                             </div>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
-                                            <div class="notify-text">
-                                                <p>New Commetns On Post</p>
-                                                <span>30 Seconds ago</span>
-                                            </div>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
-                                            <div class="notify-text">
-                                                <p>You have Changed Your Password</p>
-                                                <span>Just Now</span>
-                                            </div>
-                                        </a>
+                                    @endforeach
                                     </div>
                                 </div>
                             </li>
@@ -152,12 +145,17 @@
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
+                        <?php
+                        $adm = \DB::select("SELECT Nama_admin FROM admin");
+                        ?>
+                        @foreach($adm as $a)
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{$a -> Nama_admin}}<i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="admin.adminprofile">Profile</a>
+                                <a class="dropdown-item" href="adminprofile">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
+                        @endforeach
                         </div>
                     </div>
                 </div>
@@ -171,46 +169,117 @@
                             <h4 class="header-title mb-0">Info Pengguna</h4>
                             <div class="market-status-table mt-4">
                                 <div class="table-responsive">
-                                    <table class="table"> 
+                                    <table class="table">
+                                        <?php
+                                        $admin = \DB::select("SELECT * FROM admin");
+                                        ?>
+                                        @foreach($admin as $ai) 
                                         <tr>
-                                            <td>Nama Depan : </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nama Belakang : </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alamat : </td>
+                                            <td>Nama Admin : </td>
+                                            <td>{{$ai -> Nama_admin}}</td>
                                         </tr>
                                         <tr>
                                             <td>Email : </td>
+                                            <td>{{$ai -> Email}}</td>
                                         </tr>
                                         <tr>
-                                            <td>No. Telp : </td>
-                                        </tr>    
-                                        @foreach($admin as $ai)
-                                        <tr>
-                                        <th scope="row">{{$loop->iteration}}</th>
-                                        <td>{{$ai -> Nama_Admin}}</td>
-                                        <td>{{$ai -> Email}}</td>
-                                        <td>{{$ai -> No_telp}}</td>
-                                        <td>{{$ai -> created_at}}</td>
-                                        <td>
+                                            <td>No. Telepon : </td>
+                                            <td>{{$ai -> No_telp}}</td>
+                                        </tr>
+                                        @endforeach
                                     </table>
-                                    <a class="btn btn-primary btn-lg" href="admineditprofile" role="button">Edit Profile</a>
+                                    <a class="btn btn-primary btn-lg" href="/admineditprofile" role="button">Edit Profile</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <tbody> 
-
-</td>
-</tr>
-@endforeach
-</tbody>
-</table>
                 </div>
             </div>
     <!-- offset area end -->
+    <div class="offset-area">
+        <div class="offset-close"><i class="ti-close"></i></div>
+        <ul class="nav offset-menu-tab">
+            <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-toggle="tab" href="#settings">Settings</a></li>
+        </ul>
+        <div class="offset-content tab-content">
+            <div id="activity" class="tab-pane fade in show active">
+                <div class="recent-activity">
+                <?php
+                $karyai = \DB::select("SELECT * FROM karyailmiah where Status='Requested'");
+                ?>
+                @foreach($karyai as $k)
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>{{ $k->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $k->created_at }}</span>
+                            <span class="time">{{ $k->Status }}</span>
+                        </div>
+                        <p>{{ $k->Deskripsi }}</p>
+                    </div>
+                @endforeach
+                <?php
+                $karyail = \DB::select("SELECT * FROM karyailmiah where NOT Status='Requested'");
+                ?>
+                @foreach($karyail as $kl)
+                    <div class="timeline-task">
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="tm-title">
+                            <h4>{{ $kl->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $kl->updated_at }}</span>
+                            <span class="time">{{ $kl->Status }}</span>
+                        </div>
+                        <p>{{ $kl->Deskripsi }}</p>
+                    </div>
+                @endforeach
+                </div>
+            </div>
+            <div id="settings" class="tab-pane fade">
+                <div class="offset-settings">
+                    <h4>General Settings</h4>
+                    <div class="settings-list">
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch1" />
+                                    <label for="switch1">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Keep it 'On' When you want to get all the notification.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Show Task statistics</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch4" />
+                                    <label for="switch4">Toggle</label>
+                                </div>
+                            </div>
+                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                        </div>
+                        <div class="s-settings">
+                            <div class="s-sw-title">
+                                <h5>Notifications</h5>
+                                <div class="s-swtich">
+                                    <input type="checkbox" id="switch5" />
+                                    <label for="switch5">Toggle</label>
+                                </div>
+                            </div>
+                            <p>Use checkboxes when looking for yes or no answers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

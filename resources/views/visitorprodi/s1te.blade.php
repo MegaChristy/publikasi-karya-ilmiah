@@ -91,9 +91,7 @@
                         <ul class="notification-area pull-right">
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            <li class="settings-btn">
-                                <i class="ti-settings"></i>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -150,7 +148,7 @@
 <td>{{$ki -> Penulis}}</td>
 <td>{{$ki -> Pembimbing}}</td>
 <td>{{$ki -> JenisKaryaIlmiah}}</td>
-<td>{{$ki -> created_at}}</td>
+<td>{{$ki -> updated_at}}</td>
 <td>
 <a href="{{ asset('/Abstrak/'.$ki->Abstract)}}" class="badge badge-primary">Lihat</a> 
 </td>
@@ -291,7 +289,7 @@
         <!-- footer area start-->
         <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

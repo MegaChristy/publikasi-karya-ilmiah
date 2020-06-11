@@ -99,9 +99,7 @@
                         <ul class="notification-area pull-right">
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            <li class="settings-btn">
-                                <i class="ti-settings"></i>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -136,14 +134,14 @@
                 <!-- overview area start -->
                 <div class="container">        
       <div class="row">
-        <div class="col--4" data-aos="fade-right">
+        <div class="col-12">
           <img src="assets/images/icon/logo.png" alt="" width="400" height="400">
         </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Sistem Informasi Karya Ilmiah Institut Teknologi Del</h3>
-          <p>
+        <div class="col-12">
+          <br><h3>Sistem Informasi Karya Ilmiah Institut Teknologi Del</h3>
+          <p style="text-align:justify">
           Sistem Informasi Karya Ilmiah Institut Teknologi Del (SIKI IT Del) merupakan salah satu sistem informasi kampus yang memiliki tujuan untuk melestarikan aset intelektual yang dihasilkan oleh civitas institut serta memastikan aset tersebut dapat diakses dengan mudah. Keberadaan SIKI IT Del ini diharapkan dapat memberi kontribusi yang signifikan terhadap perkembangan ilmu pengetahuan terutama bidang pendidikan.
-Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, Makalah, Paper, Skripsi, Artikel, dan Program Kreativitas Mahasiswa<br>
+Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, Makalah, Paper, Skripsi, Artikel, dan Program Kreativitas Mahasiswa.<br>
           </p>
           <div class="row">
             <div class="col-lg-6">
@@ -160,8 +158,8 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, M
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Email Us:</strong> <br> http://www.del.ac.id </li> <br> <br>
-                <li><i class="icofont-rounded-right"></i> <strong>Learn more about Institut Teknologi Del:</strong><p><a class="btn btn-primary btn-lg" href="https://www.del.ac.id/?lang=en" role="button">Detail</a></p> </li>
+                <li><i class="icofont-rounded-right"></i> <strong>Email Us:</strong> <br> info@del.ac.id </li> <br> <br>
+                <li><i class="icofont-rounded-right"></i> <strong>Learn more about Institut Teknologi Del:</strong><p><a class="btn btn-primary" href="https://www.del.ac.id/?lang=en" role="button">Detail</a></p> </li>
               </ul>
             </div>
           </div>
@@ -170,6 +168,7 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, M
 
     </div><!-- End About Me -->
     </div>
+      </div>
       </div>
 
       <div class="offset-area">
@@ -302,9 +301,10 @@ Aset intelektual yang dikelola pada SIKI IT Del saat ini meliputi Tugas akhir, M
     <script src="assets/js/scripts.js"></script>
     <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
+        </div>
 
   </body>
 </html>

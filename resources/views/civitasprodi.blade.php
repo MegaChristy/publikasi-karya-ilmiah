@@ -92,6 +92,29 @@
                         <ul class="notification-area pull-right">
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
+                            <li class="dropdown">
+                                <?php
+                                    $karya = \DB::select("SELECT * FROM karyailmiah where NOT Status='Requested'");
+                                ?>
+                                <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
+                                    <span>{{count($karya)}}</span>
+                                </i>
+                                <div class="dropdown-menu bell-notify-box notify-box">
+                                    <span class="notify-title">You have new notifications <a href="/civitaskaryailmiah">view all</a></span>
+                                    <div class="nofity-list">
+                                    @foreach($karya as $ky)
+                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
+                                            <div class="notify-text">
+                                                <a href="/civitaskaryailmiah">
+                                                <p>{{ $ky->Judul }}</p>
+                                                <span>{{ $ky->Status }}</span>
+                                                <span>{{ $ky->updated_at }}</span>
+                                                </a>
+                                            </div>
+                                    @endforeach
+                                    </div>
+                                </div>
+                            </li>
                             <li class="settings-btn">
                                 <i class="ti-settings"></i>
                             </li>
@@ -117,7 +140,6 @@
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="civitasprofile">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
                         </div>
@@ -264,50 +286,38 @@
         <div class="offset-content tab-content">
             <div id="activity" class="tab-pane fade in show active">
                 <div class="recent-activity">
+                <?php
+                $karyai = \DB::select("SELECT * FROM karyailmiah where Status='Requested'");
+                ?>
+                @foreach($karyai as $k)
                     <div class="timeline-task">
                         <div class="icon bg1">
                             <i class="fa fa-envelope"></i>
                         </div>
                         <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
+                            <h4>{{ $k->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $k->created_at }}</span>
+                            <span class="time">{{ $k->Status }}</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
+                        <p>{{ $k->Deskripsi }}</p>
                     </div>
+                @endforeach
+                <?php
+                $karyail = \DB::select("SELECT * FROM karyailmiah where NOT Status='Requested'");
+                ?>
+                @foreach($karyail as $kl)
                     <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="fa fa-bomb"></i>
+                        <div class="icon bg1">
+                            <i class="fa fa-envelope"></i>
                         </div>
                         <div class="tm-title">
-                            <h4>Member waiting for you Attention</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
+                            <h4>{{ $kl->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $kl->updated_at }}</span>
+                            <span class="time">{{ $kl->Status }}</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
+                        <p>{{ $kl->Deskripsi }}</p>
                     </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="ti-signal"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
+                @endforeach
                 </div>
             </div>
             <div id="settings" class="tab-pane fade">
@@ -377,6 +387,7 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <br>
     <footer>
             <div class="footer-area">
                 <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>

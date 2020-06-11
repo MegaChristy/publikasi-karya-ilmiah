@@ -101,31 +101,24 @@
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                             <li class="dropdown">
+                                <?php
+                                    $karyailmiah = \DB::select("SELECT * FROM karyailmiah where Status='Requested'");
+                                ?>
                                 <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
-                                    <span>2</span>
+                                    <span>{{count($karyailmiah)}}</span>
                                 </i>
                                 <div class="dropdown-menu bell-notify-box notify-box">
-                                    <span class="notify-title">You have new notifications <a href="#">view all</a></span>
+                                    <span class="notify-title">You have new notifications <a href="/Publikasi">view all</a></span>
                                     <div class="nofity-list">
-                                        <a href="#" class="notify-item">
+                                    @foreach($karyailmiah as $ki)
                                             <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
                                             <div class="notify-text">
-                                                <p>New Commetns On Post</p>
-                                                <span>30 Seconds ago</span>
+                                                <a href="/Publikasi">
+                                                <p>{{ $ki->Judul }}</p>
+                                                <span>{{ $ki->created_at }}</span>
+                                                </a>
                                             </div>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
-                                            <div class="notify-text">
-                                                <p>New Commetns On Post</p>
-                                                <span>30 Seconds ago</span>
-                                            </div>
-                                        <a href="#" class="notify-item">
-                                            <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
-                                            <div class="notify-text">
-                                                <p>You have Changed Your Password</p>
-                                                <span>Just Now</span>
-                                            </div>
-                                        </a>
+                                    @endforeach
                                     </div>
                                 </div>
                             </li>
@@ -152,41 +145,40 @@
                     </div>
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
-                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{ $_SESSION['admin_login'] }}<i class="fa fa-angle-down"></i></h4>
+                        <?php
+                        $adm = \DB::select("SELECT Nama_admin FROM admin");
+                        ?>
+                        @foreach($adm as $a)
+                            <img class="avatar user-thumb" src="/assets/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{$a -> Nama_admin}}<i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/adminprofile">Profile</a>
                                 <a class="dropdown-item" href="/">Keluar</a>
                             </div>
+                        @endforeach
                         </div>
                     </div>
                 </div>
             </div>
             <!-- page title area end -->
+            <br>
             <div class="main-content-inner">
                 
                 <!-- sales report area end -->
                 <!-- overview area start -->
                 <div class="row">
-                    <div class="col-xl-9 col-lg-8">
+                    <div class="col-xl-12 col-lg-8">
                          <div class="card">
                             <div class="card">
                            <div id="GrafikChart"></div>
                         </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-2 coin-distribution">
-                        <div class="card h-full">
-                            <div class="card-body">
-                                <div id="container"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="row mt-5">
+                <br>
+                <div class="row">
                     <!-- latest news area start -->
-                    <div class="row">
-                <div class="col-xl-6">
+                <div class="col-xl-7">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="header-title">Karya Ilmiah Populer</h4>
@@ -224,7 +216,16 @@
                                 </div>
                             </div>
                         </div>
+                    
+                </div>
+                <div class="col-xl-5 col-lg-2 coin-distribution">
+                        <div class="card h-full">
+                            <div class="card-body">
+                                <div id="container"></div>
+                            </div>
+                        </div>
                     </div>
+                </div>
                     <!-- latest news area end -->
 
                 </div>
@@ -244,112 +245,38 @@
         <div class="offset-content tab-content">
             <div id="activity" class="tab-pane fade in show active">
                 <div class="recent-activity">
+                <?php
+                $karyai = \DB::select("SELECT * FROM karyailmiah where Status='Requested'");
+                ?>
+                @foreach($karyai as $k)
                     <div class="timeline-task">
                         <div class="icon bg1">
                             <i class="fa fa-envelope"></i>
                         </div>
                         <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
+                            <h4>{{ $k->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $k->created_at }}</span>
+                            <span class="time">{{ $k->Status }}</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
+                        <p>{{ $k->Deskripsi }}</p>
                     </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Added</h4>
-                            <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>You missed you Password!</h4>
-                            <span class="time"><i class="ti-time"></i>09:20 Am</span>
-                        </div>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="fa fa-bomb"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Member waiting for you Attention</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="ti-signal"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>You Added Kaji Patha few minutes ago</h4>
-                            <span class="time"><i class="ti-time"></i>01 minutes ago</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
+                @endforeach
+                <?php
+                $karyail = \DB::select("SELECT * FROM karyailmiah where NOT Status='Requested'");
+                ?>
+                @foreach($karyail as $kl)
                     <div class="timeline-task">
                         <div class="icon bg1">
                             <i class="fa fa-envelope"></i>
                         </div>
                         <div class="tm-title">
-                            <h4>Ratul Hamba sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
+                            <h4>{{ $kl->Judul }}</h4>
+                            <span class="time"><i class="ti-time"></i>{{ $kl->updated_at }}</span>
+                            <span class="time">{{ $kl->Status }}</span>
                         </div>
-                        <p>Hello sir , where are you, i am egerly waiting for you.
-                        </p>
+                        <p>{{ $kl->Deskripsi }}</p>
                     </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="fa fa-bomb"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="ti-signal"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
+                @endforeach
                 </div>
             </div>
             <div id="settings" class="tab-pane fade">
@@ -365,26 +292,6 @@
                                 </div>
                             </div>
                             <p>Keep it 'On' When you want to get all the notification.</p>
-                        </div>
-                        <div class="s-settings">
-                            <div class="s-sw-title">
-                                <h5>Show recent activity</h5>
-                                <div class="s-swtich">
-                                    <input type="checkbox" id="switch2" />
-                                    <label for="switch2">Toggle</label>
-                                </div>
-                            </div>
-                            <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-                        </div>
-                        <div class="s-settings">
-                            <div class="s-sw-title">
-                                <h5>Show your emails</h5>
-                                <div class="s-swtich">
-                                    <input type="checkbox" id="switch3" />
-                                    <label for="switch3">Toggle</label>
-                                </div>
-                            </div>
-                            <p>Show email so that easily find you.</p>
                         </div>
                         <div class="s-settings">
                             <div class="s-sw-title">
@@ -564,7 +471,7 @@ Highcharts.chart('container', {
     </script>
     <footer>
             <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
             </div>
         </footer>
 </body>
