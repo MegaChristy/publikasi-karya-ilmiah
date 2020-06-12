@@ -34,7 +34,7 @@
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
-          <a class="btn btn-link" href="route('password.request')">Forgot Your Password?</a>
+          
         </label>
       </div>
       <div class="form-group row mb-0">

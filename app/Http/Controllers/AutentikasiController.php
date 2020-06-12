@@ -16,7 +16,9 @@ class AutentikasiController extends Controller
          //   'username' => 'required|email',
           //  'password' => 'required|password',        
           //  ]);
-        $admin = Admin::where('username', $request->username)->where('password', $request->password)->get();
+        $pass = base64_encode($request->password);
+        $admin = Admin::where('username', $request->username)->where('password', $pass)->get();
+        
         if(count($admin)){
             session_start();
             foreach($admin as $temp){
