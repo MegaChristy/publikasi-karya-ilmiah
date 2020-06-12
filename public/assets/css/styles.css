@@ -110,7 +110,7 @@
     height: 100vh;
     width: 280px;
     overflow: hidden;
-    background: #303641;
+    background: black;
     box-shadow: 2px 0 32px rgba(0, 0, 0, 0.05);
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -140,7 +140,7 @@
 
 .sidebar-header {
     padding: 19px 32px 20px;
-    background: #303641;
+    background: black;
     border-bottom: 1px solid #343e50;
 }
 .sidebar-menu .logo{
@@ -158,7 +158,7 @@
 .metismenu li a {
     position: relative;
     display: block;
-    color: #8d97ad;
+    color: white;
     font-size: 15px;
     text-transform: capitalize;
     padding: 15px 15px;
@@ -167,7 +167,7 @@
 }
 
 .metismenu li a i {
-    color: #6a56a5;
+    color: white;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -178,7 +178,7 @@
     font-family: fontawesome;
     right: 15px;
     top: 12px;
-    color: #8d97ad;
+    color: ghostwhite;
     font-size: 20px;
 }
 
@@ -398,8 +398,9 @@
 
 .header-area {
     padding: 15px 30px;
-    background: #fff;
-    border-bottom: 1px solid #d8e3e7;
+    background-color: #3c8dbc;
+    color: #fff;
+    border-bottom: 3px solid black;
 }
 
 .nav-btn {
@@ -501,7 +502,7 @@
 
 .notification-area li>i {
     font-size: 26px;
-    color: #bdbcbc;
+    color: white;
     vertical-align: middle;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
     -webkit-transition: color 0.3s ease 0s;
@@ -719,7 +720,7 @@ ul.breadcrumbs {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     background: -webkit-linear-gradient(left, #8914fe 0%, #8063f5 100%);
-    background: linear-gradient(to right, #8914fe 0%, #8063f5 100%);
+    background: #3c8dbc;
     padding: 17px 38px;
     position: relative;
 }
