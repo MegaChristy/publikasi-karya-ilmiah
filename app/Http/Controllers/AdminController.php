@@ -5,7 +5,6 @@ use App\karyailmiah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Admin;
-use App\GrafikUnduh;
 
 class AdminController extends Controller
 {
@@ -117,19 +116,7 @@ class AdminController extends Controller
     public function download($file){
        // $data = karyailmiah::find($id);
        // return Storage::download($data->path, $data->title);
-        $karya = karyailmiah::find($file);
-        $File = $karya->File;
-        // add person
-        $grafik1 = GrafikUnduh::where('jenis',$karya->JenisKaryaIlmiah)->first();
-        $jumlah = $grafik1->jumlah;
-        $id = $grafik1->id;
-
-        $grafik2 = GrafikUnduh::findOrFail($id);
-        $grafik2->jumlah = $jumlah+1;
-     
-       if($grafik2->save()){
-           return response()->download('storage/'.$File);
-       }
+       return response()->download('storage/'.$file);
     }
 
     public function unduh($file){
