@@ -300,13 +300,111 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
-    <footer>
-            <div class="footer-area">
-                <p>© Copyright 2020. All right reserved. Template by <a href="https://colorlib.com/wp/">PSI - 04</a>.</p>
-            </div>
-        </footer>
+   <footer class="page-footer font-small unique-color-dark">
+
+  <div style="background-color: #3c8dbc;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us!</h6>
+        </div>
+        <!-- Grid column -->
+
       </div>
+      <!-- Grid row-->
 
-    </body>
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Sistem Informasi Karya Ilmiah Institut Teknologi Del</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p> Sistem Informasi Karya Ilmiah Institut Teknologi Del (SIKI IT Del) merupakan salah satu sistem 
+        informasi kampus yang memiliki tujuan untuk melestarikan aset intelektual yang dihasilkan oleh civitas institut serta memastikan aset tersebut dapat diakses dengan mudah.</p>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Location</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a>Institut Teknologi Del</a>
+        </p>
+        <p>
+          <a>JL. Sisimangaraja, Sitoluama</a>
+        </p>
+        <p>
+          <a>Laguboti, Toba Samosir</a>
+        </p>
+        <p>
+          <a>Sumatera Utara, Indonesia</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact Information</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a>Kode Pos: 22381</a>
+        </p>
+        <p>
+          <a>Telp : +62632331234</a>
+        </p>
+        <p>
+          <a>Fax  :  +62632331116</a>
+        </p>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">About</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+           <li><i class="icofont-rounded-right"></i> <strong>Email Us:</strong> <br> info@del.ac.id </li> <br>
+        <p>
+           <li><i class="icofont-rounded-right"></i> <strong>Learn more about IT Del:</strong><p><a  href="https://www.del.ac.id/?lang=en">Detail</a></p> </li>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> PSI - 04</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+
 </html>
-
