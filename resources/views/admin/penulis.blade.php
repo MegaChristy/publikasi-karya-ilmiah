@@ -164,7 +164,8 @@
                 </div>
             </div>
             <!-- page title area end -->
-<div class="container">        
+<div class="container">
+<div class="page-wrapper" style="min-height:100%;">
 <div class="row">
 <div class="col-12">
 <h1 class="mt-5"> Daftar Penulis</h1>
@@ -177,6 +178,7 @@
 <th scope="col"> Nama Penulis</th>
 <th scope="col"> Prodi</th>
 <th scope="col"> Aksi</th>
+<th scope="col"> Detail</th>
 </tr>
 </thead>
 <tbody> 
@@ -191,11 +193,46 @@
 <a href="{{ asset('/storage/'.$pls->File)}}" class="badge badge-primary">Lihat</a> 
 <a href="{{ route('downloadfile', $pls->File) }}" class="badge badge-primary">Unduh</a>
 </td>
+<td>
+<a href="" class="badge badge-primary" data-toggle="modal" data-target="#exampleModal">View</a>
+</td>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #3c8dbc;">
+                    <h6 class="modal-title" style="color:white">Window Data Karya Ilmiah</h6>
+                    <button type="button" class="close" style="color:white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <strong>ID:</strong></td>
+                    <br>{{$pls['Id_karya_ilmiah']}}</td>
+                    <br><br><strong>Judul:</strong></td>
+                    <br>{{$pls['Judul']}}</td>
+                    <br><br><strong>Deskripsi:</strong></td>                                                                        
+                    <br>{{$pls['Deskripsi']}}</td>
+                    <br><br><strong>Penulis:</strong></td>
+                    <br>{{$pls['Penulis']}}</td>
+                    <br><br><strong>Pembimbing:</strong></td>
+                    <br>{{$pls['Pembimbing']}}</td>
+                    <br><br><strong>Program Studi:</strong></td>
+                    <br>{{$pls['ProgramStudi']}}</td>
+                    <br><br><strong>Jenis Karya Ilmiah:</strong></td>
+                    <br>{{$pls['JenisKaryaIlmiah']}}</td>
+                    <br><br><strong>Status:</strong></td>
+                    <br>{{$pls['Status']}}</td>
+                </div>
+                <div class="modal-footer"  style="background-color: #3c8dbc;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </tr>
 @endforeach
 </tbody>
 </table>
 {{ $penulis->onEachSide(1)->links() }}
+</div>
 </div>
 </div>
 </div>

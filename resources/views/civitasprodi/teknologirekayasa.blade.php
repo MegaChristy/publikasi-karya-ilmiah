@@ -64,7 +64,7 @@
                                 <a href="/civitasprodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
                             </li>
                             <li>
-                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
+                                <a href="/civitastentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
                             </li>
                         </ul>
                     </nav>
@@ -151,6 +151,7 @@
             </div>
             <!-- page title area end -->
 <div class="container">
+<div class="page-wrapper" style="min-height:100%;">
 <div class="row">
 <div class="col-12">
 <h1 class="mt-5"> Daftar Karya Ilmiah</h1>
@@ -165,6 +166,7 @@
 <th scope="col"> Jenis</th>
 <th scope="col"> Tanggal Publikasi</th>
 <th scope="col"> Aksi</th>
+<th scope="col"> Detail</th>
 </tr>
 </thead>
 <tbody> 
@@ -181,6 +183,40 @@
 <a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Lihat</a>
 <a href="{{ route('downloadfile', $ki->File) }}" class="badge badge-primary">Unduh</a>
 </td>
+<td>
+<a href="" class="badge badge-primary" data-toggle="modal" data-target="#exampleModal">View</a>
+</td>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #3c8dbc;">
+                    <h6 class="modal-title" style="color:white">Window Data Karya Ilmiah</h6>
+                    <button type="button" class="close" style="color:white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <strong>ID:</strong></td>
+                    <br>{{$ki['Id_karya_ilmiah']}}</td>
+                    <br><br><strong>Judul:</strong></td>
+                    <br>{{$ki['Judul']}}</td>
+                    <br><br><strong>Deskripsi:</strong></td>                                                                        
+                    <br>{{$ki['Deskripsi']}}</td>
+                    <br><br><strong>Penulis:</strong></td>
+                    <br>{{$ki['Penulis']}}</td>
+                    <br><br><strong>Pembimbing:</strong></td>
+                    <br>{{$ki['Pembimbing']}}</td>
+                    <br><br><strong>Program Studi:</strong></td>
+                    <br>{{$ki['ProgramStudi']}}</td>
+                    <br><br><strong>Jenis Karya Ilmiah:</strong></td>
+                    <br>{{$ki['JenisKaryaIlmiah']}}</td>
+                    <br><br><strong>Status:</strong></td>
+                    <br>{{$ki['Status']}}</td>
+                </div>
+                <div class="modal-footer"  style="background-color: #3c8dbc;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </tr>
 @endforeach
 </tbody>

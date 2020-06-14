@@ -8,12 +8,27 @@ use App\Admin;
 
 class AdminController extends Controller
 {
-    public function admineditprofile(){
-        return view('/admin/admineditprofile');
+
+    public function index()
+    {
+        $admin = Admin::all();
+        return view('admin.adminprofile', compact('admin'));
     }
 
-    public function adminprofile(){
-        return view('/admin/adminprofile');
+    public function edit($id)
+    {
+        $admin = DB::table('admin')->where('Id_admin',$id)->first();
+        return view('admin.admineditprofile', compact('admin'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        DB::table('admin')->where('Id_admin',$id)->update([
+            'Nama_admin' => $request->Nama_admin,
+            'Email' => $request->Email,
+            'No_telp' => $request->No_telp
+        ]);
+        return redirect()->route('admin.index')->with('success', 'Data berhasil di edit');
     }
 
     public function adminkoleksi(Request $request){

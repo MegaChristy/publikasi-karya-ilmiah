@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePenulisTable extends Migration
+class CreateVisitorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreatePenulisTable extends Migration
      */
     public function up()
     {
-        Schema::create('penulis', function (Blueprint $table) {
-            $table->bigIncrements('Id_penulis');
-            $table->string('Nama_penulis');
-            $table->string('Prodi');
-            $table->date('Judul');
+        Schema::create('visitor', function (Blueprint $table) {
+            $table->bigIncrements('Ip_address');
+            $table->string('Nama_visitor');
+            $table->timestamps();
         });
     }
 

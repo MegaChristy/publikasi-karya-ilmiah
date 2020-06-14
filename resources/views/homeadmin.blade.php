@@ -231,9 +231,8 @@
                 </div>
                 <!-- row area start-->
             </div>
-        </div>
         <!-- main content area end -->
-    </div>
+
     <!-- page container area end -->
     <!-- offset area start -->
     <div class="offset-area">

@@ -22,6 +22,11 @@
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
     <!-- modernizr css -->
     <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -34,98 +39,76 @@
     </div>
     <!-- preloader area end -->
     <!-- page container area start -->
-    <div class="page-container">
-        <!-- sidebar menu area start -->
-        <div class="sidebar-menu">
-            <div class="sidebar-header">
-                <div class="logo">
-                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
-                </div>
-            </div>
-            <div class="main-menu">
-                <div class="menu-inner">
-                    <nav>
-                        <ul class="metismenu" id="menu">
-                            <li class="active">
-                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
-                            </li>
-                            <li>
-                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
-                            </li>
-                            <li>
-                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
-                            </li>
-                            <li>
-                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
-                            </li>
-                            <li>
-                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
-            <div class="header-area">
-                <div class="row align-items-center">
                     <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="search-box pull-left">
-                            <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
-                                <input type="text" name="cari" placeholder="Cari Karya Ilmiah" required>
-                                <i class="ti-search"></i>
-                            </form>
-                        </div>
-                    </div>
+                    
+                        
+    <div style="background-color: #3c8dbc;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/" style="color:yellow">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/karyailmiah" style="color:white">Koleksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/penulis" style="color:white">Penulis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prodi" style="color:white">Prodi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Tentang" style="color:white">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login" style="color:white">Login</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                    <input class="form-control mr-sm-2" type="search" name="cari" placeholder="Cari Karya Ilmiah" aria-label="Search" required>
+                    <button class="btn btn-outline-success" type="submit" style="background-color:#e7e7e7; color: black;">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
 
                     <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
-                            <li id="full-view"><i class="ti-fullscreen"></i></li>
-                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
 
             <!-- header area end -->
             <!-- page title area start -->
-            <div class="page-title-area">
-                <div class="row align-items-center">
-                    <div class="col-sm-6">
-                        <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Dashboard</h4>
-                            <ul class="breadcrumbs pull-left">
-                                <li><a href="/">Home</a></li>
-                                <li><span>Dashboard</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 clearfix">
-                        <div class="user-profile pull-right">
-                            <div class="text-right">
-                                <a href="login" style="color:white">Login</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <!-- page title area end -->
             <br>
 
             <div class="main-content-inner">
-
+            <div class="page-wrapper" style="min-height:100%;">
+            <div class="row">
+        <div class="col-12">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/images/icon/logo.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="assets/images/icon/itdel.jpg" alt="Second slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
                 <!-- overview area start -->
                 <div class="row">
                 <div class="col-xl-7">
@@ -175,6 +158,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- overview area end -->
     </div>
     <!-- page container area end -->
@@ -261,6 +245,7 @@ Highcharts.chart('container', {
 });
 
     </script>
+    </div>
     <!-- footer area start-->
 <!-- Footer -->
 

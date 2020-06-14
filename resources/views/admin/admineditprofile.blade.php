@@ -6,22 +6,22 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>SIKI-Institut Teknologi Del</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/metisMenu.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="/assets/css/metisMenu.css">
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/slicknav.min.css">
     <!-- amchart css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
     <!-- others css -->
-    <link rel="stylesheet" href="assets/css/typography.css">
-    <link rel="stylesheet" href="assets/css/default-css.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/typography.css">
+    <link rel="stylesheet" href="/assets/css/default-css.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
     <!-- modernizr css -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="/assets/images/icon/logo.png" alt="logo"></a>
                 </div>
             </div>
              <div class="main-menu">
@@ -150,7 +150,7 @@
                         $adm = \DB::select("SELECT Nama_admin FROM admin");
                         ?>
                         @foreach($adm as $a)
-                            <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
+                            <img class="avatar user-thumb" src="/assets/images/author/avatar.png" alt="avatar">
                             <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{$a -> Nama_admin}}<i class="fa fa-angle-down"></i></h4>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="adminprofile">Profile</a>
@@ -169,43 +169,26 @@
                         <div class="card-body">
                             <div class="market-status-table mt-4">
                             <div class="table-responsive">
-                              <form class="form-horizontal" action ="/adminprofile" enctype="multipart/form-data">
+                                <form class="form-horizontal" action ="{{ route('admin.update', $admin->Id_admin) }}" enctype="multipart/form-data" method="POST">
                                 @csrf
                                 @method('PUT')
-                                    <table class="table">
-                                    <?php
-                                    $admin = \DB::select("SELECT * FROM admin")
-                                    ?>
-                                    @foreach($admin as $ai) 
-                                        <tr>
-                                            <td>Nama Admin : </td>
-                                            <td>
-                                                <label class="sr-only" for="Nama_admin">Nama Admin</label>
-                                                <input class="form-control" id="Nama_admin" name="Nama_admin" autofocus="" required="" value="{{$ai->Nama_admin}}">
-                                            </td>
-                                        </tr>
-                                       
-                                        <tr>
-                                            <td>Email : </td>
-                                            <td>
-                                                <label class="sr-only" for="Email">Email</label>
-                                                <input class="form-control" id="Email" name="Email" autofocus="" required="" placeholder="Email" value="{{$ai->Email}}">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>No. Telp : </td>
-                                            <td>
-                                                <label class="sr-only" for="No_telp">No. Telepon</label>
-                                                <input class="form-control" id="No_telp" name="No_telp" required="" placeholder="No Telepon" value="{{$ai->No_telp}}">
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    </table>
+                                    <div class="form-group">
+                                        <label>Nama</label>
+                                        <input type="text" class="form-control" name="Nama_admin" value="{{$admin->Nama_admin}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" class="form-control" name="Email" value="{{$admin->Email}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>No. Telepon</label>
+                                        <input type="text" class="form-control" name="No.telp" value="{{$admin->No_telp}}">
+                                    </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary" type="submit">Simpan</button>
                                     </div>
-                                  </form>
-                                </div>
+                                  </form>  
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -213,14 +196,14 @@
             </div>
     <!-- offset area end -->
     <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/metisMenu.min.js"></script>
+    <script src="/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="/assets/js/jquery.slicknav.min.js"></script>
 
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
@@ -233,12 +216,12 @@
     ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
     </script>
     <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
+    <script src="/assets/js/line-chart.js"></script>
     <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
+    <script src="/assets/js/pie-chart.js"></script>
     <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/scripts.js"></script>
    <footer class="page-footer font-small unique-color-dark">
 
   <div style="background-color: #3c8dbc;">

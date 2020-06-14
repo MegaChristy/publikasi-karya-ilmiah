@@ -30,97 +30,70 @@
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
     <!-- modernizr css -->
     <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </head>
     
     <body>
 
 
 
-<div class="page-container">
-        <!-- sidebar menu area start -->
-        <div class="sidebar-menu">
-            <div class="sidebar-header">
-                <div class="logo">
-                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
-                </div>
+    <div style="background-color: #3c8dbc;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/" style="color:white">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/karyailmiah" style="color:white">Koleksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/penulis" style="color:white">Penulis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prodi" style="color:yellow">Prodi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Tentang" style="color:white">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login" style="color:white">Login</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                    <input class="form-control mr-sm-2" type="search" name="cari" placeholder="Cari Karya Ilmiah" aria-label="Search" required>
+                    <button class="btn btn-outline-success" type="submit" style="background-color:#e7e7e7; color: black;">Search</button>
+                </form>
             </div>
-            <div class="main-menu">
-                <div class="menu-inner">
-                    <nav>
-                        <ul class="metismenu" id="menu">
-                            <li>
-                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
-                            </li>
-                            <li>
-                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
-                            </li>
-                            <li>
-                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
-                            </li>
-                            <li class="active">
-                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
-                            </li>
-                            <li>
-                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        </nav>
+    </div>
 
         <!-- sidebar menu area end -->
         <!-- main content area start -->
         <div class="main-content">
             <!-- header area start -->
-            <div class="header-area">
+            <div class="header-area" style="background-color: white; color:black">
                 <div class="row align-items-center">
                     <!-- nav and search button -->
                     <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
                         <div class="row">
                         <h3 class="col-12">S1 Informatika</h3>
                         </div>
                     </div>
 
                     <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
-                            <li id="full-view"><i class="ti-fullscreen"></i></li>
-                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
 
             <!-- header area end -->
             <!-- page title area start -->
-            <div class="page-title-area">
-                <div class="row align-items-center">
-                    <div class="col-sm-6">
-                        <div class="breadcrumbs-area clearfix">
-                            <ul class="breadcrumbs pull-left">
-                                <li><a href="/">Home</a></li>
-                                <li><span>S1 Informatika</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 clearfix">
-                        <div class="user-profile pull-right">
-                        <div class="text-right">
-                                <a href="login" style="color:white">Login</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- page title area end -->
 <div class="container">
+<div class="page-wrapper" style="min-height:100%;">
 <div class="row">
 <div class="col-12">
 <h1 class="mt-5"> Daftar Karya Ilmiah</h1>
@@ -135,6 +108,7 @@
 <th scope="col"> Jenis</th>
 <th scope="col"> Tanggal Publikasi</th>
 <th scope="col"> Aksi</th>
+<th scope="col"> Detail</th>
 </tr>
 </thead>
 <tbody> 
@@ -150,6 +124,38 @@
 <td>
 <a href="{{ asset('/Abstrak/'.$ki->Abstract)}}" class="badge badge-primary">Lihat</a> 
 </td>
+<td>
+<a href="" class="badge badge-primary" data-toggle="modal" data-target="#exampleModal">View</a>
+</td>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #3c8dbc;">
+                    <h6 class="modal-title" style="color:white">Window Data Karya Ilmiah</h6>
+                    <button type="button" class="close" style="color:white" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <strong>ID:</strong></td>
+                    <br>{{$ki['Id_karya_ilmiah']}}</td>
+                    <br><br><strong>Judul:</strong></td>
+                    <br>{{$ki['Judul']}}</td>
+                    <br><br><strong>Deskripsi:</strong></td>                                                                        
+                    <br>{{$ki['Deskripsi']}}</td>
+                    <br><br><strong>Penulis:</strong></td>
+                    <br>{{$ki['Penulis']}}</td>
+                    <br><br><strong>Pembimbing:</strong></td>
+                    <br>{{$ki['Pembimbing']}}</td>
+                    <br><br><strong>Program Studi:</strong></td>
+                    <br>{{$ki['ProgramStudi']}}</td>
+                    <br><br><strong>Jenis Karya Ilmiah:</strong></td>
+                    <br>{{$ki['JenisKaryaIlmiah']}}</td>
+                </div>
+                <div class="modal-footer"  style="background-color: #3c8dbc;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </tr>
 @endforeach
 </tbody>

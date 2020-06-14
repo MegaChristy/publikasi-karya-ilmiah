@@ -16,12 +16,9 @@ class CreateCivitasTable extends Migration
         Schema::defaultStringLength(191);
         Schema::create('civitas', function (Blueprint $table) {
             $table->bigIncrements('Id_civitas');
-            $table->string('Nama_depan');
-            $table->string('Nama_belakang');
-            $table->string('Alamat');
-            $table->string('Email');
-            $table->string('No_telp');
-            $table->string('file');
+            $table->string('username');
+            $table->string('password');
+            $table->timestamps();
         });
     }
 

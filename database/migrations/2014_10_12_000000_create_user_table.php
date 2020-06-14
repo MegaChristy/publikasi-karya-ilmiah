@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKategorikaryailmiahsTable extends Migration
+class CreateUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateKategorikaryailmiahsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kategorikaryailmiahs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::defaultStringLength(191);
+        Schema::create('user', function (Blueprint $table) {
+            $table->bigIncrements('Id_user');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateKategorikaryailmiahsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategorikaryailmiahs');
+        Schema::dropIfExists('users');
     }
 }

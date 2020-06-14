@@ -162,17 +162,15 @@
             </div>
             <!-- page title area end -->
             <br>
-            <div class="main-content-inner">
+            <div class="container">
                 
                 <!-- sales report area end -->
                 <!-- overview area start -->
+                <div class="page-wrapper" style="min-height:100%;">
                 <div class="row">
-                    <div class="col-xl-12 col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="col-md-12">
-                                        <h4 class="header-title mb-0">Publikasi Karya Ilmiah</h4>
+                                    <div class="col-12">
+                                    <h1 class="mt-5">Publikasi Karya Ilmiah</h1>
                                         <br>
                                         <table class = "table">
                                         <thead class="thead-dark">
@@ -185,6 +183,7 @@
                                                 <th scope="col">Jenis Karya Ilmiah</th>
                                                 <th scope="col">File</th>
                                                 <th scope="col">Abstract</th>
+                                                <th scope="col">Detail</th>
                                                 <th scope="col">Tanggal Publikasi</th>
                                                 <th scope="col">Status</th>
                                             </tr>    
@@ -205,6 +204,40 @@
                                                         <a href="{{ asset('/Abstrak/'.$item->Abstract)}}" class="badge badge-primary">Lihat</a>
                                                         <a href="{{ route('unduhfile', $item->Abstract) }}" class="badge badge-primary">Unduh</a>
                                                         </td>
+                                                        <td>
+                                                        <a href="" class="badge badge-primary" data-toggle="modal" data-target="#exampleModal">View</a>
+                                                        </td>
+                                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header" style="background-color: #3c8dbc;">
+                                                                        <h6 class="modal-title" style="color:white">Window Data Karya Ilmiah</h6>
+                                                                        <button type="button" class="close" style="color:white" data-dismiss="modal">&times;</button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <strong>ID:</strong></td>
+                                                                        <br>{{$item['Id_karya_ilmiah']}}</td>
+                                                                        <br><br><strong>Judul:</strong></td>
+                                                                        <br>{{$item['Judul']}}</td>
+                                                                        <br><br><strong>Deskripsi:</strong></td>                                                                        
+                                                                        <br>{{$item['Deskripsi']}}</td>
+                                                                        <br><br><strong>Penulis:</strong></td>
+                                                                        <br>{{$item['Penulis']}}</td>
+                                                                        <br><br><strong>Pembimbing:</strong></td>
+                                                                        <br>{{$item['Pembimbing']}}</td>
+                                                                        <br><br><strong>Program Studi:</strong></td>
+                                                                        <br>{{$item['ProgramStudi']}}</td>
+                                                                        <br><br><strong>Jenis Karya Ilmiah:</strong></td>
+                                                                        <br>{{$item['JenisKaryaIlmiah']}}</td>
+                                                                        <br><br><strong>Status:</strong></td>
+                                                                        <br>{{$item['Status']}}</td>
+                                                                    </div>
+                                                                    <div class="modal-footer" style="background-color: #3c8dbc;">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <td>{{$item['created_at']}}</td>
                                                      
                                                         <td><a href="{{ '/files/publish/'.$item['Id_karya_ilmiah'] }}" class="badge badge-success">Accept</a>
@@ -213,12 +246,10 @@
                                                 @endforeach
                                         </table>
                                         {{ $Publikasi->onEachSide(1)->links() }}
+                                        <br>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- main content area end -->

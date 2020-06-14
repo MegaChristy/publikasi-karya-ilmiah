@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
     <!-- modernizr css -->
     <script src="{{asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,90 +38,41 @@
     </div>
     <!-- preloader area end -->
     <!-- page container area start -->
-    <div class="page-container">
-        <!-- sidebar menu area start -->
-        <div class="sidebar-menu">
-            <div class="sidebar-header">
-                <div class="logo">
-                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
-                </div>
-            </div>
-            <div class="main-menu">
-                <div class="menu-inner">
-                    <nav>
-                        <ul class="metismenu" id="menu">
-                            <li>
-                                <a href="/" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
-                            </li>
-                            <li>
-                                <a href="/karyailmiah" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Koleksi</span></a>
-                            </li>
-                            <li>
-                                <a href="/penulis" aria-expanded="true"><i class="ti-pie-chart"></i><span>Penulis</span></a>
-                            </li>
-                            <li class="active">
-                                <a href="/prodi" aria-expanded="true"><i class="ti-palette"></i><span>Prodi</span></a>
-                            </li>
-                            <li>
-                                <a href="/Tentang" aria-expanded="true"><i class="ti-slice"></i><span>Tentang</span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!-- sidebar menu area end -->
-        <!-- main content area start -->
-        <div class="main-content">
-            <!-- header area start -->
-            <div class="header-area">
-                <div class="row align-items-center">
-                    <!-- nav and search button -->
-                    <div class="col-md-6 col-sm-8 clearfix">
-                        <div class="nav-btn pull-left">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <div class="row">
-                            <h3 class="col-12"> Program Studi</h3>
-                        </div>
-                    </div>
-
-                    <!-- profile info & task notification -->
-                    <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
-                            <li id="full-view"><i class="ti-fullscreen"></i></li>
-                            <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- header area end -->
-            <!-- page title area start -->
-            <div class="page-title-area">
-                <div class="row align-items-center">
-                    <div class="col-sm-6">
-                        <div class="breadcrumbs-area clearfix">
-                            <ul class="breadcrumbs pull-left">
-                                <li><a href="/">Home</a></li>
-                                <li><span>Program Studi</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 clearfix">
-                        <div class="user-profile pull-right">
-                            <div class="text-right">
-                                <a href="login" style="color:white">Login</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- page title area end -->
-    <body>
+    
+    <div style="background-color: #3c8dbc;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/" style="color:white">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/karyailmiah" style="color:white">Koleksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/penulis" style="color:white">Penulis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prodi" style="color:yellow">Prodi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Tentang" style="color:white">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login" style="color:white">Login</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" method="GET" action="/karyailmiah">
+                    <input class="form-control mr-sm-2" type="search" name="cari" placeholder="Cari Karya Ilmiah" aria-label="Search" required>
+                    <button class="btn btn-outline-success" type="submit" style="background-color:#e7e7e7; color: black;">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+    <div class="page-wrapper" style="min-height:100%;">
         <div class="head">
 			<header>
                 <br>
@@ -130,14 +85,12 @@
                     <img src="assets/images/icon/si.png" alt="" width="200" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> S1 Sistem Informasi</span>
-                        <p>sistem informasi adalah program studi yang dirancang untuk memenuhi kebutuhan terhadap tenaga-tenaga 
-                        <p>muda yang terampil dan profesional, terutama terkait dengan pengembangan, pemanfaatan, dan pengelolaan 
-                        <p>Sistem Informasi/Teknologi Informasi dalam suatu organisasi.Kurikulum Program Studi Sistem Informasi 
-                        <P>IT Del mengacu kepada beberapa kurikulum Sarjana Sistem Informasi di Indonesia maupun Internasional.</p>
+                        <strong> S1 Sistem Informasi</strong>
+                        <p style="text-align:justify">Sistem informasi adalah program studi yang dirancang untuk memenuhi kebutuhan terhadap tenaga-tenaga 
+                        muda yang terampil dan profesional, terutama terkait dengan pengembangan, pemanfaatan, dan pengelolaan 
+                        Sistem Informasi/Teknologi Informasi dalam suatu organisasi. Kurikulum Program Studi Sistem Informasi 
+                        IT Del mengacu kepada beberapa kurikulum Sarjana Sistem Informasi di Indonesia maupun Internasional.</p>
                         <a href="{{route('visitorprodi.s1si')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
-                        
-                    
                     </div>
 				</article><br><br>
                 <article>
@@ -146,11 +99,11 @@
                     <img src="assets/images/icon/te.png" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> S1 Teknik Elektro</span>
-                        <p>Program Studi Teknik Elektro berupaya untuk meningkatkan layanan yang baik kepada mahasiswa serta 
-                        <p>mampu menjawab keperluan industri melalui lulusan tenaga terdidik dan juga terampil di bidangnya. 
-                        <P>Visi Program Studi Teknik Elektro adalah Mewujudkan program pendidikan Teknik Elektro yang unggul 
-                        <P>dan penyelenggaraan penelitian bidang Teknik Elektro yang bertaraf nasional pada tahun 2024</p>
+                        <strong> S1 Teknik Elektro</strong>
+                        <p style="text-align:justify">Program Studi Teknik Elektro berupaya untuk meningkatkan layanan yang baik kepada mahasiswa serta 
+                        mampu menjawab keperluan industri melalui lulusan tenaga terdidik dan juga terampil di bidangnya. Visi
+                        Program Studi Teknik Elektro adalah mewujudkan program pendidikan Teknik Elektro yang unggul 
+                        dan penyelenggaraan penelitian bidang Teknik Elektro yang bertaraf nasional pada tahun 2024.</p>
                         <a href="{{route('visitorprodi.s1te')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
@@ -161,12 +114,12 @@
                     <img src="assets/images/icon/informatika.png" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> S1 Informatika</span>
-                        <p>Program Studi S1 Informatika (PSIF) di Institut Teknologi Del (IT Del) memiliki cakupan bidang ilmu 
-                        <p>(body of knowledge) meliputi area ilmu komputer (Computer Science), rekayasa perangkat lunak keamanan 
-                        <p>siber (Cybersecurity), dan ilmu data (Data Science).Lulusan dari PSIF dipersiapkan untuk dapat memiliki 
-                        <p>kemampuan analisis persoalan yang terkait bidang computer science dan pengembangan perangkat lunak mulai 
-                        <p>dari yang sederhana yang sampai yang kompleks ataupun berskala besar.</p>
+                        <strong> S1 Informatika</strong>
+                        <p style="text-align:justify">Program Studi S1 Informatika (PSIF) di Institut Teknologi Del (IT Del) memiliki cakupan bidang ilmu 
+                        (body of knowledge) meliputi area ilmu komputer (Computer Science), rekayasa perangkat lunak keamanan 
+                        siber (Cybersecurity), dan ilmu data (Data Science). Lulusan dari PSIF dipersiapkan untuk dapat memiliki 
+                        kemampuan analisis persoalan yang terkait bidang computer science dan pengembangan perangkat lunak mulai 
+                        dari yang sederhana yang sampai yang kompleks ataupun berskala besar.</p>
                         <a href="{{route('visitorprodi.s1info')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
@@ -177,10 +130,10 @@
                     <img src="assets/images/icon/trpl.jpeg" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> D4 Teknologi Rekayasa Perangkat Lunak </span>
-                        <p>Visi Program Studi Teknologi Rekayasa Perangkat Lunak Program Sarjana Terapan sebagai batu loncatan 
-                        <p>menuju masa depan Teknologi Informasi yang mengintegrasikan dunia pendidikan dengan kebutuhan usaha 
-                        <p>akan tenaga profesional informatika yang mampu bersaing secara global.</p>
+                        <strong> D4 Teknologi Rekayasa Perangkat Lunak </strong>
+                        <p style="text-align:justify">Visi Program Studi Teknologi Rekayasa Perangkat Lunak Program Sarjana Terapan sebagai batu loncatan 
+                        menuju masa depan Teknologi Informasi yang mengintegrasikan dunia pendidikan dengan kebutuhan usaha 
+                        akan tenaga profesional informatika yang mampu bersaing secara global.</p>
                         <a href="{{route('visitorprodi.d4trpl')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
@@ -191,10 +144,10 @@
                     <img src="assets/images/icon/himatif.jpeg" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> D3 Teknologi Informasi</span>
-                        <p>Program Studi Teknologi Informasi Diploma Tiga  mempunyai sasaran untuk menyelenggarakan proses 
-                        <p>pembelajaran yang dapat menumbuhkan-kembangkan daya nalar, daya cipta, daya kreasi dan keterampilan 
-                        <p>yang tinggi, yang dapat dikomunikasikan dan diaplikasikan pada bidang kehidupan.</p>
+                        <strong> D3 Teknologi Informasi</strong>
+                        <p style="text-align:justify">Program Studi Teknologi Informasi Diploma Tiga  mempunyai sasaran untuk menyelenggarakan proses 
+                        pembelajaran yang dapat menumbuhkan-kembangkan daya nalar, daya cipta, daya kreasi dan keterampilan 
+                        yang tinggi, yang dapat dikomunikasikan dan diaplikasikan pada bidang kehidupan.</p>
                         <a href="{{route('visitorprodi.diplomati')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
@@ -205,11 +158,11 @@
                     <img src="assets/images/icon/tk.png" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> D3 Teknologi Komputer</span>
-                        <p>Program Studi Teknik Komputer adalah salah satu program studi yang diselenggarakan Institut Teknologi 
-                        <p>Del yang terletak di daerah pedesaan Tobasa, yang membuka peluang bagi siswa berprestasi untuk 
-                        <p>mengenyam pendidikan dengan mutu yang tidak kalah dengan pendidikan bermutu bagus yang 
-                        <p>diselenggarakan di kota besar.</p>
+                        <strong> D3 Teknologi Komputer</strong>
+                        <p style="text-align:justify">Program Studi Teknik Komputer adalah salah satu program studi yang diselenggarakan Institut Teknologi 
+                        Del yang terletak di daerah pedesaan Tobasa, yang membuka peluang bagi siswa berprestasi untuk 
+                        mengenyam pendidikan dengan mutu yang tidak kalah dengan pendidikan bermutu bagus yang 
+                        diselenggarakan di kota besar.</p>
                         <a href="{{route('visitorprodi.d3tk')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
@@ -220,12 +173,12 @@
                     <img src="assets/images/icon/mr.jpg" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> S1 Manajemen Rekayasa</span>
-                        <p>Manajemen Rekayasa (Engineering Management) adalah penggabungan dari keilmuan teknik/rekayasa (engineering) 
-                        <p>dengan ilmu manajemen yang diaplikasikan untuk menyelesaikan persoalan-persoalan dalam suatu sistem kompleks.
-                        <p>Aspek keilmuan teknik (engineering) dari Manajemen Rekayasa terlihat melalui  penerapan matematika dan ilmu 
-                        <p>pengetahuan alam yang diperoleh melalui pembelajaran, pengalaman, dan praktek empiris untuk menemukan 
-                        <p>cara-cara yang optimal dalam memanfaatkan material dan sumber daya lain dalam mengembangkan teknologi.</p>
+                        <strong> S1 Manajemen Rekayasa</strong>
+                        <p style="text-align:justify">Manajemen Rekayasa (Engineering Management) adalah penggabungan dari keilmuan teknik/rekayasa (engineering) 
+                        dengan ilmu manajemen yang diaplikasikan untuk menyelesaikan persoalan-persoalan dalam suatu sistem kompleks.
+                        Aspek keilmuan teknik (engineering) dari Manajemen Rekayasa terlihat melalui  penerapan matematika dan ilmu 
+                        pengetahuan alam yang diperoleh melalui pembelajaran, pengalaman, dan praktek empiris untuk menemukan 
+                        cara-cara yang optimal dalam memanfaatkan material dan sumber daya lain dalam mengembangkan teknologi.</p>
                         <a href="{{route('visitorprodi.s1mr')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
@@ -236,15 +189,17 @@
                     <img src="assets/images/icon/bp.jpg" alt="" width="250" height="200">
                     </div>
 					<div class="lts-content">
-                        <span> S1 Teknik Bioproses</span>
-                        <p>Program studi Sarjana Teknik Bioproses memiliki visi yaitu menjadi program studi yang unggul secara nasional 
-                        <p>dan internasional dalam bidang pendidikan, penelitian, pengembangan dan penerapan ilmu dan teknologi, serta 
-                        <p>pengabdian kepada masyarakat.</p>
+                        <strong> S1 Teknik Bioproses</strong>
+                        <p style="text-align:justify">Program studi Sarjana Teknik Bioproses memiliki visi yaitu menjadi program studi yang unggul secara nasional 
+                        dan internasional dalam bidang pendidikan, penelitian, pengembangan dan penerapan ilmu dan teknologi, serta 
+                        pengabdian kepada masyarakat.</p>
                         <a href="{{route('visitorprodi.s1bp')}}"><button button style=" height: 40px; width: 100px; background-color:#1E90FF;" class="btn btn-primary right-block" >View</button></a>
                         
                     </div>
 				</article>                                                  
 			</section>
+        </div>
+    </div>
     </div>
     <!-- page container area end -->
     <!-- offset area start -->

@@ -39,7 +39,7 @@ class CivitasController1 extends Controller
             $data->Abstract = $filename;
         }
         $data->save();
-        return redirect('/FormAddKaryaAdmin');
+        return redirect('/FormAddKaryaAdmin')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**

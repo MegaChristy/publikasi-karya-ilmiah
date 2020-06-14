@@ -166,6 +166,11 @@
                                     <div class="col-md-12">
                                         <h4 class="header-title mb-0">Kirim Karya Ilmiah</h4>
                                         <br>
+                                        @if (session()->has('success'))
+                                            <div class="alert alert-success">
+                                                {{ session()->get('success') }}
+                                            </div>
+                                        @endif
                                         <form enctype="multipart/form-data" action="{{ route('upload') }}" method="post">
                                             {{ csrf_field() }} 
                                                 <div class="form-group">
