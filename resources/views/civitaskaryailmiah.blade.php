@@ -181,7 +181,7 @@
 <td>{{$ki -> updated_at}}</td>
 <td>
 <a href="{{ asset('/storage/'.$ki->File)}}" class="badge badge-primary">Lihat</a>
-<a href="{{ route('downloadfile', $ki->Id_karya_ilmiah) }}" class="badge badge-primary">Unduh</a>
+<a href="{{ route('downloadfile', $ki->File) }}" class="badge badge-primary">Unduh</a>
 </td>
 <td>
 <a href="" class="badge badge-primary" data-toggle="modal" data-target="#exampleModal">View</a>
